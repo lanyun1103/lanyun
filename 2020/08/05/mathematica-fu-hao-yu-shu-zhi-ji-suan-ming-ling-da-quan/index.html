@@ -1,0 +1,1355 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Mathematica符号与数值计算命令大全, Hexo">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Mathematica符号与数值计算命令大全 | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Mathematica符号与数值计算命令大全</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Mathematica/">
+                                <span class="chip bg-color">Mathematica</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" class="post-category">
+                                数学建模
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-08-05
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Mathematica符号与数值计算命令大全"><a href="#Mathematica符号与数值计算命令大全" class="headerlink" title="Mathematica符号与数值计算命令大全"></a>Mathematica符号与数值计算命令大全</h1><p>基本都是链接，不会的可以直接到官网看，这个博文可以作为一个字典，忘记命令的时候来看看</p>
+<h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><h3 id="数学常量-»"><a href="#数学常量-»" class="headerlink" title="数学常量 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MathematicalConstants.html">数学常量 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Pi.html">Pi</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Pi.html">π</a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/E.html">E</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/E.html"></a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Degree.html">Degree</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Degree.html">°</a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/EulerGamma.html">EulerGamma</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MathematicalConstants.html">…</a></p>
+<h3 id="复数-»"><a href="#复数-»" class="headerlink" title="复数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ComplexNumbers.html">复数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/I.html">I</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/I.html"></a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Re.html">Re</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Im.html">Im</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Conjugate.html">Conjugate</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Abs.html">Abs</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Arg.html">Arg</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ComplexNumbers.html">…</a></p>
+<h3 id="算术函数-»"><a href="#算术函数-»" class="headerlink" title="算术函数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ArithmeticFunctions.html">算术函数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Plus.html">Plus</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Plus.html">+</a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Times.html">Times</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Times.html">×</a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Power.html">Power</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Power.html">^</a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Sqrt.html">Sqrt</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Total.html">Total</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ArithmeticFunctions.html">…</a></p>
+<h3 id="数值函数-»"><a href="#数值函数-»" class="headerlink" title="数值函数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/NumericalFunctions.html">数值函数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Abs.html">Abs</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Round.html">Round</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Floor.html">Floor</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Min.html">Min</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Max.html">Max</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Clip.html">Clip</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Ramp.html">Ramp</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Rescale.html">Rescale</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SquareWave.html">SquareWave</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/NumericalFunctions.html">…</a></p>
+<h3 id="初等函数-»"><a href="#初等函数-»" class="headerlink" title="初等函数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ElementaryFunctions.html">初等函数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Log.html">Log</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Log10.html">Log10</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Exp.html">Exp</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Sqrt.html">Sqrt</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Sin.html">Sin</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Cos.html">Cos</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Tan.html">Tan</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ArcTan.html">ArcTan</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Tanh.html">Tanh</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Sinc.html">Sinc</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ElementaryFunctions.html">…</a></p>
+<h3 id="特殊函数-»"><a href="#特殊函数-»" class="headerlink" title="特殊函数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/SpecialFunctions.html">特殊函数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Gamma.html">Gamma</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Erf.html">Erf</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/BesselJ.html">BesselJ</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/BesselK.html">BesselK</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AiryAi.html">AiryAi</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/EllipticK.html">EllipticK</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LegendreP.html">LegendreP</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ChebyshevT.html">ChebyshevT</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/HermiteH.html">HermiteH</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LaguerreL.html">LaguerreL</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SpheroidalS1.html">SpheroidalS1</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/JacobiSN.html">JacobiSN</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/WeierstrassP.html">WeierstrassP</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Zeta.html">Zeta</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PolyLog.html">PolyLog</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/EllipticTheta.html">EllipticTheta</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Hypergeometric2F1.html">Hypergeometric2F1</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/HypergeometricPFQ.html">HypergeometricPFQ</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MeijerG.html">MeijerG</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AppellF1.html">AppellF1</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/SpecialFunctions.html">…</a></p>
+<h3 id="广义函数-»"><a href="#广义函数-»" class="headerlink" title="广义函数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/GeneralizedFunctions.html">广义函数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DiracDelta.html">DiracDelta</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/HeavisideTheta.html">HeavisideTheta</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DiracComb.html">DiracComb</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/GeneralizedFunctions.html">…</a></p>
+<h3 id="整数函数-»"><a href="#整数函数-»" class="headerlink" title="整数函数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/IntegerFunctions.html">整数函数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Mod.html">Mod</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Quotient.html">Quotient</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Divisible.html">Divisible</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/GCD.html">GCD</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Factorial.html">Factorial</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Factorial.html">!</a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Binomial.html">Binomial</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Fibonacci.html">Fibonacci</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/BernoulliB.html">BernoulliB</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/StirlingS1.html">StirlingS1</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/IntegerDigits.html">IntegerDigits</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DigitCount.html">DigitCount</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/BitAnd.html">BitAnd</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/IntegerFunctions.html">…</a></p>
+<h3 id="数论函数-»"><a href="#数论函数-»" class="headerlink" title="数论函数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/NumberTheoreticFunctions.html">数论函数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FactorInteger.html">FactorInteger</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Prime.html">Prime</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PrimePi.html">PrimePi</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/EulerPhi.html">EulerPhi</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MoebiusMu.html">MoebiusMu</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DivisorSigma.html">DivisorSigma</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/JacobiSymbol.html">JacobiSymbol</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MultiplicativeOrder.html">MultiplicativeOrder</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PartitionsP.html">PartitionsP</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SquaresR.html">SquaresR</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DirichletL.html">DirichletL</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/NumberTheoreticFunctions.html">…</a></p>
+<h3 id="参数统计分布-»"><a href="#参数统计分布-»" class="headerlink" title="参数统计分布 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ParametricStatisticalDistributions.html">参数统计分布 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NormalDistribution.html">NormalDistribution</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ChiSquareDistribution.html">ChiSquareDistribution</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PoissonDistribution.html">PoissonDistribution</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ParametricStatisticalDistributions.html">…</a></p>
+<h3 id="随机数-»"><a href="#随机数-»" class="headerlink" title="随机数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/RandomNumberGeneration.html">随机数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RandomInteger.html">RandomInteger</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RandomReal.html">RandomReal</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RandomChoice.html">RandomChoice</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RandomPrime.html">RandomPrime</a></p>
+<h3 id="信号函数-»"><a href="#信号函数-»" class="headerlink" title="信号函数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/NumericalFunctions.html">信号函数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SquareWave.html">SquareWave</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/TriangleWave.html">TriangleWave</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/UnitBox.html">UnitBox</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/NumericalFunctions.html">…</a></p>
+<h3 id="与分形相关的函数-»"><a href="#与分形相关的函数-»" class="headerlink" title="与分形相关的函数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/IteratedMapsAndFractals.html">与分形相关的函数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MandelbrotSetMemberQ.html">MandelbrotSetMemberQ</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/JuliaSetIterationCount.html">JuliaSetIterationCount</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/CantorStaircase.html">CantorStaircase</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/IteratedMapsAndFractals.html">…</a></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/N.html">N</a> — 任意精度的数值计算</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FunctionExpand.html">FunctionExpand</a> — 展开为简单函数</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FullSimplify.html">FullSimplify</a> — 应用全部的符号化简</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MathematicalFunctionData.html">MathematicalFunctionData</a> — 数学函数的属性和关系</p>
+<h2 id="数据计算和精度"><a href="#数据计算和精度" class="headerlink" title="数据计算和精度"></a>数据计算和精度</h2><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/N.html">N</a> — 任意精度的数值计算</p>
+<h3 id="主要的数值函数"><a href="#主要的数值函数" class="headerlink" title="主要的数值函数"></a>主要的数值函数</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NSolve.html">NSolve</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NDSolve.html">NDSolve</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NIntegrate.html">NIntegrate</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NMinimize.html">NMinimize</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NSum.html">NSum</a></p>
+<h3 id="复数-»-1"><a href="#复数-»-1" class="headerlink" title="复数 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ComplexNumbers.html">复数 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/I.html">I</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/I.html"></a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Abs.html">Abs</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Re.html">Re</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Im.html">Im</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Conjugate.html">Conjugate</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ComplexNumbers.html">…</a></p>
+<h3 id="数字表示-»"><a href="#数字表示-»" class="headerlink" title="数字表示 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/RepresentationOfNumbers.html">数字表示 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/IntegerDigits.html">IntegerDigits</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RealDigits.html">RealDigits</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FromDigits.html">FromDigits</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/IntegerQ.html">IntegerQ</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/RepresentationOfNumbers.html">…</a></p>
+<h3 id="数字显示-»"><a href="#数字显示-»" class="headerlink" title="数字显示 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/DisplayOfNumbers.html">数字显示 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NumberForm.html">NumberForm</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NumberMarks.html">NumberMarks</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/InputForm.html">InputForm</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/CForm.html">CForm</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/DisplayOfNumbers.html">…</a></p>
+<h3 id="精度和准确度控制-»"><a href="#精度和准确度控制-»" class="headerlink" title="精度和准确度控制 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/PrecisionAndAccuracyControl.html">精度和准确度控制 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Precision.html">Precision</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Accuracy.html">Accuracy</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PrecisionGoal.html">PrecisionGoal</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AccuracyGoal.html">AccuracyGoal</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/PrecisionAndAccuracyControl.html">…</a></p>
+<h3 id="算法控制和分析"><a href="#算法控制和分析" class="headerlink" title="算法控制和分析"></a>算法控制和分析</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Method.html">Method</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/StepMonitor.html">StepMonitor</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/EvaluationMonitor.html">EvaluationMonitor</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Norm.html">Norm</a></p>
+<h2 id="矩阵与线性代数"><a href="#矩阵与线性代数" class="headerlink" title="矩阵与线性代数"></a>矩阵与线性代数</h2><h3 id="向量操作-»"><a href="#向量操作-»" class="headerlink" title="向量操作 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/OperationsOnVectors.html">向量操作 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Plus.html">+</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Times.html">*</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Power.html">^</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/OperationsOnVectors.html">…</a> — 自动按元素作用: {<em>a</em>,<em>b</em>}+{<em>c</em>,<em>d</em>}-&gt;{<em>a</em>+<em>c</em>,<em>b</em>+<em>d</em>}</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Dot.html">Dot</a> (<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Dot.html">.</a>) — 标量点积</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Cross.html">Cross</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Norm.html">Norm</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Total.html">Total</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Normalize.html">Normalize</a></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Normalize.html">Normalize</a>[_v_]</p>
+<p>给出向量 <em>v</em> 的归一化格式.</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Normalize.html">Normalize</a>[_z_]</p>
+<p>给出复数 <em>z</em> 的归一化格式.</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Normalize.html">Normalize</a>[<em>expr</em>,_f_]</p>
+<p>相对于norm 函数 <em>f</em> 归一化.</p>
+<p>▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Projection.html">Projection</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Orthogonalize.html">Orthogonalize</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/OperationsOnVectors.html">…</a></p>
+<h3 id="构造矩阵-»"><a href="#构造矩阵-»" class="headerlink" title="构造矩阵 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ConstructingMatrices.html">构造矩阵 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Table.html">Table</a> — 按表达式构建矩阵</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/IdentityMatrix.html">IdentityMatrix</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DiagonalMatrix.html">DiagonalMatrix</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RotationMatrix.html">RotationMatrix</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/HilbertMatrix.html">HilbertMatrix</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ConstructingMatrices.html">…</a></p>
+<h3 id="子矩阵-»"><a href="#子矩阵-»" class="headerlink" title="子矩阵 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/PartsOfMatrices.html">子矩阵 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Part.html">Part</a> — 部分或子矩阵：_m_[[<em>i</em>,_j_]]；用 _m_[[<em>i</em>,_j_]]=<em>x</em> 重新设置</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Dimensions.html">Dimensions</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Take.html">Take</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Drop.html">Drop</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Diagonal.html">Diagonal</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Position.html">Position</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/UpperTriangularize.html">UpperTriangularize</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/PartsOfMatrices.html">…</a></p>
+<h3 id="矩阵运算-»"><a href="#矩阵运算-»" class="headerlink" title="矩阵运算 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixOperations.html">矩阵运算 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Dot.html">Dot</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Dot.html">.</a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Inverse.html">Inverse</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Transpose.html">Transpose</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Det.html">Det</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Tr.html">Tr</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Eigenvalues.html">Eigenvalues</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MatrixExp.html">MatrixExp</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixOperations.html">…</a></p>
+<h3 id="线性系统-»"><a href="#线性系统-»" class="headerlink" title="线性系统 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/LinearSystems.html">线性系统 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LinearSolve.html">LinearSolve</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NullSpace.html">NullSpace</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MatrixRank.html">MatrixRank</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RowReduce.html">RowReduce</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Minors.html">Minors</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/LinearSystems.html">…</a></p>
+<h3 id="基于矩阵的最小化-»"><a href="#基于矩阵的最小化-»" class="headerlink" title="基于矩阵的最小化 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixBasedMinimization.html">基于矩阵的最小化 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LeastSquares.html">LeastSquares</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PseudoInverse.html">PseudoInverse</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Norm.html">Norm</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LinearProgramming.html">LinearProgramming</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixBasedMinimization.html">…</a></p>
+<h3 id="矩阵分解-»"><a href="#矩阵分解-»" class="headerlink" title="矩阵分解 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixDecompositions.html">矩阵分解 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SingularValueDecomposition.html">SingularValueDecomposition</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/QRDecomposition.html">QRDecomposition</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LUDecomposition.html">LUDecomposition</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/CholeskyDecomposition.html">CholeskyDecomposition</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SchurDecomposition.html">SchurDecomposition</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixDecompositions.html">…</a></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PrincipalComponents.html">PrincipalComponents</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/KarhunenLoeveDecomposition.html">KarhunenLoeveDecomposition</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixDecompositions.html">…</a></p>
+<h3 id="矩阵判断-»"><a href="#矩阵判断-»" class="headerlink" title="矩阵判断 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixPredicates.html">矩阵判断 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MatrixQ.html">MatrixQ</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DiagonalMatrixQ.html">DiagonalMatrixQ</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/UpperTriangularMatrixQ.html">UpperTriangularMatrixQ</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SymmetricMatrixQ.html">SymmetricMatrixQ</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PositiveDefiniteMatrixQ.html">PositiveDefiniteMatrixQ</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixPredicates.html">…</a></p>
+<h3 id="随机矩阵-»"><a href="#随机矩阵-»" class="headerlink" title="随机矩阵 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixDistributions.html">随机矩阵 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RandomVariate.html">RandomVariate</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/WishartMatrixDistribution.html">WishartMatrixDistribution</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MatrixPropertyDistribution.html">MatrixPropertyDistribution</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/MatrixDistributions.html">…</a></p>
+<h3 id="显示矩阵"><a href="#显示矩阵" class="headerlink" title="显示矩阵"></a>显示矩阵</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MatrixForm.html">MatrixForm</a> — 二维形式显示矩阵</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MatrixPlot.html">MatrixPlot</a> — 着色元素，可视化一个矩阵</p>
+<h3 id="稀疏数组-»"><a href="#稀疏数组-»" class="headerlink" title="稀疏数组 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/SparseArrays.html">稀疏数组 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SparseArray.html">SparseArray</a> — 从坐标和值方面构建一个稀疏矩阵</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ArrayRules.html">ArrayRules</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Normal.html">Normal</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/CoefficientArrays.html">CoefficientArrays</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/SparseArrays.html">…</a></p>
+<h3 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/format/CSV.html">“CSV”</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/format/HDF.html">“HDF”</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/format/MAT.html">“MAT”</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/format/MTX.html">“MTX”</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/format/HarwellBoeing.html">“HarwellBoeing”</a> ▪ …</p>
+<h2 id="公式处理"><a href="#公式处理" class="headerlink" title="公式处理"></a>公式处理</h2><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Simplify.html">Simplify</a> — 化简，可能带有变量假定</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FullSimplify.html">FullSimplify</a> — 应用完全的化简过程</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FunctionExpand.html">FunctionExpand</a> — 更多初等函数的展开</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Expand.html">Expand</a> — 展开代数表达式</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Factor.html">Factor</a> — 代数表达式的因子</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Reduce.html">Reduce</a> — 化简等式和不等式</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Series.html">Series</a> — 求出一个级数近似值</p>
+<h3 id="提取公式的部分"><a href="#提取公式的部分" class="headerlink" title="提取公式的部分"></a>提取公式的部分</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Coefficient.html">Coefficient</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Exponent.html">Exponent</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Part.html">Part</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Numerator.html">Numerator</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Denominator.html">Denominator</a></p>
+<h3 id="公式整理"><a href="#公式整理" class="headerlink" title="公式整理"></a>公式整理</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Collect.html">Collect</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Together.html">Together</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Apart.html">Apart</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Cancel.html">Cancel</a></p>
+<h3 id="等式变换"><a href="#等式变换" class="headerlink" title="等式变换"></a>等式变换</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AddSides.html">AddSides</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SubtractSides.html">SubtractSides</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MultiplySides.html">MultiplySides</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DivideSides.html">DivideSides</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ApplySides.html">ApplySides</a></p>
+<h3 id="代数转换-»"><a href="#代数转换-»" class="headerlink" title="代数转换 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/AlgebraicTransformations.html">代数转换 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PowerExpand.html">PowerExpand</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ComplexExpand.html">ComplexExpand</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/TrigExpand.html">TrigExpand</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RootReduce.html">RootReduce</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ComplexityFunction.html">ComplexityFunction</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/AlgebraicTransformations.html">…</a></p>
+<h3 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Equal.html">Equal</a>(<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Equal.html">==</a>) ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Element.html">Element</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/PossibleZeroQ.html">PossibleZeroQ</a></p>
+<h3 id="假定说明和域-»"><a href="#假定说明和域-»" class="headerlink" title="假定说明和域 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/AssumptionsAndDomains.html">假定说明和域 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Refine.html">Refine</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Assuming.html">Assuming</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ForAll.html">ForAll</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Integers.html">Integers</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Reals.html">Reals</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/AssumptionsAndDomains.html">…</a></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/TraditionalForm.html">TraditionalForm</a> — 以传统数学符号来显示一个公式</p>
+<h2 id="方程求解"><a href="#方程求解" class="headerlink" title="方程求解"></a>方程求解</h2><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Solve.html">Solve</a> — 求解方程和方程组</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NSolve.html">NSolve</a> — 方程和方程组的数值解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindRoot.html">FindRoot</a> — 给出初值，求出方程的一个数值解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AsymptoticSolve.html">AsymptoticSolve</a> — 渐近逼近代数方程</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DSolve.html">DSolve</a> — 微分、延迟与混合方程的精确解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NDSolve.html">NDSolve</a> — 微分、延迟与混合方程的数值解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ParametricNDSolve.html">ParametricNDSolve</a> — 带有参数的微分方程的数值解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AsymptoticDSolveValue.html">AsymptoticDSolveValue</a> — 微分方程的渐近解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RSolve.html">RSolve</a> — 求递推和函数式方程的解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RecurrenceTable.html">RecurrenceTable</a> — 递推和函数式方程的解答表</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AsymptoticRSolveValue.html">AsymptoticRSolveValue</a> — 递归方程的渐近解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindInstance.html">FindInstance</a> — 求出等式和不等式的特解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Reduce.html">Reduce</a> — 等式和不等式的化简</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LinearSolve.html">LinearSolve</a> — 求解矩阵形式的线性解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FrobeniusSolve.html">FrobeniusSolve</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LyapunovSolve.html">LyapunovSolve</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DiscreteLyapunovSolve.html">DiscreteLyapunovSolve</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RiccatiSolve.html">RiccatiSolve</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DiscreteRiccatiSolve.html">DiscreteRiccatiSolve</a></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ContourPlot.html">ContourPlot</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ContourPlot3D.html">ContourPlot3D</a> — 绘制解的曲线和表面</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RegionPlot.html">RegionPlot</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RegionPlot3D.html">RegionPlot3D</a> — 绘制满足不等式的区域</p>
+<h2 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h2><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/D.html">D</a> (<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/D.html">∂</a>) — 标量函数或向量函数的偏导数</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Dt.html">Dt</a> — 全导数</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Integrate.html">Integrate</a> (<a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Integrate.html">∫</a>) — 一重或多重的符号积分</p>
+<h3 id="向量微积分-»"><a href="#向量微积分-»" class="headerlink" title="向量微积分 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/VectorAnalysis.html">向量微积分 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Grad.html">Grad</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Div.html">Div</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Curl.html">Curl</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Laplacian.html">Laplacian</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/VectorAnalysis.html">…</a></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/CoordinateChartData.html">CoordinateChartData</a> — 曲线坐标中的计算</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Series.html">Series</a> — 幂级数和渐近展开 <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/SeriesExpansions.html">»</a></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Limit.html">Limit</a> — 有向和无向极限，单变量和多变量</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MinLimit.html">MinLimit</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MaxLimit.html">MaxLimit</a> — 下限和上限</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DSolve.html">DSolve</a> — 微分方程的符号解</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Minimize.html">Minimize</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Maximize.html">Maximize</a> — 符号最优化</p>
+<h3 id="离散微积分-»"><a href="#离散微积分-»" class="headerlink" title="离散微积分 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/DiscreteCalculus.html">离散微积分 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Sum.html">Sum</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Product.html">Product</a> — 符号之和与乘积</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DifferenceQuotient.html">DifferenceQuotient</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DifferenceDelta.html">DifferenceDelta</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DiscreteLimit.html">DiscreteLimit</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RSolve.html">RSolve</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/DiscreteCalculus.html">…</a></p>
+<h3 id="数值计算和精度»"><a href="#数值计算和精度»" class="headerlink" title="数值计算和精度»"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/NumericalEvaluationAndPrecision.html">数值计算和精度»</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NIntegrate.html">NIntegrate</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NDSolve.html">NDSolve</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NMinimize.html">NMinimize</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NSum.html">NSum</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/NumericalEvaluationAndPrecision.html">…</a></p>
+<h3 id="渐进微积分-»"><a href="#渐进微积分-»" class="headerlink" title="渐进微积分 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/Asymptotics.html">渐进微积分 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AsymptoticIntegrate.html">AsymptoticIntegrate</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AsymptoticDSolveValue.html">AsymptoticDSolveValue</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AsymptoticSum.html">AsymptoticSum</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/AsymptoticRSolveValue.html">AsymptoticRSolveValue</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/Asymptotics.html">…</a></p>
+<h3 id="积分变换»"><a href="#积分变换»" class="headerlink" title="积分变换»"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/IntegralTransforms.html">积分变换»</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LaplaceTransform.html">LaplaceTransform</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FourierTransform.html">FourierTransform</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Convolve.html">Convolve</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DiracDelta.html">DiracDelta</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/IntegralTransforms.html">…</a></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Normalize.html">Normalize</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Orthogonalize.html">Orthogonalize</a> — 函数的规范化、正交化</p>
+<h3 id="函数属性"><a href="#函数属性" class="headerlink" title="函数属性"></a>函数属性</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FunctionRange.html">FunctionRange</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FunctionDomain.html">FunctionDomain</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FunctionPeriod.html">FunctionPeriod</a></p>
+<h3 id="微积分与几何-»"><a href="#微积分与几何-»" class="headerlink" title="微积分与几何 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/GeometricComputation.html">微积分与几何 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ArcLength.html">ArcLength</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Area.html">Area</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Volume.html">Volume</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RegionDistance.html">RegionDistance</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/GeometricComputation.html">…</a></p>
+<h3 id="微分算子-»"><a href="#微分算子-»" class="headerlink" title="微分算子 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/DifferentialOperators.html">微分算子 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Derivative.html">Derivative</a> — 符号和数值导数函数</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/DifferentialRoot.html">DifferentialRoot</a> — 线性微分方程数值解的普通表达式</p>
+<h2 id="最优化"><a href="#最优化" class="headerlink" title="最优化"></a>最优化</h2><h3 id="数值最优化"><a href="#数值最优化" class="headerlink" title="数值最优化"></a>数值最优化</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NMinimize.html">NMinimize</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NMaximize.html">NMaximize</a> — 全局的非线性约束最优化</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindMinimum.html">FindMinimum</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindMaximum.html">FindMaximum</a> — 局部无约束或约束的最优化</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindFit.html">FindFit</a> — 最优化的非线性的无约束或约束的数据拟合</p>
+<h3 id="符号最优化"><a href="#符号最优化" class="headerlink" title="符号最优化"></a>符号最优化</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Minimize.html">Minimize</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Maximize.html">Maximize</a> — 符号的全局最优化</p>
+<h3 id="极限值和位置"><a href="#极限值和位置" class="headerlink" title="极限值和位置"></a>极限值和位置</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MinValue.html">MinValue</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MaxValue.html">MaxValue</a> — 最小、最大数值</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NMinValue.html">NMinValue</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NMaxValue.html">NMaxValue</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindMinValue.html">FindMinValue</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindMaxValue.html">FindMaxValue</a></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ArgMin.html">ArgMin</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ArgMax.html">ArgMax</a> — 最小值、最大值的位置</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NArgMin.html">NArgMin</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NArgMax.html">NArgMax</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindArgMin.html">FindArgMin</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindArgMax.html">FindArgMax</a></p>
+<h3 id="矩阵形式"><a href="#矩阵形式" class="headerlink" title="矩阵形式"></a>矩阵形式</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LinearProgramming.html">LinearProgramming</a> — 矩阵形式的实数和整数线性规划</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LeastSquares.html">LeastSquares</a> — 矩阵形式的最小二乘问题</p>
+<h3 id="凸优化-»"><a href="#凸优化-»" class="headerlink" title="凸优化 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/ConvexOptimization.html">凸优化 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LinearOptimization.html">LinearOptimization</a> — 最小 <img src="https://reference.wolfram.com/language/guide/Files/Optimization.zh/1.png" alt="img"></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/LinearFractionalOptimization.html">LinearFractionalOptimization</a> — 最小 <img src="https://reference.wolfram.com/language/guide/Files/Optimization.zh/2.png" alt="img"></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/QuadraticOptimization.html">QuadraticOptimization</a> — 最小 <img src="https://reference.wolfram.com/language/guide/Files/Optimization.zh/3.png" alt="img"></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SecondOrderConeOptimization.html">SecondOrderConeOptimization</a> — 最小 <img src="https://reference.wolfram.com/language/guide/Files/Optimization.zh/4.png" alt="img"></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SemidefiniteOptimization.html">SemidefiniteOptimization</a> — 最小 <img src="https://reference.wolfram.com/language/guide/Files/Optimization.zh/5.png" alt="img"></p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ConicOptimization.html">ConicOptimization</a> — 最小 <img src="https://reference.wolfram.com/language/guide/Files/Optimization.zh/6.png" alt="img"></p>
+<h3 id="组合最优化-»"><a href="#组合最优化-»" class="headerlink" title="组合最优化 »"></a><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/guide/DiscreteMathematics.html">组合最优化 »</a></h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindShortestTour.html">FindShortestTour</a> — 求解一个旅行销售商问题</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/Minimize.html">Minimize</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindMinimum.html">FindMinimum</a> — 求解整数规划问题</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ArgMin.html">ArgMin</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/MinValue.html">MinValue</a>, … — 最小值的位置和数值</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/KnapsackSolve.html">KnapsackSolve</a> — 求解有界、无界和 0–1 背包问题</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FrobeniusSolve.html">FrobeniusSolve</a> — 混合基数约束满足（如：换硬币）问题</p>
+<h3 id="广义优化"><a href="#广义优化" class="headerlink" title="广义优化"></a>广义优化</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/BayesianMinimization.html">BayesianMinimization</a> — 数字、文字、图像、…… 函数的基于模型的最小化</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/BayesianMinimizationObject.html">BayesianMinimizationObject</a> — 基于模型的最小化结果的表示</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/BayesianMaximization.html">BayesianMaximization</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/BayesianMaximizationObject.html">BayesianMaximizationObject</a></p>
+<h3 id="不等式可视化"><a href="#不等式可视化" class="headerlink" title="不等式可视化"></a>不等式可视化</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RegionPlot.html">RegionPlot</a>, <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/RegionPlot3D.html">RegionPlot3D</a> — 绘制满足不等式的区域</p>
+<h3 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h3><p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/NetTrain.html">NetTrain</a> — 用指定的损失函数培训神经网络</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/SpherePoints.html">SpherePoints</a> — 球面上相等的间隔点</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/EstimatedDistribution.html">EstimatedDistribution</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/EstimatedProcess.html">EstimatedProcess</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindFormula.html">FindFormula</a> ▪ …</p>
+<p><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/FindGeometricTransform.html">FindGeometricTransform</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/ImageAlign.html">ImageAlign</a> ▪ <a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/GuidedFilter.html">GuidedFilter</a> ▪ …</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2020/08/05/mathematica-fu-hao-yu-shu-zhi-ji-suan-ming-ling-da-quan/">http://example.com/2020/08/05/mathematica-fu-hao-yu-shu-zhi-ji-suan-ming-ling-da-quan/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">John Doe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Mathematica/">
+                                    <span class="chip bg-color">Mathematica</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/08/05/0805-mei-ri-yi-ti-da-jia-jie-she/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="0805每日一题：打家劫舍">
+                        
+                        <span class="card-title">0805每日一题：打家劫舍</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%88%B7%E9%A2%98/" class="post-category">
+                                    刷题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/08/05/225/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Untitled Post - 17">
+                        
+                        <span class="card-title">Untitled Post - 17</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/uncategorized/" class="post-category">
+                                    uncategorized
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
