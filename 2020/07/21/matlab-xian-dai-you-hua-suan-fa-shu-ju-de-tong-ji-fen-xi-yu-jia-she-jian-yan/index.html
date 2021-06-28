@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Matlab_现代优化算法、数据的统计分析与假设检验, jiojio">
+    <meta name="keywords" content="Matlab_现代优化算法、数据的统计分析与假设检验, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Matlab_现代优化算法、数据的统计分析与假设检验 | Hexo</title>
+    <title>Matlab_现代优化算法、数据的统计分析与假设检验 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -488,6 +488,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -511,20 +514,28 @@
 <h3 id="禁忌搜索算法"><a href="#禁忌搜索算法" class="headerlink" title="禁忌搜索算法"></a>禁忌搜索算法</h3><p>禁忌搜索算法是组合优化算法的一种，是局部搜索算法的扩展。禁忌搜索算法是人工智能在组合优化算法中的一个成功应用。禁忌搜索算法的特点是采用了禁忌技术。所谓禁忌就是禁止重复前面的工作。禁忌搜索算法用一个禁忌表记录下已经到达过的局部最优点，在下一次搜索中，利用禁忌表中的信息不再或有选择地搜索这些点。</p>
 <p>禁忌搜索算法实现的技术问题是算法的关键。禁忌搜索算法涉及侯选集合、禁忌对象、评价函数、特赦规则、记忆频率信息等概念。</p>
 <p>比较难以实现，美赛一般不会考到</p>
-<h2 id="数据的统计描述和分析"><a href="#数据的统计描述和分析" class="headerlink" title="数据的统计描述和分析"></a>数据的统计描述和分析</h2><h3 id="导入数据"><a href="#导入数据" class="headerlink" title="导入数据"></a>导入数据</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load shuju.txt</span><br></pre></td></tr></table></figure>
+<h2 id="数据的统计描述和分析"><a href="#数据的统计描述和分析" class="headerlink" title="数据的统计描述和分析"></a>数据的统计描述和分析</h2><h3 id="导入数据"><a href="#导入数据" class="headerlink" title="导入数据"></a>导入数据</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">load shuju<span class="token punctuation">.</span>txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="统计中几个重要的概率分布"><a href="#统计中几个重要的概率分布" class="headerlink" title="统计中几个重要的概率分布"></a>统计中几个重要的概率分布</h3><h4 id="分布函数、密度函数和分位数"><a href="#分布函数、密度函数和分位数" class="headerlink" title="分布函数、密度函数和分位数"></a>分布函数、密度函数和分位数</h4><p><img src="https://lanyun1103.oss-cn-beijing.aliyuncs.com/typora/20200721193448.png" alt="image-20200721193448237"></p>
 <h3 id="matlab统计工具箱中的概率分布"><a href="#matlab统计工具箱中的概率分布" class="headerlink" title="matlab统计工具箱中的概率分布"></a>matlab统计工具箱中的概率分布</h3><p>Matlab 统计工具箱中有 27 种概率分布，这里只对上面所述 4 种分布列出命令的字符：</p>
 <p>norm 正态分布； chi2 2 <em>χ</em> 分布；</p>
 <p>t <em>t</em> 分布 f <em>F</em> 分布</p>
 <p>工具箱对每一种分布都提供 5 类函数，其命令的字符是：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pdf 概率密度； cdf 分布函数； inv 分布函数的反函数；</span><br><span class="line"></span><br><span class="line">stat 均值与方差； rnd 随机数生成</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">pdf 概率密度； cdf 分布函数； inv 分布函数的反函数；
+
+stat 均值与方差； rnd 随机数生成<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>当需要一种分布的某一类函数时，将以上所列的分布命令字符与函数命令字符接起来，并输入自变量（可以是标量、数组或矩阵）和参数就行了，如：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">p=normpdf(x,mu,sigma) 均值 mu、标准差 sigma 的正态分布在 *x* 的密度函数(mu=<span class="number">0</span>，sigma=<span class="number">1</span> 时可缺省)。</span><br><span class="line"></span><br><span class="line">p=tcdf(x,n)     *t* 分布（自由度 n）在 x 的分布函数。</span><br><span class="line"></span><br><span class="line">x=chi2inv(p,n)  *χ<span class="number">2</span>* 分布（自由度 n）使分布函数 F(x)=p 的 x(即 p 分位数)。</span><br><span class="line"></span><br><span class="line">[m,v]=fstat(n1,n2)   *F* 分布（自由度 n1,n2）的均值 m 和方差 v。</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">p<span class="token operator">=</span><span class="token function">normpdf</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>mu<span class="token punctuation">,</span>sigma<span class="token punctuation">)</span> 均值 mu、标准差 sigma 的正态分布在 <span class="token operator">*</span>x<span class="token operator">*</span> 的密度函数<span class="token punctuation">(</span>mu<span class="token operator">=</span><span class="token number">0</span>，sigma<span class="token operator">=</span><span class="token number">1</span> 时可缺省<span class="token punctuation">)</span>。
+
+p<span class="token operator">=</span><span class="token function">tcdf</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>n<span class="token punctuation">)</span>     <span class="token operator">*</span>t<span class="token operator">*</span> 分布（自由度 n）在 x 的分布函数。
+
+x<span class="token operator">=</span><span class="token function">chi2inv</span><span class="token punctuation">(</span>p<span class="token punctuation">,</span>n<span class="token punctuation">)</span>  <span class="token operator">*</span>χ<span class="token number">2</span><span class="token operator">*</span> 分布（自由度 n）使分布函数 <span class="token function">F</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token operator">=</span>p 的 <span class="token function">x</span><span class="token punctuation">(</span>即 p 分位数<span class="token punctuation">)</span>。
+
+<span class="token punctuation">[</span>m<span class="token punctuation">,</span>v<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">fstat</span><span class="token punctuation">(</span>n1<span class="token punctuation">,</span>n2<span class="token punctuation">)</span>   <span class="token operator">*</span>F<span class="token operator">*</span> 分布（自由度 n1<span class="token punctuation">,</span>n2）的均值 m 和方差 v。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="参数估计的matlab实现"><a href="#参数估计的matlab实现" class="headerlink" title="参数估计的matlab实现"></a>参数估计的matlab实现</h3><p>Matlab 统计工具箱中，有专门计算总体均值、标准差的点估计和区间估计的函数。对于正态总体，命令是</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[mu,sigma,muci,sigmaci]=normfit(x,alpha) </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token punctuation">[</span>mu<span class="token punctuation">,</span>sigma<span class="token punctuation">,</span>muci<span class="token punctuation">,</span>sigmaci<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">normfit</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>alpha<span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>其中 x 为样本（数组或矩阵），alpha 为显著性水平_α_ （alpha 缺省时设定为 0.05），返回总体均值 <em>μ</em> 和标准差_σ_ 的点估计 mu 和 sigma，及总体均值 <em>μ</em> 和标准差_σ_ 的区间估计muci 和 sigmaci。当 x 为矩阵时，x 的每一列作为一个样本。</p>
 <p>Matlab 统计工具箱中还提供了一些具有特定分布总体的区间估计的命令，如expfit，poissfit，gamfit，你可以从这些字头猜出它们用于哪个分布，具体用法参见帮助系统</p>
@@ -532,14 +543,14 @@
 <p><img src="https://lanyun1103.oss-cn-beijing.aliyuncs.com/typora/20200721194118.png" alt="image-20200721194118148"></p>
 <h4 id="1-Z检验"><a href="#1-Z检验" class="headerlink" title="1.Z检验"></a>1.Z检验</h4><p><img src="https://lanyun1103.oss-cn-beijing.aliyuncs.com/typora/20200721194131.png" alt="image-20200721194131510"></p>
 <p>在 Matlab 中 <em>Z</em> 检验法由函数 ztest 来实现，命令为</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[h,p,ci]=ztest(x,mu,sigma,alpha,tail) </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token punctuation">[</span>h<span class="token punctuation">,</span>p<span class="token punctuation">,</span>ci<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">ztest</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>mu<span class="token punctuation">,</span>sigma<span class="token punctuation">,</span>alpha<span class="token punctuation">,</span>tail<span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="2-t检验"><a href="#2-t检验" class="headerlink" title="2.t检验"></a>2.t检验</h4><p><img src="https://lanyun1103.oss-cn-beijing.aliyuncs.com/typora/20200721194239.png" alt="image-20200721194239869"></p>
 <p>在 Matlab 中_t_ 检验法由函数 ttest 来实现，命令为</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[h,p,ci]=ttest(x,mu,alpha,tail) </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token punctuation">[</span>h<span class="token punctuation">,</span>p<span class="token punctuation">,</span>ci<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">ttest</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>mu<span class="token punctuation">,</span>alpha<span class="token punctuation">,</span>tail<span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="3-两个正态总体均值差的检验"><a href="#3-两个正态总体均值差的检验" class="headerlink" title="3.两个正态总体均值差的检验"></a>3.两个正态总体均值差的检验</h4><p>还可以用_t_ 检验法检验具有相同方差的 2 个正态总体均值差的假设。在 Matlab 中由函数 ttest2 实现，命令为：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[h,p,ci]=ttest2(x,y,alpha,tail) </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token punctuation">[</span>h<span class="token punctuation">,</span>p<span class="token punctuation">,</span>ci<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">ttest2</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>alpha<span class="token punctuation">,</span>tail<span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -626,132 +637,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -806,7 +691,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Matlab_排队论模型">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Matlab_排队论模型">
                         
                         <span class="card-title">Matlab_排队论模型</span>
                     </div>
@@ -855,7 +740,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="7月21日_不同的二叉搜索树">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="7月21日_不同的二叉搜索树">
                         
                         <span class="card-title">7月21日_不同的二叉搜索树</span>
                     </div>
@@ -899,6 +784,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1024,7 +946,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1037,7 +959,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1058,6 +980,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

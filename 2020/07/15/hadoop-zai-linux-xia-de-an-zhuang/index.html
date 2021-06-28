@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hadoop在Linux下的安装（Centos）, jiojio">
+    <meta name="keywords" content="Hadoop在Linux下的安装（Centos）, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hadoop在Linux下的安装（Centos） | Hexo</title>
+    <title>Hadoop在Linux下的安装（Centos） | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -473,7 +473,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -487,6 +487,9 @@
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
         
@@ -503,49 +506,93 @@
 <h2 id="固定IP："><a href="#固定IP：" class="headerlink" title="固定IP："></a>固定IP：</h2><h3 id="1-打开vmware的虚拟网络编辑器设置"><a href="#1-打开vmware的虚拟网络编辑器设置" class="headerlink" title="1.打开vmware的虚拟网络编辑器设置"></a>1.打开vmware的虚拟网络编辑器设置</h3><p><img src="http://pict.lanyun1103.top/typora/20200924132551.png?x-oss-process=image/auto-orient,1/interlace,1/resize,p_75/quality,q_70/sharpen,100/watermark,text_QGxhbnl1bjExMDMudG9w,color_ffaa0b,size_10,g_se,x_10,y_10" alt="image-20200924132550932"></p>
 <h3 id="2-打开电脑的虚拟网卡配置"><a href="#2-打开电脑的虚拟网卡配置" class="headerlink" title="2.打开电脑的虚拟网卡配置"></a>2.打开电脑的虚拟网卡配置</h3><p><img src="http://pict.lanyun1103.top/typora/20200924132857.png?x-oss-process=image/auto-orient,1/interlace,1/resize,p_75/quality,q_70/sharpen,100/watermark,text_QGxhbnl1bjExMDMudG9w,color_ffaa0b,size_10,g_se,x_10,y_10" alt="image-20200924132857463"></p>
 <h3 id="3-设置linux内网卡静态配置"><a href="#3-设置linux内网卡静态配置" class="headerlink" title="3.设置linux内网卡静态配置"></a>3.设置linux内网卡静态配置</h3><p><img src="http://pict.lanyun1103.top/typora/20200924170123.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,text_QGxhbnl1bjExMDMudG9w,color_ebff09,size_10,g_ne,x_10,y_10" alt="image-20200924170123843"></p>
-<h3 id="4-以上完成后"><a href="#4-以上完成后" class="headerlink" title="4.以上完成后"></a>4.以上完成后</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service network restart</span><br><span class="line">ip addr //查看当前的ip</span><br><span class="line">ping www.baidu.com //测试是否成功</span><br></pre></td></tr></table></figure>
+<h3 id="4-以上完成后"><a href="#4-以上完成后" class="headerlink" title="4.以上完成后"></a>4.以上完成后</h3><pre class="line-numbers language-none"><code class="language-none">service network restart
+ip addr &#x2F;&#x2F;查看当前的ip
+ping www.baidu.com &#x2F;&#x2F;测试是否成功<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>这里如果不能联网，很大可能是网关设置错误，网关的概念可以在百度查询，我调了很久终于是可以联网了</p>
 <p><img src="http://pict.lanyun1103.top/typora/20200924184413.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,text_QGxhbnl1bjExMDMudG9w,color_ebff09,size_10,g_ne,x_10,y_10" alt="image-20200924184413493"></p>
 <h2 id="安装hadoop："><a href="#安装hadoop：" class="headerlink" title="安装hadoop："></a>安装hadoop：</h2><h3 id="一、配置主机名"><a href="#一、配置主机名" class="headerlink" title="一、配置主机名"></a>一、配置主机名</h3><p>这个很重要，我看的每个教程里面都没有说</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#查看当前主机名</span><br><span class="line"><span class="built_in">hostname</span></span><br><span class="line">#修改主机名</span><br><span class="line">hostnamectl <span class="keyword">set</span>-<span class="built_in">hostname</span> [想起的主机名]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim">#查看当前主机名
+hostname
+#修改主机名
+hostnamectl <span class="token keyword">set</span><span class="token operator">-</span>hostname <span class="token punctuation">[</span>想起的主机名<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>设置完成后重启并登陆，这时候就应该不是localhost.localhostdomain这个默认主机名了</p>
 <p>在很多教程中还提到可以设置其他几个内网ip关系映射，例如</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">192.168.0.104 slave1</span><br><span class="line">192.168.0.105 slave2</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">192.168.0.104 slave1
+192.168.0.105 slave2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>这个在下面会说到怎么修改hosts文件中ip映射关系来省略输入ip地址。</p>
 <h3 id="二、安装JDK"><a href="#二、安装JDK" class="headerlink" title="二、安装JDK"></a>二、安装JDK</h3><p>推荐使用wget下载国内镜像，这边给一个华为的1.8.192版本的javalinux镜像</p>
 <p><a target="_blank" rel="noopener" href="https://repo.huaweicloud.com/java/jdk/8u192-b12/jdk-8u192-linux-x64.tar.gz">https://repo.huaweicloud.com/java/jdk/8u192-b12/jdk-8u192-linux-x64.tar.gz</a></p>
-<h4 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#先消除404错误</span><br><span class="line">yum clean all</span><br><span class="line">rpm --rebuilddb</span><br><span class="line"></span><br><span class="line">#如果报错可以下载以下包</span><br><span class="line">yum install which</span><br><span class="line">yum -y install openssh-clients</span><br><span class="line">yum install tar</span><br><span class="line">yum install wget</span><br></pre></td></tr></table></figure>
+<h4 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h4><pre class="line-numbers language-none"><code class="language-none">#先消除404错误
+yum clean all
+rpm --rebuilddb
 
-<h4 id="检查jdk"><a href="#检查jdk" class="headerlink" title="检查jdk"></a>检查jdk</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br><span class="line"></span><br><span class="line">#检查系统内jdk版本号</span><br><span class="line">rpm -qagrep jdk</span><br><span class="line">#卸载jdk</span><br><span class="line">rpm -e nodeps java******</span><br></pre></td></tr></table></figure>
+#如果报错可以下载以下包
+yum install which
+yum -y install openssh-clients
+yum install tar
+yum install wget<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="检查jdk"><a href="#检查jdk" class="headerlink" title="检查jdk"></a>检查jdk</h4><pre class="line-numbers language-none"><code class="language-none">java -version
+
+#检查系统内jdk版本号
+rpm -qagrep jdk
+#卸载jdk
+rpm -e nodeps java******<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="下载jdk"><a href="#下载jdk" class="headerlink" title="下载jdk"></a>下载jdk</h4><p>推荐到根目录的opt目录中下载</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /opt</span><br><span class="line">wget [填写上面的镜像]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cd &#x2F;opt
+wget [填写上面的镜像]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>下载完成后解压并改名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk******.tar.gz</span><br><span class="line">mv java1.8.0_openjdk jdk</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">tar -zxvf jdk******.tar.gz
+mv java1.8.0_openjdk jdk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line">#在最后添加</span><br><span class="line">export JAVA_HOME=/opt/jdk</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br></pre></td></tr></table></figure>
+<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><pre class="line-numbers language-none"><code class="language-none">vi &#x2F;etc&#x2F;profile
+#在最后添加
+export JAVA_HOME&#x3D;&#x2F;opt&#x2F;jdk
+export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>添加完成后Ecs :wq保存并退出</p>
 <p>source /etc/profile 使文件生效</p>
 <p>java -version查看是否设置成功</p>
 <h3 id="三、配置免密互相ssh"><a href="#三、配置免密互相ssh" class="headerlink" title="三、配置免密互相ssh"></a>三、配置免密互相ssh</h3><h4 id="1-统一hosts"><a href="#1-统一hosts" class="headerlink" title="1.统一hosts"></a>1.统一hosts</h4><p>首先在几个服务器之间创建统一的hosts映射,例如以下，这一步和上面的配置主机名差不多</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">192.168.177.61 host1</span><br><span class="line">192.168.177.62 host2</span><br><span class="line">192.168.177.63 host3</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">192.168.177.61 host1
+192.168.177.62 host2
+192.168.177.63 host3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>在host1服务器中（192.168.177.62）创建hosts，发送给第二个服务器（hosts2），这时候还不能用hosts2，必须用ip地址，默认会替换第二个服务器中的hosts文件，如此重复，hosts2再发给hosts3</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo scp /etc/hosts 192.168.177.62:/etc/hosts</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sudo scp &#x2F;etc&#x2F;hosts 192.168.177.62:&#x2F;etc&#x2F;hosts<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="http://pict.lanyun1103.top/typora/20200924201459.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,text_QGxhbnl1bjExMDMudG9w,color_ebff09,size_10,g_ne,x_10,y_10" alt="image-20200924201459046"></p>
-<h4 id="2-以下创建私钥"><a href="#2-以下创建私钥" class="headerlink" title="2.以下创建私钥"></a>2.以下创建私钥</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line">#连续回车，不要输入东西（如果是提示是否overwrite输入y）</span><br><span class="line">#如此之后可以在家目录下的.ssh文件夹中查看私钥</span><br><span class="line"></span><br><span class="line">#把私钥发给其他服务器用来免密登陆</span><br><span class="line">ssh-copy-id [主机名]</span><br><span class="line">#验证是否可以使用</span><br><span class="line">ssh [主机名]</span><br></pre></td></tr></table></figure>
+<h4 id="2-以下创建私钥"><a href="#2-以下创建私钥" class="headerlink" title="2.以下创建私钥"></a>2.以下创建私钥</h4><pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa
+#连续回车，不要输入东西（如果是提示是否overwrite输入y）
+#如此之后可以在家目录下的.ssh文件夹中查看私钥
+
+#把私钥发给其他服务器用来免密登陆
+ssh-copy-id [主机名]
+#验证是否可以使用
+ssh [主机名]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>配置成功就会和以下一样，可以在两个服务器之间来回切换</p>
 <p><img src="http://pict.lanyun1103.top/typora/20200924201938.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,text_QGxhbnl1bjExMDMudG9w,color_ebff09,size_10,g_ne,x_10,y_10" alt="image-20200924201938938"></p>
-<h3 id="四、安装hadoop"><a href="#四、安装hadoop" class="headerlink" title="四、安装hadoop"></a>四、安装hadoop</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /opt</span><br><span class="line">wget http://mirror.bit.edu.cn/apache/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz</span><br><span class="line">#下载完成后进行解压</span><br><span class="line">tar -zxvf hadoop-2.7.7.tar.gz</span><br><span class="line">#解压完成改名字</span><br><span class="line">mv hadoop-2.7.7.tar.gz hadoop</span><br></pre></td></tr></table></figure>
+<h3 id="四、安装hadoop"><a href="#四、安装hadoop" class="headerlink" title="四、安装hadoop"></a>四、安装hadoop</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><pre class="line-numbers language-none"><code class="language-none">cd &#x2F;opt
+wget http:&#x2F;&#x2F;mirror.bit.edu.cn&#x2F;apache&#x2F;hadoop&#x2F;common&#x2F;hadoop-2.7.7&#x2F;hadoop-2.7.7.tar.gz
+#下载完成后进行解压
+tar -zxvf hadoop-2.7.7.tar.gz
+#解压完成改名字
+mv hadoop-2.7.7.tar.gz hadoop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/opt/hadoop</span><br><span class="line">#将export PATH改成下面的形式，记住中间一定是冒号</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin</span><br><span class="line">#完成后wq退出</span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<h4 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h4><pre class="line-numbers language-none"><code class="language-none">vi &#x2F;etc&#x2F;profile
+
+export HADOOP_HOME&#x3D;&#x2F;opt&#x2F;hadoop
+#将export PATH改成下面的形式，记住中间一定是冒号
+export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin:$HADOOP_HOME&#x2F;bin
+#完成后wq退出
+source &#x2F;etc&#x2F;profile<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>1）配置hadoop-env.sh</p>
 <p>#vi hadoop-env.sh进入文件，按i编辑， 最下面添加如下信息 将export JAVA_HOME=${JAVA_HOME} 改成： export JAVA_HOME=/opt/jdk</p>
@@ -553,18 +600,44 @@
 <p>2）配置core-site.xml （编辑保存方式同hadoop-env.sh）</p>
 <p>#vi core-site.xml 在与标签中间添加如下配置：</p>
 <p>其中，hdfs://master:9000需要注意master是否跟你的主机名一致</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://master:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>/usr/hadoop/tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>fs.defaultFS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>hdfs://master:9000<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>hadoop.tmp.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>/usr/hadoop/tmp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>3）配置hdfs-site.xml（编辑保存方式同hadoop-env.sh）</p>
 <p>#vi hdfs-site.xml 在与标签中间添加如下配置：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>dfs.replication<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>4）配置mapred-site.xml （编辑保存方式同hadoop-env.sh） 添加如下配置：</p>
 <p>这里需要注意下，文件夹里面没有这个XML，需要将mapred-site.xml.template这个文件复制，然后重命名为mapred-site.xml。</p>
 <p>#cp mapred-site.xml.template mapred-site.xml</p>
 <p>#vi mapred-site.xml</p>
 <p>然后在mapred-site.xml中与标签中间，添加如下内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>mapreduce.framework.name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>yarn<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>5）配置yarn-site.xml（编辑保存方式同hadoop-env.sh）</p>
 <p>master中的master是主机名，改成与自己的主机名相同 \#hostname // 查看主机名 \#vi yarn-site.xml 在与中间添加如下配置： ```xml <property> <name>yarn.resourcemanager.hostname</name> <value>master</value> </property> <property> <name>yarn.nodemanager.aux-services</name> <value>mapreduce_shuffle</value> </property> ``` 6) #vi slaves //将里面的内容删除掉，然后改成自己的主机名 ## 运行与关闭： 1）格式化HDFS文件系统 在初次安装和使用Hadoop之前，需要格式化分布式文件系统HDFS。使用如下命令进行格式化分布式文件系统： \# cd //进入/root目录 \# hdfs namenode -format //执行这条命令。使hdfs格式化 **注意：格式化在安装hadoop时只能执行一次。** 2）启动NameNode 和 DataNode 守护进程 \#cd /opt/hadoop/sbin //进入hadoop的sbin目录 \#./start-dfs.sh //启动hadoop,第一次启动需要输入yes 3）启动ResourceManager 和 NodeManager 守护进程 \# ./start-yarn.sh 4）hadoop验证 执行jps命令，有如下进程，说明Hadoop正常启动 ```xml NameNode DataNode Jps NodeManager ResourceManager SecondaryNameNode ``` 测试hadoop ``` hdfs dfs -mkdir -p /user //在hdfs中创建user目录 hdfs dfs -ls / //查看是否有user目录 hdfs dfs -mkdir -p /user/test //在user目录下创建test目录 hdfs dfs -ls /user //查看在/user是否有test ``` 如果创建目录并且可以查找到目录，则hadoop部署完成。 5）如果想停止Hadoop守护进程。 最后要停止Hadoop守护进程，命令如下： \#cd /opt/hadoop/sbin //进入hadoop的sbin目录下 \#./stop-all.sh //停止进程 ### 在浏览器中访问 管理界面：<a target="_blank" rel="noopener" href="http://lanyun1:8088/">http://lanyun1:8088</a> NameNode：<a target="_blank" rel="noopener" href="http://lanyun1:50070/">http://lanyun1:50070</a> HDFS:<a target="_blank" rel="noopener" href="http://lanyun1:8042/">http://lanyun1:8042</a> 如果你的linux没有图形界面，可以到百度搜索如何安装相应版本的图形界面</p>
@@ -655,132 +728,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -835,7 +782,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="神经网络概述——前馈和反向转播">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="神经网络概述——前馈和反向转播">
                         
                         <span class="card-title">神经网络概述——前馈和反向转播</span>
                     </div>
@@ -876,7 +823,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="MATLAB_特征值与特征向量、稀疏矩阵">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MATLAB_特征值与特征向量、稀疏矩阵">
                         
                         <span class="card-title">MATLAB_特征值与特征向量、稀疏矩阵</span>
                     </div>
@@ -920,6 +867,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1045,7 +1029,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1058,7 +1042,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1079,6 +1063,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="R语言基础功能, jiojio">
+    <meta name="keywords" content="R语言基础功能, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>R语言基础功能 | Hexo</title>
+    <title>R语言基础功能 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -466,7 +466,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    510
+                    538
                 </div>
                 
 
@@ -488,38 +488,117 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="R语言基础功能"><a href="#R语言基础功能" class="headerlink" title="R语言基础功能"></a>R语言基础功能</h1><h2 id="0-安装R包以及查看如何使用"><a href="#0-安装R包以及查看如何使用" class="headerlink" title="0.安装R包以及查看如何使用"></a>0.安装R包以及查看如何使用</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">install.package(<span class="string">&quot;package_name&quot;</span>)</span><br><span class="line"></span><br><span class="line">?package_name</span><br></pre></td></tr></table></figure>
+                <h1 id="R语言基础功能"><a href="#R语言基础功能" class="headerlink" title="R语言基础功能"></a>R语言基础功能</h1><h2 id="0-安装R包以及查看如何使用"><a href="#0-安装R包以及查看如何使用" class="headerlink" title="0.安装R包以及查看如何使用"></a>0.安装R包以及查看如何使用</h2><pre class="line-numbers language-R" data-language="R"><code class="language-R">install.package(&quot;package_name&quot;)
 
-<h2 id="1-数据集、向量、矩阵和数组"><a href="#1-数据集、向量、矩阵和数组" class="headerlink" title="1.数据集、向量、矩阵和数组"></a>1.数据集、向量、矩阵和数组</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">向量</span><br><span class="line">x &lt;- <span class="built_in">c</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">矩阵</span><br><span class="line">newMatrix &lt;- matrix(<span class="number">1</span>:<span class="number">20</span>,nrow = <span class="number">4</span>);</span><br><span class="line">     [,<span class="number">1</span>] [,<span class="number">2</span>] [,<span class="number">3</span>] [,<span class="number">4</span>] [,<span class="number">5</span>]</span><br><span class="line">[<span class="number">1</span>,]    <span class="number">1</span>    <span class="number">5</span>    <span class="number">9</span>   <span class="number">13</span>   <span class="number">17</span></span><br><span class="line">[<span class="number">2</span>,]    <span class="number">2</span>    <span class="number">6</span>   <span class="number">10</span>   <span class="number">14</span>   <span class="number">18</span></span><br><span class="line">[<span class="number">3</span>,]    <span class="number">3</span>    <span class="number">7</span>   <span class="number">11</span>   <span class="number">15</span>   <span class="number">19</span></span><br><span class="line">[<span class="number">4</span>,]    <span class="number">4</span>    <span class="number">8</span>   <span class="number">12</span>   <span class="number">16</span>   <span class="number">20</span></span><br></pre></td></tr></table></figure>
+?package_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1-数据集、向量、矩阵和数组"><a href="#1-数据集、向量、矩阵和数组" class="headerlink" title="1.数据集、向量、矩阵和数组"></a>1.数据集、向量、矩阵和数组</h2><pre class="line-numbers language-R" data-language="R"><code class="language-R">向量
+x &lt;- c(1,2,3,4);
+矩阵
+newMatrix &lt;- matrix(1:20,nrow &#x3D; 4);
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    5    9   13   17
+[2,]    2    6   10   14   18
+[3,]    3    7   11   15   19
+[4,]    4    8   12   16   20<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>R语言中的数组是一个矩阵的推广形式，更类似于三维数组，以下为创建四个3*2的矩阵</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&gt; d &lt;-array(<span class="number">1</span>:<span class="number">24</span>,<span class="built_in">c</span>(<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>),<span class="built_in">dimnames</span> = <span class="built_in">list</span>(dim1,dim2,dim3))</span><br><span class="line">&gt; d</span><br><span class="line">, , c1</span><br><span class="line"></span><br><span class="line">   b1 b2</span><br><span class="line">a1  <span class="number">1</span>  <span class="number">4</span></span><br><span class="line">a2  <span class="number">2</span>  <span class="number">5</span></span><br><span class="line">a3  <span class="number">3</span>  <span class="number">6</span></span><br><span class="line"></span><br><span class="line">, , c2</span><br><span class="line"></span><br><span class="line">   b1 b2</span><br><span class="line">a1  <span class="number">7</span> <span class="number">10</span></span><br><span class="line">a2  <span class="number">8</span> <span class="number">11</span></span><br><span class="line">a3  <span class="number">9</span> <span class="number">12</span></span><br><span class="line"></span><br><span class="line">, , c3</span><br><span class="line"></span><br><span class="line">   b1 b2</span><br><span class="line">a1 <span class="number">13</span> <span class="number">16</span></span><br><span class="line">a2 <span class="number">14</span> <span class="number">17</span></span><br><span class="line">a3 <span class="number">15</span> <span class="number">18</span></span><br><span class="line"></span><br><span class="line">, , c4</span><br><span class="line"></span><br><span class="line">   b1 b2</span><br><span class="line">a1 <span class="number">19</span> <span class="number">22</span></span><br><span class="line">a2 <span class="number">20</span> <span class="number">23</span></span><br><span class="line">a3 <span class="number">21</span> <span class="number">24</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">&gt; d &lt;-array(1:24,c(3,2,4),dimnames &#x3D; list(dim1,dim2,dim3))
+&gt; d
+, , c1
+
+   b1 b2
+a1  1  4
+a2  2  5
+a3  3  6
+
+, , c2
+
+   b1 b2
+a1  7 10
+a2  8 11
+a3  9 12
+
+, , c3
+
+   b1 b2
+a1 13 16
+a2 14 17
+a3 15 18
+
+, , c4
+
+   b1 b2
+a1 19 22
+a2 20 23
+a3 21 24<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="2-数据框"><a href="#2-数据框" class="headerlink" title="2.数据框"></a>2.数据框</h2><p>可以创建所含元素数量相同的数据框</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; patientData = data.frame(id,age,dias,status)</span><br><span class="line">&gt; patientData</span><br><span class="line">  id age  dias    status</span><br><span class="line"><span class="number">1</span>  <span class="number">1</span>  <span class="number">24</span> type1      poor</span><br><span class="line"><span class="number">2</span>  <span class="number">2</span>  <span class="number">25</span> type2  improved</span><br><span class="line"><span class="number">3</span>  <span class="number">3</span>  <span class="number">26</span> type3 excellent</span><br><span class="line"><span class="number">4</span>  <span class="number">4</span>  <span class="number">27</span> type4      poor</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">&gt; patientData &#x3D; data.frame(id,age,dias,status)
+&gt; patientData
+  id age  dias    status
+1  1  24 type1      poor
+2  2  25 type2  improved
+3  3  26 type3 excellent
+4  4  27 type4      poor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>获得其中的值</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">patientData$age</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">patientData$age<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>也可以通过直接访问元素的值取出</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">attach(mtcars)</span><br><span class="line"><span class="comment">#attach之后可以直接访问数据集中的数据，例如访问mpg</span></span><br><span class="line">mpg</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">attach(mtcars)
+#attach之后可以直接访问数据集中的数据，例如访问mpg
+mpg<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="3-因子"><a href="#3-因子" class="headerlink" title="3.因子"></a>3.因子</h2><p>可以看下面代码输出的结果知道factor的用处</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; diab &lt;- <span class="built_in">c</span>(<span class="string">&quot;type1&quot;</span>,<span class="string">&quot;type2&quot;</span>,<span class="string">&quot;type3&quot;</span>,<span class="string">&quot;type2&quot;</span>)</span><br><span class="line">&gt; diabs &lt;- factor(diab)</span><br><span class="line">&gt; diabs</span><br><span class="line">[<span class="number">1</span>] type1 type2 type3 type2</span><br><span class="line">Levels: type1 type2 type3</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">&gt; diab &lt;- c(&quot;type1&quot;,&quot;type2&quot;,&quot;type3&quot;,&quot;type2&quot;)
+&gt; diabs &lt;- factor(diab)
+&gt; diabs
+[1] type1 type2 type3 type2
+Levels: type1 type2 type3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="4-常用命令"><a href="#4-常用命令" class="headerlink" title="4.常用命令"></a>4.常用命令</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#删除</span></span><br><span class="line">rm(data)</span><br><span class="line"><span class="comment">#查看文件</span></span><br><span class="line">ls()</span><br><span class="line"><span class="comment">#查看长度</span></span><br><span class="line"><span class="built_in">length</span>()</span><br><span class="line"><span class="comment">#查看类型</span></span><br><span class="line">mode(v)</span><br><span class="line"><span class="comment">#求根号</span></span><br><span class="line"><span class="built_in">sqrt</span>(s)</span><br><span class="line"><span class="comment">#筛选数据</span></span><br><span class="line">x[x&lt;=<span class="number">2</span>  x&gt;<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="4-常用命令"><a href="#4-常用命令" class="headerlink" title="4.常用命令"></a>4.常用命令</h2><pre class="line-numbers language-R" data-language="R"><code class="language-R">#删除
+rm(data)
+#查看文件
+ls()
+#查看长度
+length()
+#查看类型
+mode(v)
+#求根号
+sqrt(s)
+#筛选数据
+x[x&lt;&#x3D;2  x&gt;5]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="5-导入数据"><a href="#5-导入数据" class="headerlink" title="5.导入数据"></a>5.导入数据</h2><h3 id="1-创建可修改数据框"><a href="#1-创建可修改数据框" class="headerlink" title="1.创建可修改数据框"></a>1.创建可修改数据框</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; mydata &lt;- data.frame(age = numeric(<span class="number">0</span>),</span><br><span class="line">+ gender = character(<span class="number">0</span>),</span><br><span class="line">+ weight = numeric(<span class="number">0</span>))</span><br><span class="line">&gt; mydata &lt;- edit(mydata)</span><br><span class="line">&gt; mydata</span><br></pre></td></tr></table></figure>
+<h2 id="5-导入数据"><a href="#5-导入数据" class="headerlink" title="5.导入数据"></a>5.导入数据</h2><h3 id="1-创建可修改数据框"><a href="#1-创建可修改数据框" class="headerlink" title="1.创建可修改数据框"></a>1.创建可修改数据框</h3><pre class="line-numbers language-R" data-language="R"><code class="language-R">&gt; mydata &lt;- data.frame(age &#x3D; numeric(0),
++ gender &#x3D; character(0),
++ weight &#x3D; numeric(0))
+&gt; mydata &lt;- edit(mydata)
+&gt; mydata<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-读取文本文件"><a href="#2-读取文本文件" class="headerlink" title="2.读取文本文件"></a>2.读取文本文件</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读取txt或xlsx</span></span><br><span class="line">data &lt;- read.table(<span class="string">&quot;file_dir&quot;</span>, header = <span class="literal">TRUE</span>,sep = <span class="string">&quot;,&quot;</span>)</span><br><span class="line"><span class="comment">#读取csv文件</span></span><br><span class="line">data &lt;- read.csv(<span class="string">&quot;file_dir&quot;</span>, header = <span class="literal">TRUE</span>,sep = <span class="string">&quot;,&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="2-读取文本文件"><a href="#2-读取文本文件" class="headerlink" title="2.读取文本文件"></a>2.读取文本文件</h3><pre class="line-numbers language-R" data-language="R"><code class="language-R">#读取txt或xlsx
+data &lt;- read.table(&quot;file_dir&quot;, header &#x3D; TRUE,sep &#x3D; &quot;,&quot;)
+#读取csv文件
+data &lt;- read.csv(&quot;file_dir&quot;, header &#x3D; TRUE,sep &#x3D; &quot;,&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>最好可以读取ASCII码编码的文件</p>
-<h2 id="6-R自定义函数"><a href="#6-R自定义函数" class="headerlink" title="6.R自定义函数"></a>6.R自定义函数</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mydate &lt;- <span class="keyword">function</span>(type)&#123;</span><br><span class="line"><span class="built_in">switch</span>(type,</span><br><span class="line">long = format(sys.time(),<span class="string">&quot;%A %B %d %Y&quot;</span>)</span><br><span class="line">short = format(sys.time(),<span class="string">&quot;%m-%d-%y&quot;</span>), </span><br><span class="line">cat(type,<span class="string">&quot; is not recognized type\n&quot;</span>)</span><br><span class="line">)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#定义完成后，可以使用fix进行修改</span></span><br><span class="line">fix(mydata)</span><br></pre></td></tr></table></figure>
+<h2 id="6-R自定义函数"><a href="#6-R自定义函数" class="headerlink" title="6.R自定义函数"></a>6.R自定义函数</h2><pre class="line-numbers language-R" data-language="R"><code class="language-R">mydate &lt;- function(type)&#123;
+switch(type,
+long &#x3D; format(sys.time(),&quot;%A %B %d %Y&quot;)
+short &#x3D; format(sys.time(),&quot;%m-%d-%y&quot;), 
+cat(type,&quot; is not recognized type\n&quot;)
+)
+&#125;
+#定义完成后，可以使用fix进行修改
+fix(mydata)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -606,132 +685,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -786,7 +739,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="总结一些需要找东西">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="总结一些需要找东西">
                         
                         <span class="card-title">总结一些需要找东西</span>
                     </div>
@@ -835,7 +788,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="创建自己的图库（typora+picgo+阿里oss）">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="创建自己的图库（typora+picgo+阿里oss）">
                         
                         <span class="card-title">创建自己的图库（typora+picgo+阿里oss）</span>
                     </div>
@@ -879,6 +832,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1004,7 +994,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1017,7 +1007,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1038,6 +1028,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

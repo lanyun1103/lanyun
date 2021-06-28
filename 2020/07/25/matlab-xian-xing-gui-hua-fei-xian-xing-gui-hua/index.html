@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Matlab_线性规划、非线性规划, jiojio">
+    <meta name="keywords" content="Matlab_线性规划、非线性规划, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Matlab_线性规划、非线性规划 | Hexo</title>
+    <title>Matlab_线性规划、非线性规划 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -488,6 +488,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -497,10 +500,17 @@
 <p>线性规划使用lingo进行比较方便，这里先说matlab如何求解。以下是matlab的标准线性规划格式</p>
 <p><img src="http://lanyun1103.top/wp-content/uploads/2020/07/1.png"></p>
 <p>了解这个以后需要知道</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lingrop()</span><br><span class="line"><span class="comment">%了解这个函数如何使用</span></span><br><span class="line"><span class="comment">%在matlab中输入lingrop help可以查看这个函数的所有使用方法</span></span><br><span class="line"><span class="comment">%这里说一下这个函数的所有参数是什么</span></span><br><span class="line"><span class="comment">%   f是需要求解的线性函数，A和B是限制，Aeq和Beq是等式限制，如果没有使用[]代替，lb,ub是自变量的范围，options是可选的初值条件，一般使用zeros(*,*)表示从0开始</span></span><br><span class="line">[x,fval] = linprog(f,A,b,Aeq,beq,lb,ub,options)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">lingrop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">%了解这个函数如何使用</span>
+<span class="token comment">%在matlab中输入lingrop help可以查看这个函数的所有使用方法</span>
+<span class="token comment">%这里说一下这个函数的所有参数是什么</span>
+<span class="token comment">%   f是需要求解的线性函数，A和B是限制，Aeq和Beq是等式限制，如果没有使用[]代替，lb,ub是自变量的范围，options是可选的初值条件，一般使用zeros(*,*)表示从0开始</span>
+<span class="token punctuation">[</span>x<span class="token punctuation">,</span>fval<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">linprog</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span>A<span class="token punctuation">,</span>b<span class="token punctuation">,</span>Aeq<span class="token punctuation">,</span>beq<span class="token punctuation">,</span>lb<span class="token punctuation">,</span>ub<span class="token punctuation">,</span>options<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>但是lingo写起来就很舒服，lingo需要知道的是他自己的函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@abs() 绝对值</span><br><span class="line">@bin() 0-1变量</span><br><span class="line">@gin() 整数规划</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-lingo" data-language="lingo"><code class="language-lingo">@abs() 绝对值
+@bin() 0-1变量
+@gin() 整数规划<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>这里说到了整数规划，Matlab的整数规划不再展开来说，基本是由分枝法确定最终答案的范围，一步一步取得变量的整数解，而lingo可以直接限制为gin就很舒服了</p>
 <h2 id="二、非线性规划"><a href="#二、非线性规划" class="headerlink" title="二、非线性规划"></a>二、非线性规划</h2><p>求一个函数的最大值（或最小值）问题，其中至少有一个非线性函数，这类问题称之为非线性规划问题。</p>
@@ -511,7 +521,10 @@
 <p>（iv）寻求限制条件：由于所追求的目标一般都要在一定的条件下取得极小化或极大化效果，因此还需要寻找出问题的所有限制条件，这些条件通常用变量之间的一些不等式或等式来表示。</p>
 <p>MATLAB的非线性规划基本格式</p>
 <p><img src="http://lanyun1103.top/wp-content/uploads/2020/07/7KYCMG4U1MBQ7M3NGA.png"></p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X=fmincon(FUN,X0,A,B,Aeq,Beq,LB,UB,NONLCON,OPTIONS)</span><br><span class="line"><span class="comment">%它的返回值是向量 x ，其中 FUN 是用 M 文件定义的函数 f (x)；X0是x的初始值;A,B,Aeq,Beq 定义了线性约束</span></span><br><span class="line"><span class="comment">%如果没有线性约束，则A=[],B=[],Aeq=[],Beq=[]；LB 和 UB 是变量 x 的下界和上界，如果上界和下界没有约束，则 LB=[]，UB=[]，</span></span><br><span class="line"><span class="comment">%NONLCON 是用 M 文件定义的非线性向量函数C(x),Ceq(x)</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">X<span class="token operator">=</span><span class="token function">fmincon</span><span class="token punctuation">(</span>FUN<span class="token punctuation">,</span>X0<span class="token punctuation">,</span>A<span class="token punctuation">,</span>B<span class="token punctuation">,</span>Aeq<span class="token punctuation">,</span>Beq<span class="token punctuation">,</span>LB<span class="token punctuation">,</span>UB<span class="token punctuation">,</span>NONLCON<span class="token punctuation">,</span>OPTIONS<span class="token punctuation">)</span>
+<span class="token comment">%它的返回值是向量 x ，其中 FUN 是用 M 文件定义的函数 f (x)；X0是x的初始值;A,B,Aeq,Beq 定义了线性约束</span>
+<span class="token comment">%如果没有线性约束，则A=[],B=[],Aeq=[],Beq=[]；LB 和 UB 是变量 x 的下界和上界，如果上界和下界没有约束，则 LB=[]，UB=[]，</span>
+<span class="token comment">%NONLCON 是用 M 文件定义的非线性向量函数C(x),Ceq(x)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>一般步骤：</p>
 <ol>
@@ -522,7 +535,10 @@
 <h3 id="1-无约束问题"><a href="#1-无约束问题" class="headerlink" title="1.无约束问题"></a>1.无约束问题</h3><h4 id="使用一维搜索方法："><a href="#使用一维搜索方法：" class="headerlink" title="使用一维搜索方法："></a>使用一维搜索方法：</h4><h5 id="斐波那契法："><a href="#斐波那契法：" class="headerlink" title="斐波那契法："></a>斐波那契法：</h5><h5 id="0-618法"><a href="#0-618法" class="headerlink" title="0.618法"></a>0.618法</h5><h3 id="2-二次插值法"><a href="#2-二次插值法" class="headerlink" title="2.二次插值法"></a>2.二次插值法</h3><p>使用低次多项式来近似目标函数</p>
 <h3 id="3-无约束问题"><a href="#3-无约束问题" class="headerlink" title="3.无约束问题"></a>3.无约束问题</h3><h4 id="梯度法（最速下降法）"><a href="#梯度法（最速下降法）" class="headerlink" title="梯度法（最速下降法）"></a>梯度法（最速下降法）</h4><h4 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h4><p><img src="http://lanyun1103.top/wp-content/uploads/2020/07/N2B84OJOXRK9@9W.png"></p>
 <h4 id="变尺度法"><a href="#变尺度法" class="headerlink" title="变尺度法"></a>变尺度法</h4><h3 id="4-无约束极值问题"><a href="#4-无约束极值问题" class="headerlink" title="4.无约束极值问题"></a>4.无约束极值问题</h3><p>在 Matlab 工具箱中，用于求解无约束极值问题的函数有 fminunc 和 fminsearch，用法介绍如下：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fminunc()</span><br><span class="line">fminsearch()</span><br><span class="line">[X,FVAL]=FMINUNC(FUN,X0,OPTIONS,P1,P2, ...) </span><br><span class="line"><span class="comment">% 其中的返回值 X 是所求得的极小点，FVAL 是函数的极小值，其它返回值的含义参见相关的帮助。FUN 是一个 M 文件，当 FUN 只有一个返回值时，它的返回值是函数 f (x)； 当 FUN 有两个返回值时，它的第二个返回值是 f (x)的梯度向量；当 FUN 有三个返回值时，它的第三个返回值是 f (x)的二阶导数阵（Hessian 阵）</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">fminunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">fminsearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">[</span>X<span class="token punctuation">,</span>FVAL<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">FMINUNC</span><span class="token punctuation">(</span>FUN<span class="token punctuation">,</span>X0<span class="token punctuation">,</span>OPTIONS<span class="token punctuation">,</span>P1<span class="token punctuation">,</span>P2<span class="token punctuation">,</span> <span class="token punctuation">...</span><span class="token punctuation">)</span> 
+<span class="token comment">% 其中的返回值 X 是所求得的极小点，FVAL 是函数的极小值，其它返回值的含义参见相关的帮助。FUN 是一个 M 文件，当 FUN 只有一个返回值时，它的返回值是函数 f (x)； 当 FUN 有两个返回值时，它的第二个返回值是 f (x)的梯度向量；当 FUN 有三个返回值时，它的第三个返回值是 f (x)的二阶导数阵（Hessian 阵）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="5-约束极值问题"><a href="#5-约束极值问题" class="headerlink" title="5.约束极值问题"></a>5.约束极值问题</h3><p>太多了，百度比我说得好</p>
 
@@ -612,132 +628,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -792,7 +682,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Matlab_存储论">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Matlab_存储论">
                         
                         <span class="card-title">Matlab_存储论</span>
                     </div>
@@ -841,7 +731,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="如何快速的创建一个属于自己的博客">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="如何快速的创建一个属于自己的博客">
                         
                         <span class="card-title">如何快速的创建一个属于自己的博客</span>
                     </div>
@@ -885,6 +775,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1010,7 +937,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1023,7 +950,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1044,6 +971,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

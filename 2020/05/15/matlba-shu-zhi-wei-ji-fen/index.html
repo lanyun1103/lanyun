@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Matlab_数值微积分, jiojio">
+    <meta name="keywords" content="Matlab_数值微积分, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Matlab_数值微积分 | Hexo</title>
+    <title>Matlab_数值微积分 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -466,14 +466,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    4 分
                 </div>
                 
 
@@ -488,34 +488,94 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="数值微积分与方程求解"><a href="#数值微积分与方程求解" class="headerlink" title="数值微积分与方程求解"></a>数值微积分与方程求解</h1><h2 id="一、数值微分与数值积分"><a href="#一、数值微分与数值积分" class="headerlink" title="一、数值微分与数值积分"></a>一、数值微分与数值积分</h2><h3 id="数值差分和差商"><a href="#数值差分和差商" class="headerlink" title="数值差分和差商"></a>数值差分和差商</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">diff(x)</span><br><span class="line"><span class="comment">%计算向量x的一阶向前差分</span></span><br><span class="line">diff(x,n)</span><br><span class="line"><span class="comment">%计算向量x的n阶向前差分</span></span><br><span class="line">diff(A,n,dim)</span><br><span class="line"><span class="comment">%计算矩阵A的n阶差分，dim=1列，dim=2行</span></span><br></pre></td></tr></table></figure>
+                <h1 id="数值微积分与方程求解"><a href="#数值微积分与方程求解" class="headerlink" title="数值微积分与方程求解"></a>数值微积分与方程求解</h1><h2 id="一、数值微分与数值积分"><a href="#一、数值微分与数值积分" class="headerlink" title="一、数值微分与数值积分"></a>一、数值微分与数值积分</h2><h3 id="数值差分和差商"><a href="#数值差分和差商" class="headerlink" title="数值差分和差商"></a>数值差分和差商</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">diff</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token comment">%计算向量x的一阶向前差分</span>
+<span class="token function">diff</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>n<span class="token punctuation">)</span>
+<span class="token comment">%计算向量x的n阶向前差分</span>
+<span class="token function">diff</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span>n<span class="token punctuation">,</span>dim<span class="token punctuation">)</span>
+<span class="token comment">%计算矩阵A的n阶差分，dim=1列，dim=2行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="数值积分"><a href="#数值积分" class="headerlink" title="数值积分"></a>数值积分</h3><h4 id="一次定积分数值求解"><a href="#一次定积分数值求解" class="headerlink" title="一次定积分数值求解"></a>一次定积分数值求解</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[l,n] = quad(filename,a,b,tol,trace)</span><br><span class="line"><span class="comment">%辛普森方法</span></span><br><span class="line"></span><br><span class="line">[l,n] = quadl(filename,a,b,tol,trace)</span><br><span class="line"><span class="comment">%高斯方法</span></span><br><span class="line"><span class="comment">%a，b是上下限；tol控制积分精度；trace控制是否展现积分过程</span></span><br><span class="line"><span class="comment">%l 定积分的值，n 被积函数调用次数</span></span><br><span class="line"></span><br><span class="line">l=integral(filename,a,b)</span><br><span class="line"><span class="comment">%全局自适应。</span></span><br><span class="line"><span class="comment">%特点：上下限可以是无穷大</span></span><br><span class="line"></span><br><span class="line">[l,err]=quadgk(filename,a,b)</span><br><span class="line"><span class="comment">%高斯-克朗罗德方法</span></span><br><span class="line"><span class="comment">%可以是无穷大，也可以是复数</span></span><br><span class="line"><span class="comment">%err返回近似误差范围</span></span><br><span class="line"></span><br><span class="line">l = trapz(x,y)</span><br><span class="line"><span class="comment">%梯形积分法</span></span><br></pre></td></tr></table></figure>
+<h3 id="数值积分"><a href="#数值积分" class="headerlink" title="数值积分"></a>数值积分</h3><h4 id="一次定积分数值求解"><a href="#一次定积分数值求解" class="headerlink" title="一次定积分数值求解"></a>一次定积分数值求解</h4><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token punctuation">[</span>l<span class="token punctuation">,</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">quad</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>tol<span class="token punctuation">,</span>trace<span class="token punctuation">)</span>
+<span class="token comment">%辛普森方法</span>
 
-<h4 id="多重定积分数值求解"><a href="#多重定积分数值求解" class="headerlink" title="多重定积分数值求解"></a>多重定积分数值求解</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">l = integral2(filename,a,b,c,d)</span><br><span class="line">l = quad2d(filename,a,b,c,d)</span><br><span class="line">l = dblquad(filename,a,b,c,d,tol)</span><br><span class="line"><span class="comment">%二重积分数值解</span></span><br><span class="line"></span><br><span class="line">l = integral3(filename,a,b,c,d,e,f)</span><br><span class="line">l = triplequad(filename,a,b,c,d,e,f,tol)</span><br><span class="line"><span class="comment">%三重积分数值解</span></span><br></pre></td></tr></table></figure>
+<span class="token punctuation">[</span>l<span class="token punctuation">,</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">quadl</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>tol<span class="token punctuation">,</span>trace<span class="token punctuation">)</span>
+<span class="token comment">%高斯方法</span>
+<span class="token comment">%a，b是上下限；tol控制积分精度；trace控制是否展现积分过程</span>
+<span class="token comment">%l 定积分的值，n 被积函数调用次数</span>
 
-<h2 id="二、线性方程组求解"><a href="#二、线性方程组求解" class="headerlink" title="二、线性方程组求解"></a>二、线性方程组求解</h2><h3 id="左除运算符"><a href="#左除运算符" class="headerlink" title="左除运算符"></a>左除运算符</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Ax=b</span><br><span class="line">x=A\b</span><br><span class="line"><span class="comment">%A是矩阵，b是列向量</span></span><br></pre></td></tr></table></figure>
+l<span class="token operator">=</span><span class="token function">integral</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span>
+<span class="token comment">%全局自适应。</span>
+<span class="token comment">%特点：上下限可以是无穷大</span>
 
-<h3 id="矩阵分解"><a href="#矩阵分解" class="headerlink" title="矩阵分解"></a>矩阵分解</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%LU分解</span></span><br><span class="line"><span class="comment">%原理分解成上三角矩阵和下三角矩阵</span></span><br><span class="line">[L,U]=lu(A)</span><br><span class="line"><span class="comment">%产生上三角阵U和下三角阵L，满足A=LU。A必须是方阵</span></span><br><span class="line">[L,U,P]=lu(A)</span><br><span class="line"><span class="comment">%产生上三角阵U和下三角阵L和一个置换矩阵P。满足PA=LU。A必须是方阵</span></span><br></pre></td></tr></table></figure>
+<span class="token punctuation">[</span>l<span class="token punctuation">,</span>err<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">quadgk</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span>
+<span class="token comment">%高斯-克朗罗德方法</span>
+<span class="token comment">%可以是无穷大，也可以是复数</span>
+<span class="token comment">%err返回近似误差范围</span>
 
-<h3 id="迭代法"><a href="#迭代法" class="headerlink" title="迭代法"></a>迭代法</h3><h2 id="三、非线性方程组和函数极值"><a href="#三、非线性方程组和函数极值" class="headerlink" title="三、非线性方程组和函数极值"></a>三、非线性方程组和函数极值</h2><h3 id="非线性方程"><a href="#非线性方程" class="headerlink" title="非线性方程"></a>非线性方程</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = fzero(filename,x0)</span><br><span class="line"><span class="comment">%filename待求方程左端的函数表达式，x0的初始值</span></span><br><span class="line">&gt;&gt; f = @(x) x<span class="number">-1.</span>/x+<span class="number">5</span>;</span><br><span class="line">&gt;&gt; x1 = fzero(f,<span class="number">-5</span>)  <span class="comment">%求x0=-5作为迭代初值的跟</span></span><br></pre></td></tr></table></figure>
+l <span class="token operator">=</span> <span class="token function">trapz</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span>
+<span class="token comment">%梯形积分法</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="非线性方程组"><a href="#非线性方程组" class="headerlink" title="非线性方程组"></a>非线性方程组</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = fsolve(filename,x0,option)</span><br><span class="line"><span class="comment">%x是返回的近似解，filename是带求根方程左端的函数表达式，x0是初值（应该是矩阵）。</span></span><br></pre></td></tr></table></figure>
+<h4 id="多重定积分数值求解"><a href="#多重定积分数值求解" class="headerlink" title="多重定积分数值求解"></a>多重定积分数值求解</h4><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">l <span class="token operator">=</span> <span class="token function">integral2</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">)</span>
+l <span class="token operator">=</span> <span class="token function">quad2d</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">)</span>
+l <span class="token operator">=</span> <span class="token function">dblquad</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">,</span>tol<span class="token punctuation">)</span>
+<span class="token comment">%二重积分数值解</span>
 
-<h3 id="函数极值"><a href="#函数极值" class="headerlink" title="函数极值"></a>函数极值</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%无约束</span></span><br><span class="line">[xmin,fmin] = fminbnd(filename,x1,x2,option)</span><br><span class="line">[xmin,fmin] = fminsearch(filename,x0,option)</span><br><span class="line">[xmin,fmin] = fminunc(filename,x0,option)</span><br><span class="line"></span><br><span class="line"><span class="comment">%有约束</span></span><br><span class="line">[xmin,fmin] = fmincon(filename,x0,A,b,Aeq,beq,Lbnd,Ubnd,Nonf,option)</span><br><span class="line"><span class="comment">%A,b是线性不等式约束；Aeq，beq是线型等式约束；Lbnd，Ubnd是上下界；Nonf是定义非线性约束的函数。不存在则用空矩阵表示</span></span><br></pre></td></tr></table></figure>
+l <span class="token operator">=</span> <span class="token function">integral3</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">,</span>e<span class="token punctuation">,</span>f<span class="token punctuation">)</span>
+l <span class="token operator">=</span> <span class="token function">triplequad</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">,</span>e<span class="token punctuation">,</span>f<span class="token punctuation">,</span>tol<span class="token punctuation">)</span>
+<span class="token comment">%三重积分数值解</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="四、常微分方程数值求解"><a href="#四、常微分方程数值求解" class="headerlink" title="四、常微分方程数值求解"></a>四、常微分方程数值求解</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[t,y]=solver(filename,tspan,y0,option)</span><br><span class="line"><span class="comment">%filename 定义ODE的函数文件名；tspan 求解范围；y0初始状态向量；option可选参数</span></span><br><span class="line"><span class="comment">%t是时间向量，y是相应的数值解</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、线性方程组求解"><a href="#二、线性方程组求解" class="headerlink" title="二、线性方程组求解"></a>二、线性方程组求解</h2><h3 id="左除运算符"><a href="#左除运算符" class="headerlink" title="左除运算符"></a>左除运算符</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">Ax<span class="token operator">=</span>b
+x<span class="token operator">=</span>A<span class="token operator">\</span>b
+<span class="token comment">%A是矩阵，b是列向量</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="矩阵分解"><a href="#矩阵分解" class="headerlink" title="矩阵分解"></a>矩阵分解</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token comment">%LU分解</span>
+<span class="token comment">%原理分解成上三角矩阵和下三角矩阵</span>
+<span class="token punctuation">[</span>L<span class="token punctuation">,</span>U<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">lu</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+<span class="token comment">%产生上三角阵U和下三角阵L，满足A=LU。A必须是方阵</span>
+<span class="token punctuation">[</span>L<span class="token punctuation">,</span>U<span class="token punctuation">,</span>P<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">lu</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+<span class="token comment">%产生上三角阵U和下三角阵L和一个置换矩阵P。满足PA=LU。A必须是方阵</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="迭代法"><a href="#迭代法" class="headerlink" title="迭代法"></a>迭代法</h3><h2 id="三、非线性方程组和函数极值"><a href="#三、非线性方程组和函数极值" class="headerlink" title="三、非线性方程组和函数极值"></a>三、非线性方程组和函数极值</h2><h3 id="非线性方程"><a href="#非线性方程" class="headerlink" title="非线性方程"></a>非线性方程</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">x <span class="token operator">=</span> <span class="token function">fzero</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>x0<span class="token punctuation">)</span>
+<span class="token comment">%filename待求方程左端的函数表达式，x0的初始值</span>
+<span class="token operator">></span><span class="token operator">></span> f <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> x<span class="token operator">-</span><span class="token number">1.</span><span class="token operator">/</span>x<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">></span> x1 <span class="token operator">=</span> <span class="token function">fzero</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">)</span>  <span class="token comment">%求x0=-5作为迭代初值的跟</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="非线性方程组"><a href="#非线性方程组" class="headerlink" title="非线性方程组"></a>非线性方程组</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">x <span class="token operator">=</span> <span class="token function">fsolve</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>x0<span class="token punctuation">,</span>option<span class="token punctuation">)</span>
+<span class="token comment">%x是返回的近似解，filename是带求根方程左端的函数表达式，x0是初值（应该是矩阵）。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="函数极值"><a href="#函数极值" class="headerlink" title="函数极值"></a>函数极值</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token comment">%无约束</span>
+<span class="token punctuation">[</span>xmin<span class="token punctuation">,</span>fmin<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">fminbnd</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>x1<span class="token punctuation">,</span>x2<span class="token punctuation">,</span>option<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>xmin<span class="token punctuation">,</span>fmin<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">fminsearch</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>x0<span class="token punctuation">,</span>option<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>xmin<span class="token punctuation">,</span>fmin<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">fminunc</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>x0<span class="token punctuation">,</span>option<span class="token punctuation">)</span>
+
+<span class="token comment">%有约束</span>
+<span class="token punctuation">[</span>xmin<span class="token punctuation">,</span>fmin<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">fmincon</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>x0<span class="token punctuation">,</span>A<span class="token punctuation">,</span>b<span class="token punctuation">,</span>Aeq<span class="token punctuation">,</span>beq<span class="token punctuation">,</span>Lbnd<span class="token punctuation">,</span>Ubnd<span class="token punctuation">,</span>Nonf<span class="token punctuation">,</span>option<span class="token punctuation">)</span>
+<span class="token comment">%A,b是线性不等式约束；Aeq，beq是线型等式约束；Lbnd，Ubnd是上下界；Nonf是定义非线性约束的函数。不存在则用空矩阵表示</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="四、常微分方程数值求解"><a href="#四、常微分方程数值求解" class="headerlink" title="四、常微分方程数值求解"></a>四、常微分方程数值求解</h2><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token punctuation">[</span>t<span class="token punctuation">,</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">solver</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span>tspan<span class="token punctuation">,</span>y0<span class="token punctuation">,</span>option<span class="token punctuation">)</span>
+<span class="token comment">%filename 定义ODE的函数文件名；tspan 求解范围；y0初始状态向量；option可选参数</span>
+<span class="token comment">%t是时间向量，y是相应的数值解</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="常微分方程数值求解函数命名"><a href="#常微分方程数值求解函数命名" class="headerlink" title="常微分方程数值求解函数命名"></a>常微分方程数值求解函数命名</h3><p>ode代表ODE；nn是所用方法的阶数；xx用于标注方法特性</p>
 <h3 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h3><p>比较微分方程求解和精确解的误差</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; f = @(t,y) (y^<span class="number">2</span>-t<span class="number">-2</span>)/<span class="number">4</span>/(t+<span class="number">1</span>);</span><br><span class="line">&gt;&gt; [t,y] = ode23(f,[<span class="number">0</span>,<span class="number">10</span>],<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">&gt;&gt; y1=<span class="built_in">sqrt</span>(t+<span class="number">1</span>)+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(t,y,<span class="string">&#x27;b&#x27;</span>,t,y1,<span class="string">&#x27;r&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token operator">></span><span class="token operator">></span> f <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>y<span class="token punctuation">)</span> <span class="token punctuation">(</span>y<span class="token operator">^</span><span class="token number">2</span><span class="token operator">-</span>t<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">4</span><span class="token operator">/</span><span class="token punctuation">(</span>t<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token punctuation">[</span>t<span class="token punctuation">,</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">ode23</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; f = @(t,x) [<span class="number">-2</span>,<span class="number">0</span>;<span class="number">0</span>,<span class="number">1</span>]*[x(<span class="number">2</span>);x(<span class="number">1</span>)];</span><br><span class="line">&gt;&gt; [t,x] = ode45(f,[<span class="number">0</span>,<span class="number">20</span>],[<span class="number">1</span>,<span class="number">0</span>]);</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(t,x(:,<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<span class="token operator">></span><span class="token operator">></span> y1<span class="token operator">=</span><span class="token function">sqrt</span><span class="token punctuation">(</span>t<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">plot</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>y<span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span>t<span class="token punctuation">,</span>y1<span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token operator">></span><span class="token operator">></span> f <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>x<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">[</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token punctuation">[</span>t<span class="token punctuation">,</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">ode45</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">plot</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="ode方程组例子："><a href="#ode方程组例子：" class="headerlink" title="ode方程组例子："></a>ode方程组例子：</h3><p>例子来源<code>ode45waterloo.pdf</code>，算是官方的一个例子，大概可以应用于基本所有情况的微分方程组求解。</p>
 <p>$$y_{1}^{\prime}=2 y_{1}+y_{2}+5 y_{3}+e^{-2 t}$$</p>
@@ -524,10 +584,26 @@
 <p>$$y_{1}(0)=1, y_{2}(0)=-1, y_{3}(0)=0 $$</p>
 <p>$$t \quad in \quad [0, p i / 2]$$</p>
 <p>odefun.m</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">clc;clear all; close all;</span><br><span class="line">[t1, y1] = ode23(@df2, [<span class="number">0</span> <span class="built_in">pi</span>/<span class="number">2</span>], [<span class="number">1</span>;<span class="number">-1</span>;<span class="number">0</span>]);</span><br><span class="line"><span class="built_in">plot</span>(t1,y1(:,<span class="number">1</span>), <span class="string">&#x27;+&#x27;</span>, t1,y1(:,<span class="number">2</span>),<span class="string">&#x27;x&#x27;</span>, t1,y1(:,<span class="number">3</span>),<span class="string">&#x27;o&#x27;</span>)</span><br><span class="line"><span class="built_in">hold</span></span><br><span class="line">grid</span><br><span class="line">title(<span class="string">&#x27;example&#x27;</span>);</span><br><span class="line">text(<span class="number">0.3</span>, <span class="number">14</span>, <span class="string">&#x27;-+- y_1&#x27;</span>)</span><br><span class="line">text(<span class="number">0.3</span>, <span class="number">10</span>, <span class="string">&#x27;-x- y_2&#x27;</span>)</span><br><span class="line">text(<span class="number">0.3</span>, <span class="number">-12</span>, <span class="string">&#x27;-o- y_3&#x27;</span>)</span><br><span class="line">xlabel(<span class="string">&#x27;time&#x27;</span>)</span><br><span class="line"><span class="built_in">hold</span> off</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">clc<span class="token punctuation">;</span>clear all<span class="token punctuation">;</span> close all<span class="token punctuation">;</span>
+<span class="token punctuation">[</span>t1<span class="token punctuation">,</span> y1<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">ode23</span><span class="token punctuation">(</span><span class="token operator">@</span>df2<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">pi</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">plot</span><span class="token punctuation">(</span>t1<span class="token punctuation">,</span><span class="token function">y1</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'+'</span><span class="token punctuation">,</span> t1<span class="token punctuation">,</span><span class="token function">y1</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'x'</span><span class="token punctuation">,</span> t1<span class="token punctuation">,</span><span class="token function">y1</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'o'</span><span class="token punctuation">)</span>
+hold
+grid
+<span class="token function">title</span><span class="token punctuation">(</span><span class="token string">'example'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">text</span><span class="token punctuation">(</span><span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token string">'-+- y_1'</span><span class="token punctuation">)</span>
+<span class="token function">text</span><span class="token punctuation">(</span><span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">'-x- y_2'</span><span class="token punctuation">)</span>
+<span class="token function">text</span><span class="token punctuation">(</span><span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token string">'-o- y_3'</span><span class="token punctuation">)</span>
+<span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'time'</span><span class="token punctuation">)</span>
+hold off<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>df2.m</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fv</span>=<span class="title">df2</span><span class="params">(t,Y)</span></span></span><br><span class="line"><span class="comment">% Fv(1,1)=2*Y(1)+Y(2)+5*Y(3)+exp(-2*t); </span></span><br><span class="line"><span class="comment">% Fv(2,1)=-3*Y(1)-2*Y(2)-8*Y(3)+2*exp(-2*t)-cos(3*t);</span></span><br><span class="line"><span class="comment">% Fv(3,1)=3*Y(1)+3*Y(2)+2*Y(3)+cos(3*t);</span></span><br><span class="line">Fv = [<span class="number">2</span>*Y(<span class="number">1</span>)+Y(<span class="number">2</span>)+<span class="number">5</span>*Y(<span class="number">3</span>)+<span class="built_in">exp</span>(<span class="number">-2</span>*t)</span><br><span class="line">    <span class="number">-3</span>*Y(<span class="number">1</span>)<span class="number">-2</span>*Y(<span class="number">2</span>)<span class="number">-8</span>*Y(<span class="number">3</span>)+<span class="number">2</span>*<span class="built_in">exp</span>(<span class="number">-2</span>*t)-<span class="built_in">cos</span>(<span class="number">3</span>*t)</span><br><span class="line">    <span class="number">3</span>*Y(<span class="number">1</span>)+<span class="number">3</span>*Y(<span class="number">2</span>)+<span class="number">2</span>*Y(<span class="number">3</span>)+<span class="built_in">cos</span>(<span class="number">3</span>*t)];</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token keyword">function</span> Fv<span class="token operator">=</span><span class="token function">df2</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>Y<span class="token punctuation">)</span>
+<span class="token comment">% Fv(1,1)=2*Y(1)+Y(2)+5*Y(3)+exp(-2*t); </span>
+<span class="token comment">% Fv(2,1)=-3*Y(1)-2*Y(2)-8*Y(3)+2*exp(-2*t)-cos(3*t);</span>
+<span class="token comment">% Fv(3,1)=3*Y(1)+3*Y(2)+2*Y(3)+cos(3*t);</span>
+Fv <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token operator">*</span><span class="token function">Y</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">Y</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">5</span><span class="token operator">*</span><span class="token function">Y</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">exp</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">*</span>t<span class="token punctuation">)</span>
+    <span class="token operator">-</span><span class="token number">3</span><span class="token operator">*</span><span class="token function">Y</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">*</span><span class="token function">Y</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">8</span><span class="token operator">*</span><span class="token function">Y</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span><span class="token function">exp</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">*</span>t<span class="token punctuation">)</span><span class="token operator">-</span><span class="token function">cos</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token operator">*</span>t<span class="token punctuation">)</span>
+    <span class="token number">3</span><span class="token operator">*</span><span class="token function">Y</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">3</span><span class="token operator">*</span><span class="token function">Y</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span><span class="token function">Y</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">cos</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token operator">*</span>t<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>图像如下：</p>
 <p><img src="http://pict.lanyun1103.top/typora/20210508100737.png" alt="example"></p>
@@ -619,132 +695,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -799,7 +749,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Matlab_符号计算">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Matlab_符号计算">
                         
                         <span class="card-title">Matlab_符号计算</span>
                     </div>
@@ -892,6 +842,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1017,7 +1004,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1030,7 +1017,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1051,6 +1038,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

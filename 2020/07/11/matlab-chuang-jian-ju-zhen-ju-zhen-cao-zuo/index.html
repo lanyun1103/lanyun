@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Matlab创建矩阵、矩阵操作, jiojio">
+    <meta name="keywords" content="Matlab创建矩阵、矩阵操作, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Matlab创建矩阵、矩阵操作 | Hexo</title>
+    <title>Matlab创建矩阵、矩阵操作 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -488,43 +488,100 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Matlab矩阵"><a href="#Matlab矩阵" class="headerlink" title="Matlab矩阵"></a>Matlab矩阵</h1><h2 id="一、建立新矩阵"><a href="#一、建立新矩阵" class="headerlink" title="一、建立新矩阵"></a>一、建立新矩阵</h2><h3 id="创建矩阵指令"><a href="#创建矩阵指令" class="headerlink" title="创建矩阵指令"></a>创建矩阵指令</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ones</span>(n)</span><br><span class="line">建立一个n×n的<span class="number">1</span>矩阵.</span><br><span class="line"><span class="built_in">ones</span>(m,n,…,p)   建立一个m×n×…×p的<span class="number">1</span>矩阵.</span><br><span class="line"><span class="built_in">ones</span>(<span class="built_in">size</span>(A))   建立一个和矩阵A同样大小的<span class="number">1</span>矩阵</span><br><span class="line"></span><br><span class="line"><span class="built_in">zeros</span>(n)</span><br><span class="line">建立一个n×n的<span class="number">0</span>矩阵.</span><br><span class="line"><span class="built_in">zeros</span>(m, n,...,p)   建立一个m×n…×p的<span class="number">0</span>矩阵.</span><br><span class="line"><span class="built_in">zeros</span>(<span class="built_in">size</span>(A))  建立一个和矩阵A同样大小的<span class="number">0</span>矩阵.</span><br><span class="line"></span><br><span class="line"><span class="built_in">eye</span>(n)  建立一个n×n的单位矩阵.注意ye命令只能用来建立二维矩阵.</span><br><span class="line"><span class="built_in">eye</span>(m, n)   建立一个m×n的单位矩阵.注意<span class="built_in">eye</span>命令只能用来建立二维矩阵.</span><br><span class="line"><span class="built_in">eye</span>(<span class="built_in">size</span> (A))   建立一个和矩阵A同样大小的单位矩阵</span><br><span class="line"><span class="built_in">diag</span>(A)     生成一个由矩阵A主对角线元素组成的列向量.主对角线总是从矩阵左上角开始.对于方阵来说它结束于矩阵的右下角</span><br></pre></td></tr></table></figure>
+                <h1 id="Matlab矩阵"><a href="#Matlab矩阵" class="headerlink" title="Matlab矩阵"></a>Matlab矩阵</h1><h2 id="一、建立新矩阵"><a href="#一、建立新矩阵" class="headerlink" title="一、建立新矩阵"></a>一、建立新矩阵</h2><h3 id="创建矩阵指令"><a href="#创建矩阵指令" class="headerlink" title="创建矩阵指令"></a>创建矩阵指令</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">ones</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+建立一个n×n的<span class="token number">1</span>矩阵<span class="token punctuation">.</span>
+<span class="token function">ones</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span>n<span class="token punctuation">,</span>…<span class="token punctuation">,</span>p<span class="token punctuation">)</span>   建立一个m×n×…×p的<span class="token number">1</span>矩阵<span class="token punctuation">.</span>
+<span class="token function">ones</span><span class="token punctuation">(</span><span class="token function">size</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">)</span>   建立一个和矩阵A同样大小的<span class="token number">1</span>矩阵
+
+<span class="token function">zeros</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+建立一个n×n的<span class="token number">0</span>矩阵<span class="token punctuation">.</span>
+<span class="token function">zeros</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> n<span class="token punctuation">,</span><span class="token punctuation">...</span><span class="token punctuation">,</span>p<span class="token punctuation">)</span>   建立一个m×n…×p的<span class="token number">0</span>矩阵<span class="token punctuation">.</span>
+<span class="token function">zeros</span><span class="token punctuation">(</span><span class="token function">size</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">)</span>  建立一个和矩阵A同样大小的<span class="token number">0</span>矩阵<span class="token punctuation">.</span>
+
+<span class="token function">eye</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>  建立一个n×n的单位矩阵<span class="token punctuation">.</span>注意ye命令只能用来建立二维矩阵<span class="token punctuation">.</span>
+<span class="token function">eye</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> n<span class="token punctuation">)</span>   建立一个m×n的单位矩阵<span class="token punctuation">.</span>注意eye命令只能用来建立二维矩阵<span class="token punctuation">.</span>
+<span class="token function">eye</span><span class="token punctuation">(</span><span class="token function">size</span> <span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">)</span>   建立一个和矩阵A同样大小的单位矩阵
+<span class="token function">diag</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>     生成一个由矩阵A主对角线元素组成的列向量<span class="token punctuation">.</span>主对角线总是从矩阵左上角开始<span class="token punctuation">.</span>对于方阵来说它结束于矩阵的右下角<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="随机数指令"><a href="#随机数指令" class="headerlink" title="随机数指令"></a>随机数指令</h3><p>随机数和随机矩阵</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rand</span>        产生在<span class="number">0</span>~<span class="number">1</span>之间均匀分布的随机数;每调用一次给一个新的数值.</span><br><span class="line"><span class="built_in">rand</span>+ <span class="built_in">i</span>     <span class="built_in">rand</span>产生一个复数随机数   </span><br><span class="line"><span class="built_in">rand</span> (n)    产生一个n×n的矩阵,其元素为<span class="number">0</span>~<span class="number">1</span>之间均匀分布的随机数.</span><br><span class="line"><span class="built_in">rand</span>(m,n,…,p)   产生一个m×n×…×p的矩阵,其元素为<span class="number">0</span>~<span class="number">1</span>之间均匀分布的</span><br><span class="line">随机数</span><br><span class="line"><span class="built_in">rand</span>        产生零均值、单位方差的正态分布随机数</span><br><span class="line"><span class="built_in">randn</span> (n)   产生一个×n的矩阵,其元素为零均值、单位方差的正态分布随机数</span><br><span class="line"><span class="built_in">randn</span>(m,n,·…,p)     产生一个m×n×…×p的矩阵,其元素为零均值、单位方差的正态分布随机数</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">rand        产生在<span class="token number">0</span><span class="token operator">~</span><span class="token number">1</span>之间均匀分布的随机数<span class="token punctuation">;</span>每调用一次给一个新的数值<span class="token punctuation">.</span>
+rand<span class="token operator">+</span> <span class="token number">i</span>     rand产生一个复数随机数   
+<span class="token function">rand</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span>    产生一个n×n的矩阵<span class="token punctuation">,</span>其元素为<span class="token number">0</span><span class="token operator">~</span><span class="token number">1</span>之间均匀分布的随机数<span class="token punctuation">.</span>
+<span class="token function">rand</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span>n<span class="token punctuation">,</span>…<span class="token punctuation">,</span>p<span class="token punctuation">)</span>   产生一个m×n×…×p的矩阵<span class="token punctuation">,</span>其元素为<span class="token number">0</span><span class="token operator">~</span><span class="token number">1</span>之间均匀分布的
+随机数
+rand        产生零均值、单位方差的正态分布随机数
+<span class="token function">randn</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span>   产生一个×n的矩阵<span class="token punctuation">,</span>其元素为零均值、单位方差的正态分布随机数
+<span class="token function">randn</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span>n<span class="token punctuation">,</span>·…<span class="token punctuation">,</span>p<span class="token punctuation">)</span>     产生一个m×n×…×p的矩阵<span class="token punctuation">,</span>其元素为零均值、单位方差的正态分布随机数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>随机数种子</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rand</span>(<span class="string">&#x27;state&#x27;</span>)     返回一个有<span class="number">35</span>个元素的向量,其中包含随机状态发生器的当前状态.</span><br><span class="line"><span class="built_in">rand</span>(<span class="string">&#x27;state&#x27;</span>,s)       设置随机种子发生器的状态为s</span><br><span class="line"><span class="built_in">rand</span>(<span class="string">&#x27;state&#x27;</span>,<span class="number">0</span>)   设置随机种子发生器为它的原始状态</span><br><span class="line"><span class="built_in">rand</span>(<span class="string">&#x27;state&#x27;</span>,<span class="built_in">j</span>)       设置随机种子发生器为它的第种状态,<span class="built_in">j</span>为整数</span><br><span class="line"><span class="built_in">rand</span>(<span class="string">&#x27;state&#x27;</span>,sum(<span class="number">100</span>*clock)))     使用 clock命令(见命令集<span class="number">15</span>),使得随机种子发生器在每个不同时刻都设置为一种不同的状态</span><br><span class="line"><span class="built_in">rand</span>(<span class="string">&#x27;seed&#x27;</span>,arg)      使用 MATLAB4中的随机种子发生器,见帮助可以得到更多</span><br><span class="line">的信息</span><br><span class="line"><span class="built_in">randn</span>(<span class="string">&#x27;state&#x27;</span>)        返回一个有两个元素的向量,其中包含正态随机种子发生器</span><br><span class="line">的状态</span><br><span class="line"><span class="built_in">randn</span>(<span class="string">&#x27;state&#x27;</span>,arg)    根据arg设置正态随机种子发生器,见<span class="built_in">rand</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">rand</span><span class="token punctuation">(</span><span class="token string">'state'</span><span class="token punctuation">)</span>     返回一个有<span class="token number">35</span>个元素的向量<span class="token punctuation">,</span>其中包含随机状态发生器的当前状态<span class="token punctuation">.</span>
+<span class="token function">rand</span><span class="token punctuation">(</span><span class="token string">'state'</span><span class="token punctuation">,</span>s<span class="token punctuation">)</span>       设置随机种子发生器的状态为s
+<span class="token function">rand</span><span class="token punctuation">(</span><span class="token string">'state'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>   设置随机种子发生器为它的原始状态
+<span class="token function">rand</span><span class="token punctuation">(</span><span class="token string">'state'</span><span class="token punctuation">,</span><span class="token number">j</span><span class="token punctuation">)</span>       设置随机种子发生器为它的第种状态<span class="token punctuation">,</span><span class="token number">j</span>为整数
+<span class="token function">rand</span><span class="token punctuation">(</span><span class="token string">'state'</span><span class="token punctuation">,</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">*</span>clock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     使用 clock命令<span class="token punctuation">(</span>见命令集<span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">,</span>使得随机种子发生器在每个不同时刻都设置为一种不同的状态
+<span class="token function">rand</span><span class="token punctuation">(</span><span class="token string">'seed'</span><span class="token punctuation">,</span>arg<span class="token punctuation">)</span>      使用 MATLAB4中的随机种子发生器<span class="token punctuation">,</span>见帮助可以得到更多
+的信息
+<span class="token function">randn</span><span class="token punctuation">(</span><span class="token string">'state'</span><span class="token punctuation">)</span>        返回一个有两个元素的向量<span class="token punctuation">,</span>其中包含正态随机种子发生器
+的状态
+<span class="token function">randn</span><span class="token punctuation">(</span><span class="token string">'state'</span><span class="token punctuation">,</span>arg<span class="token punctuation">)</span>    根据arg设置正态随机种子发生器<span class="token punctuation">,</span>见rand<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="二、矩阵变换"><a href="#二、矩阵变换" class="headerlink" title="二、矩阵变换"></a>二、矩阵变换</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">reshape</span>(A, m, n)    生成一个m×n×…×p维的矩阵,它的元素以线性索引的顺序(见图<span class="number">2</span><span class="number">-2</span>)从矩阵A中取来.如果矩阵A中没有m×n×p个元素,将返回一个错误信息</span><br><span class="line"></span><br><span class="line"><span class="built_in">repmat</span>(A,[m n...p]) 创建一个和矩阵A有相同元素的m×n×…×p块的多维矩阵</span><br><span class="line">p])</span><br><span class="line"><span class="built_in">repmat</span>(x,[m n...p]) 创建一个m×n×…×p的多维矩阵,所有元素的值都为标量使用该命令要比用命令x*Ones([mn…])来创建同一个大矩阵的速度要快</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span>(dim,A,B)    将矩阵A和B组合成一个dim维的多维矩阵</span><br></pre></td></tr></table></figure>
+<h2 id="二、矩阵变换"><a href="#二、矩阵变换" class="headerlink" title="二、矩阵变换"></a>二、矩阵变换</h2><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">reshape</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span> m<span class="token punctuation">,</span> n<span class="token punctuation">)</span>    生成一个m×n×…×p维的矩阵<span class="token punctuation">,</span>它的元素以线性索引的顺序<span class="token punctuation">(</span>见图<span class="token number">2</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span>从矩阵A中取来<span class="token punctuation">.</span>如果矩阵A中没有m×n×p个元素<span class="token punctuation">,</span>将返回一个错误信息
 
-<h2 id="三、创建空矩阵"><a href="#三、创建空矩阵" class="headerlink" title="三、创建空矩阵"></a>三、创建空矩阵</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A = []</span><br></pre></td></tr></table></figure>
+<span class="token function">repmat</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span><span class="token punctuation">[</span>m n<span class="token punctuation">...</span>p<span class="token punctuation">]</span><span class="token punctuation">)</span> 创建一个和矩阵A有相同元素的m×n×…×p块的多维矩阵
+p<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token function">repmat</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span><span class="token punctuation">[</span>m n<span class="token punctuation">...</span>p<span class="token punctuation">]</span><span class="token punctuation">)</span> 创建一个m×n×…×p的多维矩阵<span class="token punctuation">,</span>所有元素的值都为标量使用该命令要比用命令x<span class="token operator">*</span><span class="token function">Ones</span><span class="token punctuation">(</span><span class="token punctuation">[</span>mn…<span class="token punctuation">]</span><span class="token punctuation">)</span>来创建同一个大矩阵的速度要快
 
-<h2 id="四、生成向量和子矩阵"><a href="#四、生成向量和子矩阵" class="headerlink" title="四、生成向量和子矩阵"></a>四、生成向量和子矩阵</h2><h3 id="通过矩阵创建向量"><a href="#通过矩阵创建向量" class="headerlink" title="通过矩阵创建向量"></a>通过矩阵创建向量</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">i</span> : k   创建从<span class="built_in">i</span>开始、步长为<span class="number">1</span>、到k结束的数字序列，即 <span class="built_in">i</span> ,<span class="built_in">i</span>+<span class="number">1</span>, <span class="built_in">i</span>+<span class="number">2</span>, . . ., k。如果<span class="built_in">i</span>&gt;k，M AT L A B则返回一个空矩阵，也就是 []。数字<span class="built_in">i</span>和k不必是整数，该序列的最后一个数是小于或等于 k。</span><br><span class="line"><span class="built_in">i</span> : <span class="built_in">j</span> : k   创建从<span class="built_in">i</span>开始、步长为<span class="number">1</span>、到k结束的数字序列，即 <span class="built_in">i</span>, <span class="built_in">i</span>+<span class="built_in">j</span>, <span class="built_in">i</span>+ <span class="number">2</span><span class="built_in">j</span>, . . ., k。对于<span class="built_in">j</span>= <span class="number">0</span>，则返回一个空矩阵。数字 <span class="built_in">i</span>、<span class="built_in">j</span>和k不必是整数，该序列的最后一个数是小于或等于k。</span><br></pre></td></tr></table></figure>
+<span class="token function">cat</span><span class="token punctuation">(</span>dim<span class="token punctuation">,</span>A<span class="token punctuation">,</span>B<span class="token punctuation">)</span>    将矩阵A和B组合成一个dim维的多维矩阵<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="直接创建向量"><a href="#直接创建向量" class="headerlink" title="直接创建向量"></a>直接创建向量</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">linspace</span>(a,b)   在区间[a,b上创建一个有<span class="number">100</span>个元素的向量,这<span class="number">100</span>个数把整个区间线性分隔.</span><br><span class="line"><span class="built_in">linspace</span>(a,b,n) 在区间[a,b上创建一个有n个元素的向量.这个命令和冒号表示形式相近,但是它直接定义了数据的个数.</span><br><span class="line">还有<span class="built_in">logspace</span>，通过多数创建等间隔向量</span><br></pre></td></tr></table></figure>
+<h2 id="三、创建空矩阵"><a href="#三、创建空矩阵" class="headerlink" title="三、创建空矩阵"></a>三、创建空矩阵</h2><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">A <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="创建子矩阵"><a href="#创建子矩阵" class="headerlink" title="创建子矩阵"></a>创建子矩阵</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方法同上</span><br><span class="line">A(:,<span class="built_in">j</span>)  返回二维矩阵A中第<span class="built_in">j</span>列列向量.</span><br><span class="line">A(<span class="built_in">i</span>,:)  返回二维矩阵A中第<span class="built_in">i</span>行行向量.</span><br><span class="line">以及步长方法创建</span><br></pre></td></tr></table></figure>
+<h2 id="四、生成向量和子矩阵"><a href="#四、生成向量和子矩阵" class="headerlink" title="四、生成向量和子矩阵"></a>四、生成向量和子矩阵</h2><h3 id="通过矩阵创建向量"><a href="#通过矩阵创建向量" class="headerlink" title="通过矩阵创建向量"></a>通过矩阵创建向量</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token number">i</span> <span class="token operator">:</span> k   创建从<span class="token number">i</span>开始、步长为<span class="token number">1</span>、到k结束的数字序列，即 <span class="token number">i</span> <span class="token punctuation">,</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">i</span><span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span><span class="token punctuation">,</span> k。如果<span class="token number">i</span><span class="token operator">></span>k，M AT L A B则返回一个空矩阵，也就是 <span class="token punctuation">[</span><span class="token punctuation">]</span>。数字<span class="token number">i</span>和k不必是整数，该序列的最后一个数是小于或等于 k。
+<span class="token number">i</span> <span class="token operator">:</span> <span class="token number">j</span> <span class="token operator">:</span> k   创建从<span class="token number">i</span>开始、步长为<span class="token number">1</span>、到k结束的数字序列，即 <span class="token number">i</span><span class="token punctuation">,</span> <span class="token number">i</span><span class="token operator">+</span><span class="token number">j</span><span class="token punctuation">,</span> <span class="token number">i</span><span class="token operator">+</span> <span class="token number">2j</span><span class="token punctuation">,</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span><span class="token punctuation">,</span> k。对于<span class="token number">j</span><span class="token operator">=</span> <span class="token number">0</span>，则返回一个空矩阵。数字 <span class="token number">i</span>、<span class="token number">j</span>和k不必是整数，该序列的最后一个数是小于或等于k。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="直接创建向量"><a href="#直接创建向量" class="headerlink" title="直接创建向量"></a>直接创建向量</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">linspace</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span>   在区间<span class="token punctuation">[</span>a<span class="token punctuation">,</span>b上创建一个有<span class="token number">100</span>个元素的向量<span class="token punctuation">,</span>这<span class="token number">100</span>个数把整个区间线性分隔<span class="token punctuation">.</span>
+<span class="token function">linspace</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>n<span class="token punctuation">)</span> 在区间<span class="token punctuation">[</span>a<span class="token punctuation">,</span>b上创建一个有n个元素的向量<span class="token punctuation">.</span>这个命令和冒号表示形式相近<span class="token punctuation">,</span>但是它直接定义了数据的个数<span class="token punctuation">.</span>
+还有logspace，通过多数创建等间隔向量<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="创建子矩阵"><a href="#创建子矩阵" class="headerlink" title="创建子矩阵"></a>创建子矩阵</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">方法同上
+<span class="token function">A</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token number">j</span><span class="token punctuation">)</span>  返回二维矩阵A中第<span class="token number">j</span>列列向量<span class="token punctuation">.</span>
+<span class="token function">A</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span>  返回二维矩阵A中第<span class="token number">i</span>行行向量<span class="token punctuation">.</span>
+以及步长方法创建<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="五、特殊矩阵"><a href="#五、特殊矩阵" class="headerlink" title="五、特殊矩阵"></a>五、特殊矩阵</h2><p>希尔伯特矩阵</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">hilb</span>(n)     生成一个n×n的希尔伯特矩阵.</span><br><span class="line"><span class="built_in">invhilb</span>(n)  生成一个n×n的希尔伯特矩阵的逆矩阵,其元素都为整数</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">hilb</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>     生成一个n×n的希尔伯特矩阵<span class="token punctuation">.</span>
+<span class="token function">invhilb</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>  生成一个n×n的希尔伯特矩阵的逆矩阵<span class="token punctuation">,</span>其元素都为整数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h1 id="Matlab矩阵操作"><a href="#Matlab矩阵操作" class="headerlink" title="Matlab矩阵操作"></a>Matlab矩阵操作</h1><h2 id="一、转置与共轭"><a href="#一、转置与共轭" class="headerlink" title="一、转置与共轭"></a>一、转置与共轭</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x27;  输出转置矩阵</span><br><span class="line">.&#x27; 仅转置</span><br></pre></td></tr></table></figure>
+<h1 id="Matlab矩阵操作"><a href="#Matlab矩阵操作" class="headerlink" title="Matlab矩阵操作"></a>Matlab矩阵操作</h1><h2 id="一、转置与共轭"><a href="#一、转置与共轭" class="headerlink" title="一、转置与共轭"></a>一、转置与共轭</h2><pre class="line-numbers language-matlba" data-language="matlba"><code class="language-matlba">&#39;  输出转置矩阵
+.&#39; 仅转置<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h2 id="二、运算"><a href="#二、运算" class="headerlink" title="二、运算"></a>二、运算</h2><p>加法</p>
 <p>乘法</p>
 <p>除法</p>
 <p>乘方</p>
-<h2 id="三、关系运算符"><a href="#三、关系运算符" class="headerlink" title="三、关系运算符"></a>三、关系运算符</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt; 小于</span><br><span class="line">&lt; = 小于等于</span><br><span class="line">&gt; 大于</span><br><span class="line">&gt; = 大于等于</span><br><span class="line">= = 等于</span><br><span class="line">~ = 不等于</span><br></pre></td></tr></table></figure>
+<h2 id="三、关系运算符"><a href="#三、关系运算符" class="headerlink" title="三、关系运算符"></a>三、关系运算符</h2><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token operator">&lt;</span> 小于
+<span class="token operator">&lt;</span> <span class="token operator">=</span> 小于等于
+<span class="token operator">></span> 大于
+<span class="token operator">></span> <span class="token operator">=</span> 大于等于
+<span class="token operator">=</span> <span class="token operator">=</span> 等于
+<span class="token operator">~</span> <span class="token operator">=</span> 不等于<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="四、逻辑运算符"><a href="#四、逻辑运算符" class="headerlink" title="四、逻辑运算符"></a>四、逻辑运算符</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&amp; 与 </span><br><span class="line"> 或 </span><br><span class="line">~ 非</span><br><span class="line">xor 异或</span><br></pre></td></tr></table></figure>
+<h2 id="四、逻辑运算符"><a href="#四、逻辑运算符" class="headerlink" title="四、逻辑运算符"></a>四、逻辑运算符</h2><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token operator">&amp;</span> 与 
+ 或 
+<span class="token operator">~</span> 非
+xor 异或<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="五、逻辑函数"><a href="#五、逻辑函数" class="headerlink" title="五、逻辑函数"></a>五、逻辑函数</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">find</span>(x) 返回一个x中包含非零元素的下标的向量.如果所有的元素都是零,那么返回一个空矩阵,即[].</span><br><span class="line"><span class="built_in">find</span>(A) 返回一个长的列向量,表示A中包含非零元素的下标向量下述命令更可取</span><br><span class="line">[u,v]=<span class="built_in">find</span>(A)   返回向量u和v,它们包含A中的非零元素的下标,即A中元素(,v)为非零</span><br><span class="line">[u,v,b]=<span class="built_in">find</span>(A) 返回包含A中非零元素的下标向量u和v以及一个包含对应非零元素的向量.A中元素(<span class="number">2</span>w)为非零并且能在b中找到</span><br></pre></td></tr></table></figure>
+<h2 id="五、逻辑函数"><a href="#五、逻辑函数" class="headerlink" title="五、逻辑函数"></a>五、逻辑函数</h2><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> 返回一个x中包含非零元素的下标的向量<span class="token punctuation">.</span>如果所有的元素都是零<span class="token punctuation">,</span>那么返回一个空矩阵<span class="token punctuation">,</span>即<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span>
+<span class="token function">find</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span> 返回一个长的列向量<span class="token punctuation">,</span>表示A中包含非零元素的下标向量下述命令更可取
+<span class="token punctuation">[</span>u<span class="token punctuation">,</span>v<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">find</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>   返回向量u和v<span class="token punctuation">,</span>它们包含A中的非零元素的下标<span class="token punctuation">,</span>即A中元素<span class="token punctuation">(</span><span class="token punctuation">,</span>v<span class="token punctuation">)</span>为非零
+<span class="token punctuation">[</span>u<span class="token punctuation">,</span>v<span class="token punctuation">,</span>b<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">find</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span> 返回包含A中非零元素的下标向量u和v以及一个包含对应非零元素的向量<span class="token punctuation">.</span>A中元素<span class="token punctuation">(</span><span class="token number">2</span>w<span class="token punctuation">)</span>为非零并且能在b中找到<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -611,132 +668,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -791,7 +722,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="学生管理系统_python">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="学生管理系统_python">
                         
                         <span class="card-title">学生管理系统_python</span>
                     </div>
@@ -848,7 +779,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="不同路径II(动态规划)——每日一题0706">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="不同路径II(动态规划)——每日一题0706">
                         
                         <span class="card-title">不同路径II(动态规划)——每日一题0706</span>
                     </div>
@@ -892,6 +823,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1017,7 +985,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1030,7 +998,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1051,6 +1019,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

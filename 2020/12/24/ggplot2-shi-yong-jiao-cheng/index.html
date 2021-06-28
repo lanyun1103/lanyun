@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ggplot2使用教程（未完）, jiojio">
+    <meta name="keywords" content="ggplot2使用教程（未完）, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ggplot2使用教程（未完） | Hexo</title>
+    <title>ggplot2使用教程（未完） | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -466,14 +466,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -488,13 +488,16 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="ggplot2使用教程"><a href="#ggplot2使用教程" class="headerlink" title="ggplot2使用教程"></a>ggplot2使用教程</h1><h2 id="一、基本作图函数qplot"><a href="#一、基本作图函数qplot" class="headerlink" title="一、基本作图函数qplot"></a>一、基本作图函数qplot</h2><h3 id="1-例子"><a href="#1-例子" class="headerlink" title="1. 例子"></a>1. 例子</h3><p>表示快速作图，下面是qplot的参数</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(x,y,...,data,facets=<span class="literal">NULL</span>,margins=<span class="literal">FALSE</span>,geom=<span class="string">&quot;auto&quot;</span>,xlim=<span class="built_in">c</span>(<span class="literal">NA</span>,<span class="literal">NA</span>),ylim=<span class="built_in">c</span>(<span class="literal">NA</span>,<span class="literal">NA</span>),<span class="built_in">log</span>=<span class="string">&quot;&quot;</span>,main=<span class="literal">NULL</span>,xlab=<span class="literal">NULL</span>,ylab=<span class="literal">NULL</span>,asp=<span class="literal">NA</span>,stat=<span class="literal">NULL</span>,position=<span class="literal">NULL</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">qplot(x,y,...,data,facets&#x3D;NULL,margins&#x3D;FALSE,geom&#x3D;&quot;auto&quot;,xlim&#x3D;c(NA,NA),ylim&#x3D;c(NA,NA),log&#x3D;&quot;&quot;,main&#x3D;NULL,xlab&#x3D;NULL,ylab&#x3D;NULL,asp&#x3D;NA,stat&#x3D;NULL,position&#x3D;NULL)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <blockquote>
 <p>说明：x,y是绘制在x轴y轴的数据，data指定数据集，官方推荐使用数据框作为绘图数据集，因为数据框可以储存不同类型的值，ggplot2可以直接使用每一列数据来自动映射到图形属性（无论是什么类型的数据）。facets：分页参数，采用”行变量~列变量“。</p>
@@ -502,7 +505,8 @@
 <p>同样数据下，使用plot绘图：</p>
 <p><img src="http://pict.lanyun1103.top/typora/20201224094219.png" alt="image-20201224094218947"></p>
 <p>使用qplot绘图：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fcyl = as.factor(mpg$cyl)</span><br><span class="line">qplot(displ, hwy, data = mpg, shape=fcyl, color = fcyl)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">fcyl &#x3D; as.factor(mpg$cyl)
+qplot(displ, hwy, data &#x3D; mpg, shape&#x3D;fcyl, color &#x3D; fcyl)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><img src="http://pict.lanyun1103.top/typora/20201224094228.png" alt="image-20201224094228539"></p>
 <p>为什么plot需要使用pch制定图形的形状而<code>qplot</code>不需要，因为<code>qplot</code>的自动映射机制，根据数据到几何图像的自动映射让他能自动将不同的数据使用不同的图形表示。同理，使用<code>`color=fcyl`</code>也是自动映射自动生成合适的颜色。</p>
@@ -516,7 +520,7 @@
 <li> 柱状图</li>
 <li> 平滑线</li>
 </ol>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(x, y, data = mpq, geom = <span class="built_in">c</span>(<span class="string">&quot;point&quot;</span>,<span class="string">&quot;smooth&quot;</span>), method = <span class="string">&quot;loess&quot;</span>, se=<span class="built_in">F</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">qplot(x, y, data &#x3D; mpq, geom &#x3D; c(&quot;point&quot;,&quot;smooth&quot;), method &#x3D; &quot;loess&quot;, se&#x3D;F)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <blockquote>
 <p>method表示使用局部平滑。</p>
@@ -539,12 +543,13 @@
 <h3 id="3）几何对象"><a href="#3）几何对象" class="headerlink" title="3）几何对象"></a>3）几何对象</h3><p>呈现在集合图形中的多边形元素。</p>
 <p><code>mapping=aes()</code>就是从数据到图形属性的映射函数，通常可以简化成<code>aes()</code>，<code>aes(x=var1,var2)</code>，<code>aes</code>函数中还包含其他的属性，例如大小、颜色、形状。</p>
 <p><code>ggplot()</code>函数的功能是初始化ggplot对象，表明图形所用的数据是什么。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ggplot(mpg, aes(displ, hwy, colour = factor(cyl)))</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">ggplot(mpg, aes(displ, hwy, colour &#x3D; factor(cyl)))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="http://pict.lanyun1103.top/typora/20201224105816.png" alt="image-20201224105815944"></p>
 <p>命令会创建一个空的图形</p>
 <p>如果需要绘制图形，<strong>使用<code>layer()</code>添加几何对象</strong>，代码如下</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggplot(mpg, aes(displ, hwy, colour = factor(cyl)))+</span><br><span class="line">  layer(geom = <span class="string">&quot;point&quot;</span>, stat = <span class="string">&quot;identity&quot;</span>, position = <span class="string">&quot;identity&quot;</span>, params = <span class="built_in">list</span>(na.rm=<span class="literal">FALSE</span>))</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">ggplot(mpg, aes(displ, hwy, colour &#x3D; factor(cyl)))+
+  layer(geom &#x3D; &quot;point&quot;, stat &#x3D; &quot;identity&quot;, position &#x3D; &quot;identity&quot;, params &#x3D; list(na.rm&#x3D;FALSE))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>这里使用了+完成对图形的绘制，layer函数的帮助信息如下</p>
 <blockquote>
@@ -559,25 +564,37 @@
 <li> position：位置调整，主要是为了调整图形重合的现象。</li>
 </ol>
 <p>也就是：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">layer(data, mapping, geom, stat, position)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">layer(data, mapping, geom, stat, position)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>以上的例子绘制的是散点图，设置的为<code>geom=&quot;point&quot;</code>，其他有<code>geom=&quot;line&quot;</code>，但是可以使用其他的代替，例如<code>geom_point()</code>，效果是一样的。<strong>可以使用<code>???geom_.</code>来获得其他函数的清单</strong>。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggplot(mpg, aes(displ, hwy, colour = factor(cyl)))+</span><br><span class="line">  geom_point()</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">ggplot(mpg, aes(displ, hwy, colour &#x3D; factor(cyl)))+
+  geom_point()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="4）统计变换"><a href="#4）统计变换" class="headerlink" title="4）统计变换"></a>4）统计变换</h3><p>因为有时候我们不仅要绘制原始的图形，还需要对原始数据进行“统计”上的修改。并且把修改后的数据一起表现出来。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggplot(mpg, aes(displ, hwy, colour = factor(cyl)))+</span><br><span class="line">  geom_point()+stat_smooth(method = <span class="string">&quot;loess&quot;</span>, se = <span class="literal">FALSE</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">ggplot(mpg, aes(displ, hwy, colour &#x3D; factor(cyl)))+
+  geom_point()+stat_smooth(method &#x3D; &quot;loess&quot;, se &#x3D; FALSE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><img src="http://pict.lanyun1103.top/typora/20201224111340.png" alt="image-20201224111340039"></p>
 <h3 id="5）标度"><a href="#5）标度" class="headerlink" title="5）标度"></a>5）标度</h3><h3 id="6）坐标系"><a href="#6）坐标系" class="headerlink" title="6）坐标系"></a>6）坐标系</h3><h3 id="7）分面"><a href="#7）分面" class="headerlink" title="7）分面"></a>7）分面</h3><p>即通过<code>+</code>联系起来的ggplot各个页面</p>
-<h2 id="三、绘图实践"><a href="#三、绘图实践" class="headerlink" title="三、绘图实践"></a>三、绘图实践</h2><h3 id="1-散点图"><a href="#1-散点图" class="headerlink" title="1. 散点图"></a>1. 散点图</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ggplot(mpg, aes(displ, hwy, colour = factor(cyl),shape=factor(cyl)))+</span><br><span class="line">  geom_point()+</span><br><span class="line">  scale_shape_manual(values=<span class="number">1</span>:<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line">scale_color_manual()    <span class="comment">#自定义颜色</span></span><br><span class="line">scale_fill_manual()     <span class="comment">#自定义填充颜色</span></span><br><span class="line">scale_size_manual()     <span class="comment">#自定义大小</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、绘图实践"><a href="#三、绘图实践" class="headerlink" title="三、绘图实践"></a>三、绘图实践</h2><h3 id="1-散点图"><a href="#1-散点图" class="headerlink" title="1. 散点图"></a>1. 散点图</h3><pre class="line-numbers language-R" data-language="R"><code class="language-R">ggplot(mpg, aes(displ, hwy, colour &#x3D; factor(cyl),shape&#x3D;factor(cyl)))+
+  geom_point()+
+  scale_shape_manual(values&#x3D;1:4)
 
-<h3 id="2-折线图"><a href="#2-折线图" class="headerlink" title="2. 折线图"></a>2. 折线图</h3><h4 id="1）普通折线图"><a href="#1）普通折线图" class="headerlink" title="1）普通折线图"></a>1）普通折线图</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ggplot(longley, aes(factor(Year), Unemployed, group =<span class="number">1</span>))+geom_line()</span><br></pre></td></tr></table></figure>
+scale_color_manual()    #自定义颜色
+scale_fill_manual()     #自定义填充颜色
+scale_size_manual()     #自定义大小<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-折线图"><a href="#2-折线图" class="headerlink" title="2. 折线图"></a>2. 折线图</h3><h4 id="1）普通折线图"><a href="#1）普通折线图" class="headerlink" title="1）普通折线图"></a>1）普通折线图</h4><pre class="line-numbers language-R" data-language="R"><code class="language-R">ggplot(longley, aes(factor(Year), Unemployed, group &#x3D;1))+geom_line()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="http://pict.lanyun1103.top/typora/20201224133947.png" alt="image-20201224133947822"></p>
 <blockquote>
 <p>注意：group=1，告诉ggplot()将数据点作为一个分组来处理。</p>
 </blockquote>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">geom_line()     <span class="comment">#连线</span></span><br><span class="line">geom_point()    <span class="comment">#标记图片的点</span></span><br><span class="line"><span class="comment">#以下代码可以着重标记图片中某些点</span></span><br><span class="line">a = subset(longley, Unemployed&gt;=median(Unemployed))</span><br><span class="line">p + geom_point(data = a, shape = <span class="number">21</span>, size = <span class="number">4</span>,fill = <span class="string">&quot;black&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">geom_line()     #连线
+geom_point()    #标记图片的点
+#以下代码可以着重标记图片中某些点
+a &#x3D; subset(longley, Unemployed&gt;&#x3D;median(Unemployed))
+p + geom_point(data &#x3D; a, shape &#x3D; 21, size &#x3D; 4,fill &#x3D; &quot;black&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="2）面积图"><a href="#2）面积图" class="headerlink" title="2）面积图"></a>2）面积图</h4><p><code>geom_area</code>用来绘制面积图</p>
 <h4 id="3）绘制多个折线图"><a href="#3）绘制多个折线图" class="headerlink" title="3）绘制多个折线图"></a>3）绘制多个折线图</h4><p>使用reshape2中的<code>melt()</code>处理宽数据，将数据框以长格式排成一列。</p>
@@ -674,132 +691,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -850,11 +741,11 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/01/06/288/">
+                <a href="/2021/01/06/manim-jiao-cheng-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Manim教程——基础绘制、展现、变换（一）">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Manim教程——基础绘制、展现、变换（一）">
                         
                         <span class="card-title">Manim教程——基础绘制、展现、变换（一）</span>
                     </div>
@@ -873,11 +764,7 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/e6-97-a5-e5-b8-b8-e5-ad-a6-e4-b9-a0/" class="post-category">
-                                    %e6%97%a5%e5%b8%b8%e5%ad%a6%e4%b9%a0
-                                </a>
-                            
-                            <a href="/categories/e6-97-a5-e5-b8-b8-e5-ad-a6-e4-b9-a0/%E4%B8%80%E4%BA%9B%E6%8A%80%E6%9C%AF/" class="post-category">
+                            <a href="/categories/%E4%B8%80%E4%BA%9B%E6%8A%80%E6%9C%AF/" class="post-category">
                                     一些技术
                                 </a>
                             
@@ -907,7 +794,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="LaTeX如何使用Bibtex引用参考文献">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="LaTeX如何使用Bibtex引用参考文献">
                         
                         <span class="card-title">LaTeX如何使用Bibtex引用参考文献</span>
                     </div>
@@ -951,6 +838,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1076,7 +1000,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1089,7 +1013,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1110,6 +1034,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

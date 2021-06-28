@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MATLAB_特征值与特征向量、稀疏矩阵, jiojio">
+    <meta name="keywords" content="MATLAB_特征值与特征向量、稀疏矩阵, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MATLAB_特征值与特征向量、稀疏矩阵 | Hexo</title>
+    <title>MATLAB_特征值与特征向量、稀疏矩阵 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -488,23 +488,84 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><img src="http://lanyun1103.top/wp-content/uploads/2020/07/EECPRRDJ65EW2XD-300x295.png"></p>
-<h1 id="特征值和特征向量"><a href="#特征值和特征向量" class="headerlink" title="特征值和特征向量"></a>特征值和特征向量</h1><h2 id="一、求特征值"><a href="#一、求特征值" class="headerlink" title="一、求特征值"></a>一、求特征值</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">eig(A)</span><br><span class="line">求包含矩阵A的特征值的向量.</span><br><span class="line">[X, D]=eig(A)</span><br><span class="line">产生一个矩阵A的特征值在对角线上的对角矩阵D和矩阵X,它们的列是相应的特征向量,满足AX=XD.为了得到有更好条件特征值的矩阵要进行相似变换.</span><br><span class="line">[x,D]=eig(A, rebalance)</span><br><span class="line">不经过平衡处理求得矩阵A的特征值和特征向量,也就是不进行平衡相似变换</span><br><span class="line"></span><br><span class="line">balance(A)</span><br><span class="line">求平衡矩阵</span><br><span class="line">[T,B]= balance(A)</span><br><span class="line">找到一个相似变换矩阵T和矩阵B,使得它们满足B=T-ATB是用命令balance求得的平衡矩阵.</span><br><span class="line"></span><br><span class="line">eigs(A)</span><br><span class="line">返回一个由矩阵A的部分特征值组成的向量,和命令eig样,但是不返回全部的特征值.如果不带有参量,则计算出最大的特征值.当计算所有特征值时,如果矩阵A的秩不小于<span class="number">6</span>,则计算出<span class="number">6</span>个特征值来.</span><br><span class="line">eigs(f, n)</span><br><span class="line">求出矩阵A的部分特征值.在使用一个矩阵列的线性运算符时,字符串f中包含的是M文件的文件名,n指定问题的阶次.用这种方法来求特征值比开始就用运算符来求要快</span><br><span class="line"></span><br><span class="line">condeig(A)</span><br><span class="line">返回一个由矩阵A的特征值条件数组成的向量</span><br><span class="line">[V,D,s]= condeig(A)</span><br><span class="line">返回[V,D]=eig(A)和s=condeig(A).</span><br></pre></td></tr></table></figure>
+<h1 id="特征值和特征向量"><a href="#特征值和特征向量" class="headerlink" title="特征值和特征向量"></a>特征值和特征向量</h1><h2 id="一、求特征值"><a href="#一、求特征值" class="headerlink" title="一、求特征值"></a>一、求特征值</h2><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">eig</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+求包含矩阵A的特征值的向量<span class="token punctuation">.</span>
+<span class="token punctuation">[</span>X<span class="token punctuation">,</span> D<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">eig</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+产生一个矩阵A的特征值在对角线上的对角矩阵D和矩阵X<span class="token punctuation">,</span>它们的列是相应的特征向量<span class="token punctuation">,</span>满足AX<span class="token operator">=</span>XD<span class="token punctuation">.</span>为了得到有更好条件特征值的矩阵要进行相似变换<span class="token punctuation">.</span>
+<span class="token punctuation">[</span>x<span class="token punctuation">,</span>D<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">eig</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span> rebalance<span class="token punctuation">)</span>
+不经过平衡处理求得矩阵A的特征值和特征向量<span class="token punctuation">,</span>也就是不进行平衡相似变换
+
+<span class="token function">balance</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+求平衡矩阵
+<span class="token punctuation">[</span>T<span class="token punctuation">,</span>B<span class="token punctuation">]</span><span class="token operator">=</span> <span class="token function">balance</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+找到一个相似变换矩阵T和矩阵B<span class="token punctuation">,</span>使得它们满足B<span class="token operator">=</span>T<span class="token operator">-</span>ATB是用命令balance求得的平衡矩阵<span class="token punctuation">.</span>
+
+<span class="token function">eigs</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+返回一个由矩阵A的部分特征值组成的向量<span class="token punctuation">,</span>和命令eig样<span class="token punctuation">,</span>但是不返回全部的特征值<span class="token punctuation">.</span>如果不带有参量<span class="token punctuation">,</span>则计算出最大的特征值<span class="token punctuation">.</span>当计算所有特征值时<span class="token punctuation">,</span>如果矩阵A的秩不小于<span class="token number">6</span><span class="token punctuation">,</span>则计算出<span class="token number">6</span>个特征值来<span class="token punctuation">.</span>
+<span class="token function">eigs</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span> n<span class="token punctuation">)</span>
+求出矩阵A的部分特征值<span class="token punctuation">.</span>在使用一个矩阵列的线性运算符时<span class="token punctuation">,</span>字符串f中包含的是M文件的文件名<span class="token punctuation">,</span>n指定问题的阶次<span class="token punctuation">.</span>用这种方法来求特征值比开始就用运算符来求要快
+
+<span class="token function">condeig</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+返回一个由矩阵A的特征值条件数组成的向量
+<span class="token punctuation">[</span>V<span class="token punctuation">,</span>D<span class="token punctuation">,</span>s<span class="token punctuation">]</span><span class="token operator">=</span> <span class="token function">condeig</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+返回<span class="token punctuation">[</span>V<span class="token punctuation">,</span>D<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">eig</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>和s<span class="token operator">=</span><span class="token function">condeig</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="二、QR-QZ算法"><a href="#二、QR-QZ算法" class="headerlink" title="二、QR/QZ算法"></a>二、QR/QZ算法</h2><p>在MATLAB中，QR算法是计算矩阵所有特征值的一种有效的数学方法，也可以用命令eig来求。在用这种方法时，建议将矩阵转换成相似的上海森伯形式，</p>
-<h3 id="QR算法"><a href="#QR算法" class="headerlink" title="QR算法"></a>QR算法</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[Q, R]=qr(A)</span><br><span class="line">产生一个m×m的酉矩阵Q和一个m×n的上三角矩阵R,使得A=QR</span><br></pre></td></tr></table></figure>
+<h3 id="QR算法"><a href="#QR算法" class="headerlink" title="QR算法"></a>QR算法</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token punctuation">[</span>Q<span class="token punctuation">,</span> R<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">qr</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+产生一个m×m的酉矩阵Q和一个m×n的上三角矩阵R<span class="token punctuation">,</span>使得A<span class="token operator">=</span>QR<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="QZ算法"><a href="#QZ算法" class="headerlink" title="QZ算法"></a>QZ算法</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[C,D,Q,Z,V]=qz(A, B)得到对角线元素是广义特征值的上三角矩阵C、D和广义特征向量矩阵V,矩阵Q和Z是变换矩阵,使得QAZ=C和QBZ=D.</span><br></pre></td></tr></table></figure>
+<h3 id="QZ算法"><a href="#QZ算法" class="headerlink" title="QZ算法"></a>QZ算法</h3><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token punctuation">[</span>C<span class="token punctuation">,</span>D<span class="token punctuation">,</span>Q<span class="token punctuation">,</span>Z<span class="token punctuation">,</span>V<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">qz</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span> B<span class="token punctuation">)</span>得到对角线元素是广义特征值的上三角矩阵C、D和广义特征向量矩阵V<span class="token punctuation">,</span>矩阵Q和Z是变换矩阵<span class="token punctuation">,</span>使得QAZ<span class="token operator">=</span>C和QBZ<span class="token operator">=</span>D<span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h1 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h1><h2 id="一、创建稀疏矩阵"><a href="#一、创建稀疏矩阵" class="headerlink" title="一、创建稀疏矩阵"></a>一、创建稀疏矩阵</h2><p>可以通过eye创建，但是sparse可以创建稀疏矩阵</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">sparse(A)</span><br><span class="line">由非零元素和下标建立稀疏矩阵A.如果A已是一个稀疏</span><br><span class="line">矩阵,则返回A本身.</span><br><span class="line">sparse(m,n)</span><br><span class="line">生成一个m×n的所有元素都是<span class="number">0</span>的稀疏矩阵.</span><br><span class="line">sparse(u,v, a)</span><br><span class="line">生成一个由长度相同的向量u,v和a定义的稀疏矩阵.其</span><br><span class="line">中u和v是整数向量,a是一个实数或者复数向量.(u,v)</span><br><span class="line">对应值a1,如果a中有零元素,则将这个元素排除在外</span><br><span class="line">稀疏矩阵的大小为<span class="built_in">max</span>(u)×<span class="built_in">max</span>(v).</span><br><span class="line">sparse(u,v,a,m,n)生成一个m×n的稀疏矩阵,(u,w)对应值a:.向量u,v和a必须长度相同.</span><br><span class="line">sparse(u,v,a,m,n,nzmax)生成一个m×n的含有nzmax个非零元素的稀疏矩阵.(u,v)对应值a.nzmax的值必须大于或者等于向量u和v的长度.</span><br><span class="line"></span><br><span class="line"><span class="built_in">find</span>(x)</span><br><span class="line">返回向量x中非零元素的下标.如果x=X是一个矩阵,那么X的向量就作为一个长向量来考虑.</span><br><span class="line">[u,v]=<span class="built_in">find</span> (A)</span><br><span class="line">返回矩阵A中非零元素的下标.</span><br><span class="line">[u,v,s]=<span class="built_in">find</span>(A)返回矩阵A中非零元素的下标.用向量中元素的值及u和v中相应的下标,实际上就是向量、v和s作为命令pars的参数.</span><br><span class="line">spconvert(D)</span><br><span class="line">将一个有三列的矩阵转换成一个稀疏矩阵.D中的第<span class="number">1</span>列作为行的下标,第<span class="number">2</span>列作为列的下标,最后一列作为元素值</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">sparse</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+由非零元素和下标建立稀疏矩阵A<span class="token punctuation">.</span>如果A已是一个稀疏
+矩阵<span class="token punctuation">,</span>则返回A本身<span class="token punctuation">.</span>
+<span class="token function">sparse</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span>n<span class="token punctuation">)</span>
+生成一个m×n的所有元素都是<span class="token number">0</span>的稀疏矩阵<span class="token punctuation">.</span>
+<span class="token function">sparse</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span>v<span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+生成一个由长度相同的向量u<span class="token punctuation">,</span>v和a定义的稀疏矩阵<span class="token punctuation">.</span>其
+中u和v是整数向量<span class="token punctuation">,</span>a是一个实数或者复数向量<span class="token punctuation">.</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span>v<span class="token punctuation">)</span>
+对应值a1<span class="token punctuation">,</span>如果a中有零元素<span class="token punctuation">,</span>则将这个元素排除在外
+稀疏矩阵的大小为<span class="token function">max</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span>×<span class="token function">max</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">.</span>
+<span class="token function">sparse</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span>v<span class="token punctuation">,</span>a<span class="token punctuation">,</span>m<span class="token punctuation">,</span>n<span class="token punctuation">)</span>生成一个m×n的稀疏矩阵<span class="token punctuation">,</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span>w<span class="token punctuation">)</span>对应值a<span class="token operator">:</span><span class="token punctuation">.</span>向量u<span class="token punctuation">,</span>v和a必须长度相同<span class="token punctuation">.</span>
+<span class="token function">sparse</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span>v<span class="token punctuation">,</span>a<span class="token punctuation">,</span>m<span class="token punctuation">,</span>n<span class="token punctuation">,</span>nzmax<span class="token punctuation">)</span>生成一个m×n的含有nzmax个非零元素的稀疏矩阵<span class="token punctuation">.</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span>v<span class="token punctuation">)</span>对应值a<span class="token punctuation">.</span>nzmax的值必须大于或者等于向量u和v的长度<span class="token punctuation">.</span>
 
-<h2 id="二、稀疏矩阵运算"><a href="#二、稀疏矩阵运算" class="headerlink" title="二、稀疏矩阵运算"></a>二、稀疏矩阵运算</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">nnz(A)</span><br><span class="line">求矩阵A中非零元素的个数.它既可求满矩阵也可求稀疏矩阵.</span><br><span class="line">spy(A)</span><br><span class="line">画出稀疏矩阵A中非零元素的分布.也可用在满矩阵中,在这种情况下,只给出非零元素的分布.</span><br><span class="line">spy(A,cstr,<span class="built_in">size</span>)用指定的颜色cstr在<span class="built_in">size</span>规定的范围内画出稀疏矩阵A中非零元素的分布.</span><br><span class="line">nonzeros(A)</span><br><span class="line">按照列的顺序找出矩阵A中非零的元素.</span><br><span class="line">spores (A)</span><br><span class="line">把矩阵A中的非零元素全换为<span class="number">1.</span></span><br><span class="line">spalloc(m, n, nzman)</span><br><span class="line">产生一个m×n阶只有n=<span class="built_in">max</span>个非零元素的稀疏矩阵.这样可以有效地减少存储空间和提高运算速度.</span><br><span class="line">nzmax(A)</span><br><span class="line">给出为矩阵A中非零元素分配的内存数.不一定和nnz(a)得到的数相同:参见 sparse或者spa11oc.</span><br><span class="line">issparse(A)</span><br><span class="line">如果矩阵A是稀疏矩阵,则返回<span class="number">1</span>;否则返回<span class="number">0.</span></span><br><span class="line">spun (fcn, A)</span><br><span class="line">用A中所有非零元素对函数fcn求值,如果函数不是对稀疏矩阵定义的,同样也可以求值.</span><br><span class="line">spun(A)</span><br><span class="line">求稀疏矩阵A的结构秩.对于所有的矩阵来说,都有prank(A≥rank(A)</span><br></pre></td></tr></table></figure>
+<span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+返回向量x中非零元素的下标<span class="token punctuation">.</span>如果x<span class="token operator">=</span>X是一个矩阵<span class="token punctuation">,</span>那么X的向量就作为一个长向量来考虑<span class="token punctuation">.</span>
+<span class="token punctuation">[</span>u<span class="token punctuation">,</span>v<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">find</span> <span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+返回矩阵A中非零元素的下标<span class="token punctuation">.</span>
+<span class="token punctuation">[</span>u<span class="token punctuation">,</span>v<span class="token punctuation">,</span>s<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">find</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>返回矩阵A中非零元素的下标<span class="token punctuation">.</span>用向量中元素的值及u和v中相应的下标<span class="token punctuation">,</span>实际上就是向量、v和s作为命令pars的参数<span class="token punctuation">.</span>
+<span class="token function">spconvert</span><span class="token punctuation">(</span>D<span class="token punctuation">)</span>
+将一个有三列的矩阵转换成一个稀疏矩阵<span class="token punctuation">.</span>D中的第<span class="token number">1</span>列作为行的下标<span class="token punctuation">,</span>第<span class="token number">2</span>列作为列的下标<span class="token punctuation">,</span>最后一列作为元素值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="二、稀疏矩阵运算"><a href="#二、稀疏矩阵运算" class="headerlink" title="二、稀疏矩阵运算"></a>二、稀疏矩阵运算</h2><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">nnz</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+求矩阵A中非零元素的个数<span class="token punctuation">.</span>它既可求满矩阵也可求稀疏矩阵<span class="token punctuation">.</span>
+<span class="token function">spy</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+画出稀疏矩阵A中非零元素的分布<span class="token punctuation">.</span>也可用在满矩阵中<span class="token punctuation">,</span>在这种情况下<span class="token punctuation">,</span>只给出非零元素的分布<span class="token punctuation">.</span>
+<span class="token function">spy</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span>cstr<span class="token punctuation">,</span>size<span class="token punctuation">)</span>用指定的颜色cstr在size规定的范围内画出稀疏矩阵A中非零元素的分布<span class="token punctuation">.</span>
+<span class="token function">nonzeros</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+按照列的顺序找出矩阵A中非零的元素<span class="token punctuation">.</span>
+<span class="token function">spores</span> <span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+把矩阵A中的非零元素全换为<span class="token number">1.</span>
+<span class="token function">spalloc</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> n<span class="token punctuation">,</span> nzman<span class="token punctuation">)</span>
+产生一个m×n阶只有n<span class="token operator">=</span>max个非零元素的稀疏矩阵<span class="token punctuation">.</span>这样可以有效地减少存储空间和提高运算速度<span class="token punctuation">.</span>
+<span class="token function">nzmax</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+给出为矩阵A中非零元素分配的内存数<span class="token punctuation">.</span>不一定和<span class="token function">nnz</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>得到的数相同<span class="token operator">:</span>参见 sparse或者spa11oc<span class="token punctuation">.</span>
+<span class="token function">issparse</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+如果矩阵A是稀疏矩阵<span class="token punctuation">,</span>则返回<span class="token number">1</span><span class="token punctuation">;</span>否则返回<span class="token number">0.</span>
+<span class="token function">spun</span> <span class="token punctuation">(</span>fcn<span class="token punctuation">,</span> A<span class="token punctuation">)</span>
+用A中所有非零元素对函数fcn求值<span class="token punctuation">,</span>如果函数不是对稀疏矩阵定义的<span class="token punctuation">,</span>同样也可以求值<span class="token punctuation">.</span>
+<span class="token function">spun</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+求稀疏矩阵A的结构秩<span class="token punctuation">.</span>对于所有的矩阵来说<span class="token punctuation">,</span>都有<span class="token function">prank</span><span class="token punctuation">(</span>A≥<span class="token function">rank</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -591,132 +652,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -771,7 +706,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Hadoop在Linux下的安装（Centos）">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Hadoop在Linux下的安装（Centos）">
                         
                         <span class="card-title">Hadoop在Linux下的安装（Centos）</span>
                     </div>
@@ -820,7 +755,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="学生管理系统_python">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="学生管理系统_python">
                         
                         <span class="card-title">学生管理系统_python</span>
                     </div>
@@ -872,6 +807,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -997,7 +969,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1010,7 +982,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1031,6 +1003,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

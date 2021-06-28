@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="重定向/转发、jsp传递信息、getAttribute与getParameter区别, jiojio">
+    <meta name="keywords" content="重定向/转发、jsp传递信息、getAttribute与getParameter区别, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>重定向/转发、jsp传递信息、getAttribute与getParameter区别 | Hexo</title>
+    <title>重定向/转发、jsp传递信息、getAttribute与getParameter区别 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -466,7 +466,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    979
+                    973
                 </div>
                 
 
@@ -488,6 +488,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -499,7 +502,11 @@
 <li> 改变地址栏地址</li>
 <li> 无法传递值，至今没有发现如何传递</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">response.sendRedirect(<span class="string">&quot;regRequest.jsp&quot;</span>);</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">String site = <span class="string">&quot;http://www.runoob.com&quot;</span> ;</span><br><span class="line">response.setStatus(response.SC_MOVED_TEMPORARILY);</span><br><span class="line">response.setHeader(<span class="string">&quot;Location&quot;</span>, site); </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">response<span class="token punctuation">.</span><span class="token function">sendRedirect</span><span class="token punctuation">(</span><span class="token string">"regRequest.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//或者</span>
+<span class="token class-name">String</span> site <span class="token operator">=</span> <span class="token string">"http://www.runoob.com"</span> <span class="token punctuation">;</span>
+response<span class="token punctuation">.</span><span class="token function">setStatus</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>SC_MOVED_TEMPORARILY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+response<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">"Location"</span><span class="token punctuation">,</span> site<span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="2-转发"><a href="#2-转发" class="headerlink" title="2.转发"></a>2.转发</h3><p>转发：</p>
 <ol>
@@ -507,35 +514,40 @@
 <li> 地址栏不变</li>
 <li> 信息可以传递</li>
 </ol>
-<h4 id="java代码："><a href="#java代码：" class="headerlink" title="java代码："></a>java代码：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.getRequestDispatcher(<span class="string">&quot;b.jsp&quot;</span>).forward(req,resp);</span><br></pre></td></tr></table></figure>
+<h4 id="java代码："><a href="#java代码：" class="headerlink" title="java代码："></a>java代码：</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">request<span class="token punctuation">.</span><span class="token function">getRequestDispatcher</span><span class="token punctuation">(</span><span class="token string">"b.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="jsp代码："><a href="#jsp代码：" class="headerlink" title="jsp代码："></a>jsp代码：</h4><p>可以通过\<a href="jsp:param">jsp:param</a>传递参数，传递的目的文件必须是动态文件（jsp），含义与java代码基本相同</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:forward page=<span class="string">&quot;b.jsp&quot;</span>&gt;</span><br><span class="line">    &lt;jsp:param name=<span class="string">&quot;name&quot;</span> , value =<span class="string">&quot;value&quot;</span>&gt;&lt;/jsp:param&gt;</span><br><span class="line">&lt;/jsp:forward&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;jsp:forward page&#x3D;&quot;b.jsp&quot;&gt;
+    &lt;jsp:param name&#x3D;&quot;name&quot; , value &#x3D;&quot;value&quot;&gt;&lt;&#x2F;jsp:param&gt;
+&lt;&#x2F;jsp:forward&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>跳转的界面可以通过以下获取传递来的数据</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.getParameter(<span class="string">&quot;name&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">request.getParameter(&quot;name&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="3-跳转"><a href="#3-跳转" class="headerlink" title="3.跳转"></a>3.跳转</h3><p>以上两种都是jsp在运行到代码的时候就跳转，即自动跳转</p>
 <p>在用了以上的很多之后，才发现如果想要实现<strong>点击跳转页面+传递数据</strong>，其实最好用的是html的\标签，既可以传递值，也没必要使用button标签添加一个累赘的按钮，现在的很多网页也是这么实现前端的携带信息跳转任务的</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;b.jsp+&lt;%=name%&gt;&quot;</span>&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;a href&#x3D;&quot;b.jsp+&lt;%&#x3D;name%&gt;&quot;&gt;&lt;&#x2F;a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="二、关于如何在jsp文件之间互相传递信息"><a href="#二、关于如何在jsp文件之间互相传递信息" class="headerlink" title="二、关于如何在jsp文件之间互相传递信息"></a>二、关于如何在jsp文件之间互相传递信息</h2><h3 id="1-通过地址栏传递信息"><a href="#1-通过地址栏传递信息" class="headerlink" title="1.通过地址栏传递信息"></a>1.通过地址栏传递信息</h3><p>即在a.jsp文件中，使用跳转界面，在目的文件地址后方添加参数</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;get_index.jsp?number=&lt;%=number%&gt;&quot;</span>&gt;点击跳转&lt;/a&gt;   </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;a href&#x3D;&quot;get_index.jsp?number&#x3D;&lt;%&#x3D;number%&gt;&quot;&gt;点击跳转&lt;&#x2F;a&gt;   <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="2-通过request传递参数"><a href="#2-通过request传递参数" class="headerlink" title="2.通过request传递参数"></a>2.通过request传递参数</h3><p>传递值的方法有很多种，页面重定向/转移的方法也有很多种，以上已经说过，如果需要自动跳转，传递本文件的内容，选择<strong>转发</strong>即可，但是在学习中发现存在一种问题。</p>
 <p>如果在本文件中写了购买票务的底层逻辑，并且在本文件中转发给另一个文件，因为地址栏不变，这是服务器给你改变的网页内容，当你刷新的时候，又运行了一次底层的购买票务逻辑，票就会又少一张，这是很恐怖的结果，所以最方便的结果，就是把需要转发给其他文件的内容，通过地址栏传过去。这样另一个文件也可以通过request的方法获得网址中的参数。</p>
 <p>a.jsp</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%request.setCharacterEncoding(<span class="string">&quot;UTF-8&quot;</span>); %&gt;</span><br><span class="line">&lt;%request.setAttribute(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;李白&quot;</span>); %&gt;</span><br><span class="line">&lt;jsp:forward page=<span class="string">&quot;index.jsp&quot;</span>&gt;&lt;/jsp:forward&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%request.setCharacterEncoding(&quot;UTF-8&quot;); %&gt;
+&lt;%request.setAttribute(&quot;name&quot;, &quot;李白&quot;); %&gt;
+&lt;jsp:forward page&#x3D;&quot;index.jsp&quot;&gt;&lt;&#x2F;jsp:forward&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>b.jsp</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%=(String)request.getAttribute(<span class="string">&quot;name&quot;</span>)%&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%&#x3D;(String)request.getAttribute(&quot;name&quot;)%&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="三、关于Attribute与Parameter的区别"><a href="#三、关于Attribute与Parameter的区别" class="headerlink" title="三、关于Attribute与Parameter的区别"></a>三、关于Attribute与Parameter的区别</h2><p>js中我们经常用到getAttribute和getParameter，两者都可以用来从其他文件获得数据，存在区别，这里总结一下</p>
 <h3 id="getAttribute"><a href="#getAttribute" class="headerlink" title="getAttribute()"></a>getAttribute()</h3><p>用来获得request域中的参数，可以理解成把数据放到request对象中放在服务器端，也就是说，想要get必须先set。可以实现多个文件中的数据共享。（但是重定向会重置这个request对象，不信可以试试，也就更符合了重定向无法传递信息）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">request.setAttribute(<span class="string">&quot;name&quot;</span>,<span class="string">&quot;jack&quot;</span>);</span><br><span class="line">request.getAttribute(<span class="string">&quot;name&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">request<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">,</span><span class="token string">"jack"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+request<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="getParameter"><a href="#getParameter" class="headerlink" title="getParameter()"></a>getParameter()</h3><p>客户端与服务器端之间的单纯单方面信息交换，这个客户端的数据提交可以使用html的表单，也可以是其他任何可以传递信息的跳转网页方法，但是需要注意的是没有setParameter()这个方法，也就是这个方法就是单纯的获得客户端传来的参数。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getParameter(<span class="string">&quot;username&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="返回值之间的区别"><a href="#返回值之间的区别" class="headerlink" title="返回值之间的区别"></a>返回值之间的区别</h3><ol>
 <li> getParameter()获取的是客户端设置的数据。 getAttribute()获取的是服务器设置的数据。</li>
@@ -628,132 +640,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -808,7 +694,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Android Studio 配置镜像">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Android Studio 配置镜像">
                         
                         <span class="card-title">Android Studio 配置镜像</span>
                     </div>
@@ -857,7 +743,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="GIT版本控制总结">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="GIT版本控制总结">
                         
                         <span class="card-title">GIT版本控制总结</span>
                     </div>
@@ -901,6 +787,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1026,7 +949,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1039,7 +962,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1060,6 +983,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

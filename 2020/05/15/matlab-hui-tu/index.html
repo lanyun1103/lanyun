@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Matlab_绘图, jiojio">
+    <meta name="keywords" content="Matlab_绘图, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Matlab_绘图 | Hexo</title>
+    <title>Matlab_绘图 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -466,14 +466,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    885
+                    802
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -488,6 +488,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -495,7 +498,15 @@
             <div id="articleContent">
                 <h1 id="Matlab——绘图"><a href="#Matlab——绘图" class="headerlink" title="Matlab——绘图"></a>Matlab——绘图</h1><h2 id="一、绘图："><a href="#一、绘图：" class="headerlink" title="一、绘图："></a>一、绘图：</h2><h3 id="1-函数："><a href="#1-函数：" class="headerlink" title="1.函数："></a>1.函数：</h3><h4 id="plot："><a href="#plot：" class="headerlink" title="plot："></a>plot：</h4><h5 id="基础："><a href="#基础：" class="headerlink" title="基础："></a>基础：</h5><p>创建数组：</p>
 <p>x=0:0.005:0.2（创建0.005步长，0 - 0.2的点）</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(x,y)</span><br><span class="line">①：可以使用两个坐标数组</span><br><span class="line">②：可以使用单个坐标数组</span><br><span class="line">③：可以绘制复数向量图</span><br><span class="line">cx = x+y*<span class="built_in">i</span> / cx = <span class="built_in">complex</span>(x,y)</span><br><span class="line"><span class="built_in">plot</span>(cx)</span><br><span class="line"></span><br><span class="line">④：同一个图中绘制多个曲线</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,[<span class="built_in">sin</span>(x);<span class="built_in">sin</span>(<span class="number">2</span>*x)]);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">plot</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span>
+①：可以使用两个坐标数组
+②：可以使用单个坐标数组
+③：可以绘制复数向量图
+cx <span class="token operator">=</span> x<span class="token operator">+</span>y<span class="token operator">*</span><span class="token number">i</span> <span class="token operator">/</span> cx <span class="token operator">=</span> <span class="token function">complex</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span>
+<span class="token function">plot</span><span class="token punctuation">(</span>cx<span class="token punctuation">)</span>
+
+④：同一个图中绘制多个曲线
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">plot</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token function">sin</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">sin</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>x<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="plot选项："><a href="#plot选项：" class="headerlink" title="plot选项："></a>plot选项：</h5><p>线型：</p>
 <ol>
@@ -515,46 +526,131 @@
 <li> “^”</li>
 </ol>
 <h4 id="fplot："><a href="#fplot：" class="headerlink" title="fplot："></a>fplot：</h4><h5 id="作用、用法："><a href="#作用、用法：" class="headerlink" title="作用、用法："></a>作用、用法：</h5><p>一般用来绘制函数的图像</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fplot(f,lims,选项)</span><br><span class="line">&gt;&gt; fplot(@(x) <span class="built_in">sin</span>(<span class="number">1.</span>/x),[<span class="number">0</span>,<span class="number">0.2</span>],<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line"></span><br><span class="line">fplot(funx,funy,tlims,选项)</span><br><span class="line">&gt;&gt; fplot(@(t) t.*<span class="built_in">sin</span>(t),@(t) t.*<span class="built_in">cos</span>(t),[<span class="number">0</span>,<span class="number">10</span>*<span class="built_in">pi</span>],<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line"></span><br><span class="line">选项和<span class="built_in">plot</span>相同</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">fplot</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span>lims<span class="token punctuation">,</span>选项<span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">fplot</span><span class="token punctuation">(</span><span class="token operator">@</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token function">sin</span><span class="token punctuation">(</span><span class="token number">1.</span><span class="token operator">/</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0.2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">)</span>
 
-<h4 id="绘图参数："><a href="#绘图参数：" class="headerlink" title="绘图参数："></a>绘图参数：</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">title(图形标题)</span><br><span class="line">&gt;&gt; fplot(@(t) t.*<span class="built_in">sin</span>(t),@(t) t.*<span class="built_in">cos</span>(t),[<span class="number">0</span>,<span class="number">10</span>*<span class="built_in">pi</span>],<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">&gt;&gt; title(<span class="string">&#x27;test&#x27;</span>)</span><br><span class="line">设置属性：</span><br><span class="line">Color</span><br><span class="line">FontSize</span><br><span class="line"></span><br><span class="line">*****************</span><br><span class="line">xlabel(x轴说明)</span><br><span class="line">ylabel(y轴说明)</span><br><span class="line"></span><br><span class="line">*****************</span><br><span class="line">text(x,y,图形说明）和 gtext(说明)</span><br><span class="line">text 在指定坐标上添加文本说明</span><br><span class="line">gtext(<span class="string">&#x27;\leftarrow sin(x)&#x27;</span>)</span><br><span class="line"></span><br><span class="line">*****************</span><br><span class="line"><span class="built_in">legend</span>(图例<span class="number">1</span>，图例<span class="number">2</span>)</span><br><span class="line">说明多个函数曲线的名称</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,[<span class="built_in">sin</span>(x);<span class="built_in">sin</span>(<span class="number">2</span>*x)]);</span><br><span class="line">&gt;&gt; <span class="built_in">legend</span>(<span class="string">&#x27;sin(x)&#x27;</span>,<span class="string">&#x27;sin(2*x)&#x27;</span>)</span><br><span class="line"></span><br><span class="line">****************</span><br><span class="line">set()</span><br><span class="line">set函数的调用格式为：</span><br><span class="line">set(句柄，属性名<span class="number">1</span>，属性值<span class="number">1</span>，属性名<span class="number">2</span>，属性值<span class="number">2</span>，…)</span><br><span class="line">例如</span><br><span class="line">set(h,&#123;<span class="string">&#x27;LineWidth&#x27;</span>&#125;,&#123;<span class="number">2</span>;<span class="number">5</span>;<span class="number">8</span>&#125;) <span class="comment">%set(h,&#123;&#x27;LineWidth&#x27;&#125;,&#123;2&#125;)==set(h,&#x27;LineWidth&#x27;,2),将所有线宽设置为2</span></span><br><span class="line">set(h,&#123;<span class="string">&#x27;Color&#x27;</span>&#125;,&#123;<span class="string">&#x27;r&#x27;</span>;<span class="string">&#x27;g&#x27;</span>;<span class="string">&#x27;b&#x27;</span>&#125;,&#123;<span class="string">&#x27;LineStyle&#x27;</span>&#125;,&#123;<span class="string">&#x27;--&#x27;</span>;<span class="string">&#x27;:&#x27;</span>;<span class="string">&#x27;-.&#x27;</span>&#125;) <span class="comment">%设置颜色和线宽</span></span><br></pre></td></tr></table></figure>
+<span class="token function">fplot</span><span class="token punctuation">(</span>funx<span class="token punctuation">,</span>funy<span class="token punctuation">,</span>tlims<span class="token punctuation">,</span>选项<span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">fplot</span><span class="token punctuation">(</span><span class="token operator">@</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> t<span class="token operator">.*</span><span class="token function">sin</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> t<span class="token operator">.*</span><span class="token function">cos</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token operator">*</span><span class="token keyword">pi</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+
+选项和plot相同<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="绘图参数："><a href="#绘图参数：" class="headerlink" title="绘图参数："></a>绘图参数：</h4><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">title</span><span class="token punctuation">(</span>图形标题<span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">fplot</span><span class="token punctuation">(</span><span class="token operator">@</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> t<span class="token operator">.*</span><span class="token function">sin</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> t<span class="token operator">.*</span><span class="token function">cos</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token operator">*</span><span class="token keyword">pi</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">title</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span>
+设置属性：
+Color
+FontSize
+
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>
+<span class="token function">xlabel</span><span class="token punctuation">(</span>x轴说明<span class="token punctuation">)</span>
+<span class="token function">ylabel</span><span class="token punctuation">(</span>y轴说明<span class="token punctuation">)</span>
+
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>
+<span class="token function">text</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>图形说明）和 <span class="token function">gtext</span><span class="token punctuation">(</span>说明<span class="token punctuation">)</span>
+text 在指定坐标上添加文本说明
+<span class="token function">gtext</span><span class="token punctuation">(</span><span class="token string">'\leftarrow sin(x)'</span><span class="token punctuation">)</span>
+
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>
+<span class="token function">legend</span><span class="token punctuation">(</span>图例<span class="token number">1</span>，图例<span class="token number">2</span><span class="token punctuation">)</span>
+说明多个函数曲线的名称
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">plot</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token function">sin</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">sin</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>x<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">legend</span><span class="token punctuation">(</span><span class="token string">'sin(x)'</span><span class="token punctuation">,</span><span class="token string">'sin(2*x)'</span><span class="token punctuation">)</span>
+
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>
+<span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+set函数的调用格式为：
+<span class="token function">set</span><span class="token punctuation">(</span>句柄，属性名<span class="token number">1</span>，属性值<span class="token number">1</span>，属性名<span class="token number">2</span>，属性值<span class="token number">2</span>，…<span class="token punctuation">)</span>
+例如
+<span class="token function">set</span><span class="token punctuation">(</span>h<span class="token punctuation">,</span><span class="token punctuation">&#123;</span><span class="token string">'LineWidth'</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span><span class="token number">2</span><span class="token punctuation">;</span><span class="token number">5</span><span class="token punctuation">;</span><span class="token number">8</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token comment">%set(h,&#123;'LineWidth'&#125;,&#123;2&#125;)==set(h,'LineWidth',2),将所有线宽设置为2</span>
+<span class="token function">set</span><span class="token punctuation">(</span>h<span class="token punctuation">,</span><span class="token punctuation">&#123;</span><span class="token string">'Color'</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span><span class="token string">'r'</span><span class="token punctuation">;</span><span class="token string">'g'</span><span class="token punctuation">;</span><span class="token string">'b'</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span><span class="token string">'LineStyle'</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span><span class="token string">'--'</span><span class="token punctuation">;</span><span class="token string">':'</span><span class="token punctuation">;</span><span class="token string">'-.'</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token comment">%设置颜色和线宽</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="坐标控制"><a href="#坐标控制" class="headerlink" title="坐标控制"></a>坐标控制</h5><p>调整当前视图范围</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axis([xmin,xmax,ymin,ymax,zmin,zmax])</span><br><span class="line"></span><br><span class="line">axis equal  设置坐标轴等长刻度</span><br><span class="line">axis square 正方形坐标系</span><br><span class="line">axis auto   默认</span><br><span class="line">axis off    取消坐标轴</span><br><span class="line">axis on     显示坐标轴</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">axis</span><span class="token punctuation">(</span><span class="token punctuation">[</span>xmin<span class="token punctuation">,</span>xmax<span class="token punctuation">,</span>ymin<span class="token punctuation">,</span>ymax<span class="token punctuation">,</span>zmin<span class="token punctuation">,</span>zmax<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+axis equal  设置坐标轴等长刻度
+axis square 正方形坐标系
+axis auto   默认
+axis off    取消坐标轴
+axis on     显示坐标轴<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>网格和边框</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">grid on</span><br><span class="line">grid off</span><br><span class="line">grid </span><br><span class="line"></span><br><span class="line">box on</span><br><span class="line">box off</span><br><span class="line">box</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">grid on
+grid off
+grid 
 
-<h5 id="图形保持"><a href="#图形保持" class="headerlink" title="图形保持"></a>图形保持</h5><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">hold</span> on</span><br><span class="line"><span class="built_in">hold</span> off</span><br><span class="line">可以用来绘制同心圆</span><br></pre></td></tr></table></figure>
+box on
+box off
+box<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="图形分割"><a href="#图形分割" class="headerlink" title="图形分割"></a>图形分割</h5><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">subplot(m,n,p)</span><br><span class="line">将图形窗口分成m行n列的图形</span><br></pre></td></tr></table></figure>
+<h5 id="图形保持"><a href="#图形保持" class="headerlink" title="图形保持"></a>图形保持</h5><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">hold on
+hold off
+可以用来绘制同心圆<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="图形分割"><a href="#图形分割" class="headerlink" title="图形分割"></a>图形分割</h5><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">subplot</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span>n<span class="token punctuation">,</span>p<span class="token punctuation">)</span>
+将图形窗口分成m行n列的图形<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="2-其他二维曲线："><a href="#2-其他二维曲线：" class="headerlink" title="2.其他二维曲线："></a>2.其他二维曲线：</h3><p>对数</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">semilogx(x1,y1,选项<span class="number">1</span>,x2,y2,选项<span class="number">2.</span>..)</span><br><span class="line">semilogy(x1,y1,选项<span class="number">1</span>,x2,y2,选项<span class="number">2.</span>..)</span><br><span class="line">loglog(x1,y1,选项<span class="number">1</span>,x2,y2,选项<span class="number">2.</span>..)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">semilogx</span><span class="token punctuation">(</span>x1<span class="token punctuation">,</span>y1<span class="token punctuation">,</span>选项<span class="token number">1</span><span class="token punctuation">,</span>x2<span class="token punctuation">,</span>y2<span class="token punctuation">,</span>选项<span class="token number">2.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+<span class="token function">semilogy</span><span class="token punctuation">(</span>x1<span class="token punctuation">,</span>y1<span class="token punctuation">,</span>选项<span class="token number">1</span><span class="token punctuation">,</span>x2<span class="token punctuation">,</span>y2<span class="token punctuation">,</span>选项<span class="token number">2.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+<span class="token function">loglog</span><span class="token punctuation">(</span>x1<span class="token punctuation">,</span>y1<span class="token punctuation">,</span>选项<span class="token number">1</span><span class="token punctuation">,</span>x2<span class="token punctuation">,</span>y2<span class="token punctuation">,</span>选项<span class="token number">2.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>极坐标</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">polar(theta,rho,选项)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">polar</span><span class="token punctuation">(</span>theta<span class="token punctuation">,</span>rho<span class="token punctuation">,</span>选项<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>条形类图</p>
 <p>（1）条形图</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">bar(y,style) y是数据，style用于指定格式(grouped,stacked)</span><br><span class="line">&gt;&gt; y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>;<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>;<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br><span class="line">&gt;&gt; subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">&gt;&gt; bar(y)</span><br><span class="line">&gt;&gt; title(<span class="string">&#x27;group&#x27;</span>)</span><br><span class="line">&gt;&gt; subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">&gt;&gt; bar(y,<span class="string">&#x27;stacked&#x27;</span>)</span><br><span class="line">&gt;&gt; title(<span class="string">&#x27;stack&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">bar</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>style<span class="token punctuation">)</span> y是数据，style用于指定格式<span class="token punctuation">(</span>grouped<span class="token punctuation">,</span>stacked<span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">;</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">subplot</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">bar</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">title</span><span class="token punctuation">(</span><span class="token string">'group'</span><span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">subplot</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">bar</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span><span class="token string">'stacked'</span><span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">title</span><span class="token punctuation">(</span><span class="token string">'stack'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>（2）直方图：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hist(y)</span><br><span class="line">hist(y,x)</span><br><span class="line">&gt;&gt; y = <span class="built_in">randn</span>(<span class="number">500</span>,<span class="number">1</span>);</span><br><span class="line">&gt;&gt; subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">&gt;&gt; hist(y);</span><br><span class="line">&gt;&gt; subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">&gt;&gt; x = <span class="number">-3</span>:<span class="number">0.2</span>:<span class="number">3</span>;</span><br><span class="line">&gt;&gt; hist(y,x)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">hist</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+<span class="token function">hist</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>x<span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> y <span class="token operator">=</span> <span class="token function">randn</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">subplot</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">hist</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">subplot</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">></span> x <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">3</span><span class="token operator">:</span><span class="token number">0.2</span><span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">hist</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-三维函数："><a href="#3-三维函数：" class="headerlink" title="3.三维函数："></a>3.三维函数：</h3><h4 id="plot3："><a href="#plot3：" class="headerlink" title="plot3："></a>plot3：</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot3</span>(x,y,z,选项)</span><br><span class="line">输入多组数据</span><br><span class="line"><span class="built_in">plot3</span>(x1,y1,z1,x2,y2,z2,...,xn,yn,zn)</span><br></pre></td></tr></table></figure>
+<h3 id="3-三维函数："><a href="#3-三维函数：" class="headerlink" title="3.三维函数："></a>3.三维函数：</h3><h4 id="plot3："><a href="#plot3：" class="headerlink" title="plot3："></a>plot3：</h4><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">plot3</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z<span class="token punctuation">,</span>选项<span class="token punctuation">)</span>
+输入多组数据
+<span class="token function">plot3</span><span class="token punctuation">(</span>x1<span class="token punctuation">,</span>y1<span class="token punctuation">,</span>z1<span class="token punctuation">,</span>x2<span class="token punctuation">,</span>y2<span class="token punctuation">,</span>z2<span class="token punctuation">,</span><span class="token punctuation">...</span><span class="token punctuation">,</span>xn<span class="token punctuation">,</span>yn<span class="token punctuation">,</span>zn<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="fplot：-1"><a href="#fplot：-1" class="headerlink" title="fplot："></a>fplot：</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fplot3(funx,funy,funz,tlims)</span><br><span class="line">//tlims是参数函数自变量的取值范围，用二元向量[tmin,tmax]描述</span><br><span class="line">&gt;&gt; fplot3(xt,yt,zt,[<span class="number">-12</span>,<span class="number">12</span>])</span><br></pre></td></tr></table></figure>
+<h4 id="fplot：-1"><a href="#fplot：-1" class="headerlink" title="fplot："></a>fplot：</h4><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">fplot3</span><span class="token punctuation">(</span>funx<span class="token punctuation">,</span>funy<span class="token punctuation">,</span>funz<span class="token punctuation">,</span>tlims<span class="token punctuation">)</span>
+<span class="token operator">/</span><span class="token operator">/</span>tlims是参数函数自变量的取值范围，用二元向量<span class="token punctuation">[</span>tmin<span class="token punctuation">,</span>tmax<span class="token punctuation">]</span>描述
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">fplot3</span><span class="token punctuation">(</span>xt<span class="token punctuation">,</span>yt<span class="token punctuation">,</span>zt<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="平面网格图："><a href="#平面网格图：" class="headerlink" title="平面网格图："></a>平面网格图：</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>矩阵运算</span><br><span class="line">&gt;&gt; X = <span class="built_in">ones</span>(<span class="built_in">size</span>(y))*x</span><br><span class="line">&gt;&gt; Y = y*<span class="built_in">ones</span>*(<span class="built_in">size</span>(x));</span><br><span class="line"><span class="number">2.</span>使用<span class="built_in">meshgrid</span></span><br><span class="line">[X,Y]=<span class="built_in">meshgrid</span>(x,y)</span><br></pre></td></tr></table></figure>
+<h4 id="平面网格图："><a href="#平面网格图：" class="headerlink" title="平面网格图："></a>平面网格图：</h4><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token number">1.</span>矩阵运算
+<span class="token operator">></span><span class="token operator">></span> X <span class="token operator">=</span> <span class="token function">ones</span><span class="token punctuation">(</span><span class="token function">size</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span>x
+<span class="token operator">></span><span class="token operator">></span> Y <span class="token operator">=</span> y<span class="token operator">*</span>ones<span class="token operator">*</span><span class="token punctuation">(</span><span class="token function">size</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token number">2.</span>使用meshgrid
+<span class="token punctuation">[</span>X<span class="token punctuation">,</span>Y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">meshgrid</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h4><p>带等高线：meshc</p>
 <p>带底座：meshz</p>
 <p>带等高线的曲面函数：surfc</p>
 <p>光照效果的曲线函数：surfl</p>
-<h4 id="绘图参数：-1"><a href="#绘图参数：-1" class="headerlink" title="绘图参数："></a>绘图参数：</h4><h5 id="视点处理："><a href="#视点处理：" class="headerlink" title="视点处理："></a>视点处理：</h5><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">view(az,el)  </span><br><span class="line">az是方位角，el是仰角</span><br><span class="line">view(x,y,z)</span><br><span class="line">从某个点</span><br><span class="line">view(<span class="number">2</span>)</span><br><span class="line">从二维层面</span><br><span class="line">view(<span class="number">3</span>)</span><br><span class="line">从三维层面</span><br></pre></td></tr></table></figure>
+<h4 id="绘图参数：-1"><a href="#绘图参数：-1" class="headerlink" title="绘图参数："></a>绘图参数：</h4><h5 id="视点处理："><a href="#视点处理：" class="headerlink" title="视点处理："></a>视点处理：</h5><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">view</span><span class="token punctuation">(</span>az<span class="token punctuation">,</span>el<span class="token punctuation">)</span>  
+az是方位角，el是仰角
+<span class="token function">view</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z<span class="token punctuation">)</span>
+从某个点
+<span class="token function">view</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+从二维层面
+<span class="token function">view</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+从三维层面<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="颜色处理："><a href="#颜色处理：" class="headerlink" title="颜色处理："></a>颜色处理：</h5><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">指定当前图形使用的色图</span><br><span class="line">colormap cmapname</span><br><span class="line">colormap(cmap)</span><br><span class="line">cmap可以自定义颜色矩阵</span><br><span class="line">&gt;&gt; surf(peaks)</span><br><span class="line">&gt;&gt; colormap hot</span><br></pre></td></tr></table></figure>
+<h5 id="颜色处理："><a href="#颜色处理：" class="headerlink" title="颜色处理："></a>颜色处理：</h5><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">指定当前图形使用的色图
+colormap cmapname
+<span class="token function">colormap</span><span class="token punctuation">(</span>cmap<span class="token punctuation">)</span>
+cmap可以自定义颜色矩阵
+<span class="token operator">></span><span class="token operator">></span> <span class="token function">surf</span><span class="token punctuation">(</span>peaks<span class="token punctuation">)</span>
+<span class="token operator">></span><span class="token operator">></span> colormap hot<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -640,132 +736,6 @@
 
                 </div>
             </div>
-            
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
             
         </div>
     </div>
@@ -870,7 +840,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="switch语句不加break/continue">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="switch语句不加break/continue">
                         
                         <span class="card-title">switch语句不加break/continue</span>
                     </div>
@@ -914,6 +884,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1039,7 +1046,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1052,7 +1059,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1073,6 +1080,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

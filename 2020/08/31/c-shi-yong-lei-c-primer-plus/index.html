@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C++ 使用类《C++ primer plus》, jiojio">
+    <meta name="keywords" content="C++ 使用类《C++ primer plus》, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C++ 使用类《C++ primer plus》 | Hexo</title>
+    <title>C++ 使用类《C++ primer plus》 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -462,14 +462,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -484,70 +484,304 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="C-使用类"><a href="#C-使用类" class="headerlink" title="C++ 使用类"></a>C++ 使用类</h1><h2 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h2><p>运算符重载的意义在于可以对对象之间进行运算符操作，例如</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span> ;</span></span><br><span class="line">Time time1;</span><br><span class="line">Time time2;</span><br><span class="line">time1 + time2;</span><br><span class="line">time1 - time2;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Time ;
+Time time1;
+Time time2;
+time1 + time2;
+time1 - time2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>代码的核心在于</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//t为传来的参数，因为是用于对象之间的操作，参数是一个传来的对象</span></span><br><span class="line">Time Time::<span class="keyword">operator</span>+(<span class="keyword">const</span> Time&amp; t)<span class="keyword">const</span> &#123;</span><br><span class="line">    <span class="comment">//新建一个sum对象</span></span><br><span class="line">    Time sum;</span><br><span class="line">    <span class="comment">//本对象即为minutes，t.minutes为传来参数的时间</span></span><br><span class="line">    sum.minutes = minutes + t.minutes;</span><br><span class="line">    sum.hours = hours + t.hours + sum.minutes / <span class="number">60</span>;</span><br><span class="line">    sum.minutes %= <span class="number">60</span>;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//这里猜测有前后顺序，加号后面的是传来的参数，可能会导致不能颠倒顺序</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;t为传来的参数，因为是用于对象之间的操作，参数是一个传来的对象
+Time Time::operator+(const Time&amp; t)const &#123;
+    &#x2F;&#x2F;新建一个sum对象
+    Time sum;
+    &#x2F;&#x2F;本对象即为minutes，t.minutes为传来参数的时间
+    sum.minutes &#x3D; minutes + t.minutes;
+    sum.hours &#x3D; hours + t.hours + sum.minutes &#x2F; 60;
+    sum.minutes %&#x3D; 60;
+    return sum;
+&#125;
+&#x2F;&#x2F;这里猜测有前后顺序，加号后面的是传来的参数，可能会导致不能颠倒顺序<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="类定义"><a href="#类定义" class="headerlink" title="类定义"></a>类定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> STACK_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACK_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> hours;</span><br><span class="line">    <span class="keyword">int</span> minutes;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Time</span>();</span><br><span class="line">    <span class="built_in">Time</span>(<span class="keyword">int</span> h, <span class="keyword">int</span> m = <span class="number">0</span>);</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Addmin</span><span class="params">(<span class="keyword">int</span> min)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">AddHr</span><span class="params">(<span class="keyword">int</span> h)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Reset</span><span class="params">(<span class="keyword">int</span> h = <span class="number">0</span>, <span class="keyword">int</span> m = <span class="number">0</span>)</span></span>;</span><br><span class="line">    Time <span class="keyword">operator</span> + (<span class="keyword">const</span> Time&amp; t)<span class="keyword">const</span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Show</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> </span></span><br></pre></td></tr></table></figure>
+<h3 id="类定义"><a href="#类定义" class="headerlink" title="类定义"></a>类定义</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#ifndef STACK_H
+#define STACK_H
+#include&lt;iostream&gt;
+class Time &#123;
+    int hours;
+    int minutes;
+public:
+    Time();
+    Time(int h, int m &#x3D; 0);
+    void Addmin(int min);
+    void AddHr(int h);
+    void Reset(int h &#x3D; 0, int m &#x3D; 0);
+    Time operator + (const Time&amp; t)const;
+    void Show() const;
+&#125;;
 
-<h3 id="类方法定义"><a href="#类方法定义" class="headerlink" title="类方法定义"></a>类方法定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&quot;stack.h&quot;</span></span></span><br><span class="line">Time::<span class="built_in">Time</span>() &#123;</span><br><span class="line">    hours = minutes = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">Time::<span class="built_in">Time</span>(<span class="keyword">int</span> h, <span class="keyword">int</span> m) &#123;</span><br><span class="line">    hours = h;</span><br><span class="line">    minutes = m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Time::Addmin</span><span class="params">(<span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">    minutes += m;</span><br><span class="line">    hours += minutes / <span class="number">60</span>;</span><br><span class="line">    minutes % <span class="number">60</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Time::AddHr</span><span class="params">(<span class="keyword">int</span> h)</span> </span>&#123;</span><br><span class="line">    hours += h;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Time::Reset</span><span class="params">(<span class="keyword">int</span> h, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">    hours = h;</span><br><span class="line">    minutes = m;</span><br><span class="line">&#125;</span><br><span class="line">Time Time::<span class="keyword">operator</span>+(<span class="keyword">const</span> Time&amp; t)<span class="keyword">const</span> &#123;</span><br><span class="line">    Time sum;</span><br><span class="line">    sum.minutes = minutes + t.minutes;</span><br><span class="line">    sum.hours = hours + t.hours + sum.minutes / <span class="number">60</span>;</span><br><span class="line">    sum.minutes %= <span class="number">60</span>;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Time::Show</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">    std::cout &lt;&lt; hours &lt;&lt; <span class="string">&quot;hours&quot;</span> &lt;&lt; minutes &lt;&lt; <span class="string">&quot;minutes&quot;</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+#endif <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="主函数使用"><a href="#主函数使用" class="headerlink" title="主函数使用"></a>主函数使用</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&quot;stack.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">    Time planning;</span><br><span class="line">    <span class="function">Time <span class="title">coding</span><span class="params">(<span class="number">2</span>, <span class="number">40</span>)</span></span>;</span><br><span class="line">    <span class="function">Time <span class="title">fixing</span><span class="params">(<span class="number">5</span>, <span class="number">55</span>)</span></span>;</span><br><span class="line">    Time total;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;planning time = &quot;</span>;</span><br><span class="line">    planning.<span class="built_in">Show</span>();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;coding time = &quot;</span>;</span><br><span class="line">    coding.<span class="built_in">Show</span>();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;fixing time = &quot;</span>;</span><br><span class="line">    fixing.<span class="built_in">Show</span>();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    total = coding + fixing;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;coding time + fixing time = &quot;</span>;</span><br><span class="line">    total.<span class="built_in">Show</span>();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="类方法定义"><a href="#类方法定义" class="headerlink" title="类方法定义"></a>类方法定义</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&quot;stack.h&quot;
+Time::Time() &#123;
+    hours &#x3D; minutes &#x3D; 0;
+&#125;
+Time::Time(int h, int m) &#123;
+    hours &#x3D; h;
+    minutes &#x3D; m;
+&#125;
+void Time::Addmin(int m) &#123;
+    minutes +&#x3D; m;
+    hours +&#x3D; minutes &#x2F; 60;
+    minutes % 60;
+&#125;
+void Time::AddHr(int h) &#123;
+    hours +&#x3D; h;
+&#125;
+void Time::Reset(int h, int m) &#123;
+    hours &#x3D; h;
+    minutes &#x3D; m;
+&#125;
+Time Time::operator+(const Time&amp; t)const &#123;
+    Time sum;
+    sum.minutes &#x3D; minutes + t.minutes;
+    sum.hours &#x3D; hours + t.hours + sum.minutes &#x2F; 60;
+    sum.minutes %&#x3D; 60;
+    return sum;
+&#125;
+void Time::Show() const &#123;
+    std::cout &lt;&lt; hours &lt;&lt; &quot;hours&quot; &lt;&lt; minutes &lt;&lt; &quot;minutes&quot;;
+
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="主函数使用"><a href="#主函数使用" class="headerlink" title="主函数使用"></a>主函数使用</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&quot;stack.h&quot;
+
+#include&lt;iostream&gt;
+
+int main() &#123;
+    using namespace std;
+    Time planning;
+    Time coding(2, 40);
+    Time fixing(5, 55);
+    Time total;
+    cout &lt;&lt; &quot;planning time &#x3D; &quot;;
+    planning.Show();
+    cout &lt;&lt; endl;
+
+    cout &lt;&lt; &quot;coding time &#x3D; &quot;;
+    coding.Show();
+    cout &lt;&lt; endl;
+
+    cout &lt;&lt; &quot;fixing time &#x3D; &quot;;
+    fixing.Show();
+    cout &lt;&lt; endl;
+
+    total &#x3D; coding + fixing;
+    cout &lt;&lt; &quot;coding time + fixing time &#x3D; &quot;;
+    total.Show();
+    cout &lt;&lt; endl;
+
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="友元"><a href="#友元" class="headerlink" title="友元"></a>友元</h2><p>友元的意义： 在类重载二元运算符时，常常需要友元，例如把Time对象乘以实数</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A = B * <span class="number">2.75</span>;</span><br><span class="line"><span class="comment">//被转换成</span></span><br><span class="line">A = B.operator*(<span class="number">2.75</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">A</span> <span class="token operator">=</span> <span class="token class-name">B</span> <span class="token operator">*</span> <span class="token number">2.75</span><span class="token punctuation">;</span>
+<span class="token comment">//被转换成</span>
+<span class="token class-name">A</span> <span class="token operator">=</span> <span class="token class-name">B</span><span class="token punctuation">.</span>operator<span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">2.75</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>但是如果是</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A = <span class="number">2.75</span> * B;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">A</span> <span class="token operator">=</span> <span class="token number">2.75</span> <span class="token operator">*</span> <span class="token class-name">B</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>那么验证了我上面的猜想，这种方法是有左右顺序的，左边的操作数应该是调用对象。 但是这样的话，左边需要调用类的<strong>私有数据</strong>，但是根据C++的语言特性，一个常规的非成员函数是不能调用类的私有数据的，这就引出了友元函数——可以调用类的私有数据的函数。</p>
 <h3 id="创建友元"><a href="#创建友元" class="headerlink" title="创建友元"></a>创建友元</h3><p>声明友元函数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//goes in class declaration</span></span><br><span class="line"><span class="keyword">friend</span> Time <span class="keyword">operator</span>*(<span class="keyword">double</span> m ,<span class="keyword">const</span> Time &amp; t);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;goes in class declaration
+friend Time operator*(double m ,const Time &amp; t);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>定义函数，需要注意的是前面不需要加上friend 和 Time::，因为这不是一个成员函数，直接定义即可。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Time <span class="keyword">operator</span> * (<span class="keyword">double</span> m, <span class="keyword">const</span> Time &amp; t)&#123;</span><br><span class="line">    Time res;</span><br><span class="line">    <span class="keyword">long</span> totalminutes = t.hours * mult * <span class="number">60</span> + t.minutes* mult;</span><br><span class="line">    result.hours = totalminutes/<span class="number">60</span>;</span><br><span class="line">    result.minutes = totalminutes%<span class="number">60</span>;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">Time operator * (double m, const Time &amp; t)&#123;
+    Time res;
+    long totalminutes &#x3D; t.hours * mult * 60 + t.minutes* mult;
+    result.hours &#x3D; totalminutes&#x2F;60;
+    result.minutes &#x3D; totalminutes%60;
+    return result;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>也可以用来重载&lt;&lt;来格式化输出</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="keyword">operator</span> &lt;&lt; (ostream &amp; os,<span class="keyword">const</span> Time &amp; t)&#123;</span><br><span class="line">    os &lt;&lt; t.hours &lt;&lt; <span class="string">&quot; hours,&quot;</span> &lt;&lt; t.minutes &lt;&lt; <span class="string">&quot; minutes.&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void operator &lt;&lt; (ostream &amp; os,const Time &amp; t)&#123;
+    os &lt;&lt; t.hours &lt;&lt; &quot; hours,&quot; &lt;&lt; t.minutes &lt;&lt; &quot; minutes.&quot;;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>使用这种方法重写&lt;&lt;来进行输出会导致无法进行</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; t.hours &lt;&lt; <span class="string">&quot; hours.&quot;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">cout &lt;&lt; t.hours &lt;&lt; &quot; hours.&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>由于c++特性，cout语句从左到右执行，需要重写的方法返回ostream类才可以继续进行右边的输出</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//define</span></span><br><span class="line"><span class="keyword">friend</span> std::ostream&amp; <span class="keyword">operator</span> &lt;&lt; (std::ostream&amp; os, <span class="keyword">const</span> Time&amp; t);</span><br><span class="line"></span><br><span class="line"><span class="comment">//declare</span></span><br><span class="line">std::ostream&amp; <span class="keyword">operator</span> &lt;&lt; (std::ostream&amp; os, <span class="keyword">const</span> Time&amp; t) &#123;</span><br><span class="line">    os &lt;&lt; t.hours &lt;&lt; <span class="string">&quot; hours &quot;</span> &lt;&lt; t.minutes &lt;&lt; <span class="string">&quot; minutes&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;define
+friend std::ostream&amp; operator &lt;&lt; (std::ostream&amp; os, const Time&amp; t);
 
-<h2 id="类的自动转换和强制转换"><a href="#类的自动转换和强制转换" class="headerlink" title="类的自动转换和强制转换"></a>类的自动转换和强制转换</h2><h3 id="自动转换"><a href="#自动转换" class="headerlink" title="自动转换"></a>自动转换</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> count = <span class="number">90</span>;</span><br><span class="line"><span class="keyword">double</span> time = <span class="number">80</span>;</span><br><span class="line"><span class="keyword">int</span> side = <span class="number">8.33</span>;</span><br></pre></td></tr></table></figure>
+&#x2F;&#x2F;declare
+std::ostream&amp; operator &lt;&lt; (std::ostream&amp; os, const Time&amp; t) &#123;
+    os &lt;&lt; t.hours &lt;&lt; &quot; hours &quot; &lt;&lt; t.minutes &lt;&lt; &quot; minutes&quot;;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="类的自动转换和强制转换"><a href="#类的自动转换和强制转换" class="headerlink" title="类的自动转换和强制转换"></a>类的自动转换和强制转换</h2><h3 id="自动转换"><a href="#自动转换" class="headerlink" title="自动转换"></a>自动转换</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">long count &#x3D; 90;
+double time &#x3D; 80;
+int side &#x3D; 8.33;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>对于类来说，如果不通过正常的创建类的方式</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Time time1 = <span class="built_in">Time</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">Time time1 &#x3D; Time(1,2);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>而是通过</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Time time;</span><br><span class="line">time = <span class="number">19</span>;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">Time time;
+time &#x3D; 19;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>同时可以看出这种方法不可以同时接受两个参数，也就是构造方法只能有一个参数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Time</span>(<span class="keyword">int</span> time)&#123;</span><br><span class="line">    time_ = time;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">Time(int time)&#123;
+    time_ &#x3D; time;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>如何解决呢，这里可以使用默认参数的方法，解决需要创建两个方法来区分单个参数和多个参数的问题</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Time</span>(<span class="keyword">int</span> hours ,<span class="keyword">int</span> minutes = <span class="number">0</span>)&#123;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">Time(int hours ,int minutes &#x3D; 0)&#123;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Time time1;</span><br><span class="line">time1 = <span class="number">12</span>;</span><br><span class="line">time2 = <span class="built_in">Time</span>(<span class="number">12</span>);</span><br><span class="line">time3 = (Time)<span class="number">12</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">Time time1;
+time1 &#x3D; 12;
+time2 &#x3D; Time(12);
+time3 &#x3D; (Time)12;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="转换函数"><a href="#转换函数" class="headerlink" title="转换函数"></a>转换函数</h3><p>转换函数用来把类转换成基础数据类型</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//declare</span></span><br><span class="line"><span class="function"><span class="keyword">operator</span> <span class="title">typeName</span><span class="params">()</span></span>;</span><br><span class="line"><span class="comment">//define</span></span><br><span class="line"><span class="function">Time::<span class="keyword">operator</span> <span class="title">double</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> stone;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;declare
+operator typeName();
+&#x2F;&#x2F;define
+Time::operator double() &#123;
+    return stone;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>所有的代码，《C++ primer plus》中对于类的使用的基本所有代码，理解完所有的语句以及书中所有的注意事项</p>
-<h3 id="stack-h"><a href="#stack-h" class="headerlink" title="stack.h"></a>stack.h</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> STACK_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACK_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> hours;</span><br><span class="line">    <span class="keyword">int</span> minutes;</span><br><span class="line">    <span class="keyword">double</span> stone;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//construct</span></span><br><span class="line">    <span class="built_in">Time</span>();</span><br><span class="line">    <span class="built_in">Time</span>(<span class="keyword">int</span> h, <span class="keyword">int</span> m = <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">Time</span>(<span class="keyword">double</span> stone);</span><br><span class="line">    <span class="comment">//fun</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Addmin</span><span class="params">(<span class="keyword">int</span> min)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">AddHr</span><span class="params">(<span class="keyword">int</span> h)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Reset</span><span class="params">(<span class="keyword">int</span> h = <span class="number">0</span>, <span class="keyword">int</span> m = <span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="comment">//operator declare</span></span><br><span class="line">    Time <span class="keyword">operator</span> + (<span class="keyword">const</span> Time&amp; t)<span class="keyword">const</span>;</span><br><span class="line">    Time <span class="keyword">operator</span> * (<span class="keyword">int</span> n)<span class="keyword">const</span>;</span><br><span class="line">    <span class="comment">//show fun</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Show</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Showstone</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">    <span class="comment">//friends</span></span><br><span class="line">    <span class="keyword">friend</span> Time <span class="keyword">operator</span> *(<span class="keyword">int</span> n, <span class="keyword">const</span> Time&amp; t);</span><br><span class="line">    <span class="keyword">friend</span> std::ostream&amp; <span class="keyword">operator</span> &lt;&lt; (std::ostream&amp; os, <span class="keyword">const</span> Time&amp; t);</span><br><span class="line">    <span class="comment">//turnner</span></span><br><span class="line">    <span class="function"><span class="keyword">operator</span> <span class="title">double</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> </span></span><br></pre></td></tr></table></figure>
+<h3 id="stack-h"><a href="#stack-h" class="headerlink" title="stack.h"></a>stack.h</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#ifndef STACK_H
+#define STACK_H
+#include&lt;iostream&gt;
+class Time &#123;
+    int hours;
+    int minutes;
+    double stone;
+public:
+    &#x2F;&#x2F;construct
+    Time();
+    Time(int h, int m &#x3D; 0);
+    Time(double stone);
+    &#x2F;&#x2F;fun
+    void Addmin(int min);
+    void AddHr(int h);
+    void Reset(int h &#x3D; 0, int m &#x3D; 0);
+    &#x2F;&#x2F;operator declare
+    Time operator + (const Time&amp; t)const;
+    Time operator * (int n)const;
+    &#x2F;&#x2F;show fun
+    void Show() const;
+    void Showstone() const;
+    &#x2F;&#x2F;friends
+    friend Time operator *(int n, const Time&amp; t);
+    friend std::ostream&amp; operator &lt;&lt; (std::ostream&amp; os, const Time&amp; t);
+    &#x2F;&#x2F;turnner
+    operator double();
+&#125;;
 
-<h3 id="stack-cpp"><a href="#stack-cpp" class="headerlink" title="stack.cpp"></a>stack.cpp</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&quot;stack.h&quot;</span></span></span><br><span class="line">Time::<span class="built_in">Time</span>() &#123;</span><br><span class="line">    hours = minutes = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">Time::<span class="built_in">Time</span>(<span class="keyword">int</span> h, <span class="keyword">int</span> m) &#123;</span><br><span class="line">    hours = h;</span><br><span class="line">    minutes = m;</span><br><span class="line">&#125;</span><br><span class="line">Time::<span class="built_in">Time</span>(<span class="keyword">double</span> stone_in) &#123;</span><br><span class="line">    hours = <span class="number">0</span>;</span><br><span class="line">    minutes = <span class="number">0</span>;</span><br><span class="line">    stone = stone_in;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Time::Addmin</span><span class="params">(<span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">    minutes += m;</span><br><span class="line">    hours += minutes / <span class="number">60</span>;</span><br><span class="line">    minutes % <span class="number">60</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Time::AddHr</span><span class="params">(<span class="keyword">int</span> h)</span> </span>&#123;</span><br><span class="line">    hours += h;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Time::Reset</span><span class="params">(<span class="keyword">int</span> h, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">    hours = h;</span><br><span class="line">    minutes = m;</span><br><span class="line">&#125;</span><br><span class="line">Time Time::<span class="keyword">operator</span>+(<span class="keyword">const</span> Time&amp; t)<span class="keyword">const</span> &#123;</span><br><span class="line">    Time sum;</span><br><span class="line">    sum.minutes = minutes + t.minutes;</span><br><span class="line">    sum.hours = hours + t.hours + sum.minutes / <span class="number">60</span>;</span><br><span class="line">    sum.minutes %= <span class="number">60</span>;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line">Time Time::<span class="keyword">operator</span>*(<span class="keyword">int</span> n)<span class="keyword">const</span> &#123;</span><br><span class="line">    Time result;</span><br><span class="line">    <span class="keyword">long</span> totalminutes = hours * n * <span class="number">60</span> + minutes * n;</span><br><span class="line">    result.hours = totalminutes / <span class="number">60</span>;</span><br><span class="line">    result.minutes = totalminutes % <span class="number">60</span>;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Time::Show</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">    std::cout &lt;&lt; hours &lt;&lt; <span class="string">&quot;hours&quot;</span> &lt;&lt; minutes &lt;&lt; <span class="string">&quot;minutes&quot;</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Time::Showstone</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">    std::cout &lt;&lt; stone;</span><br><span class="line">&#125;</span><br><span class="line">Time <span class="keyword">operator</span> * (<span class="keyword">int</span> n, <span class="keyword">const</span> Time&amp; t) &#123;</span><br><span class="line">    <span class="keyword">return</span> t * n;</span><br><span class="line">&#125;</span><br><span class="line">std::ostream&amp; <span class="keyword">operator</span> &lt;&lt; (std::ostream&amp; os, <span class="keyword">const</span> Time&amp; t) &#123;</span><br><span class="line">    os &lt;&lt; t.hours &lt;&lt; <span class="string">&quot; hours &quot;</span> &lt;&lt; t.minutes &lt;&lt; <span class="string">&quot; minutes&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> os;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Time::<span class="keyword">operator</span> <span class="title">double</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> stone;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+#endif <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="mainer-cpp"><a href="#mainer-cpp" class="headerlink" title="mainer.cpp"></a>mainer.cpp</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&quot;stack.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">    Time planning;</span><br><span class="line">    <span class="function">Time <span class="title">coding</span><span class="params">(<span class="number">2</span>, <span class="number">40</span>)</span></span>;</span><br><span class="line">    <span class="function">Time <span class="title">fixing</span><span class="params">(<span class="number">5</span>, <span class="number">55</span>)</span></span>;</span><br><span class="line">    Time total;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;planning time = &quot;</span>;</span><br><span class="line">    planning.<span class="built_in">Show</span>();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;coding time = &quot;</span>;</span><br><span class="line">    coding.<span class="built_in">Show</span>();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;fixing time = &quot;</span>;</span><br><span class="line">    fixing.<span class="built_in">Show</span>();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    total = coding + fixing;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;coding time + fixing time = &quot;</span>;</span><br><span class="line">    total.<span class="built_in">Show</span>();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    Time time1 = <span class="number">12.0</span>;</span><br><span class="line">    time1.<span class="built_in">Showstone</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="stack-cpp"><a href="#stack-cpp" class="headerlink" title="stack.cpp"></a>stack.cpp</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&quot;stack.h&quot;
+Time::Time() &#123;
+    hours &#x3D; minutes &#x3D; 0;
+&#125;
+Time::Time(int h, int m) &#123;
+    hours &#x3D; h;
+    minutes &#x3D; m;
+&#125;
+Time::Time(double stone_in) &#123;
+    hours &#x3D; 0;
+    minutes &#x3D; 0;
+    stone &#x3D; stone_in;
+&#125;
+void Time::Addmin(int m) &#123;
+    minutes +&#x3D; m;
+    hours +&#x3D; minutes &#x2F; 60;
+    minutes % 60;
+&#125;
+void Time::AddHr(int h) &#123;
+    hours +&#x3D; h;
+&#125;
+void Time::Reset(int h, int m) &#123;
+    hours &#x3D; h;
+    minutes &#x3D; m;
+&#125;
+Time Time::operator+(const Time&amp; t)const &#123;
+    Time sum;
+    sum.minutes &#x3D; minutes + t.minutes;
+    sum.hours &#x3D; hours + t.hours + sum.minutes &#x2F; 60;
+    sum.minutes %&#x3D; 60;
+    return sum;
+&#125;
+Time Time::operator*(int n)const &#123;
+    Time result;
+    long totalminutes &#x3D; hours * n * 60 + minutes * n;
+    result.hours &#x3D; totalminutes &#x2F; 60;
+    result.minutes &#x3D; totalminutes % 60;
+    return result;
+&#125;
+void Time::Show() const &#123;
+    std::cout &lt;&lt; hours &lt;&lt; &quot;hours&quot; &lt;&lt; minutes &lt;&lt; &quot;minutes&quot;;
+
+&#125;
+void Time::Showstone() const &#123;
+    std::cout &lt;&lt; stone;
+&#125;
+Time operator * (int n, const Time&amp; t) &#123;
+    return t * n;
+&#125;
+std::ostream&amp; operator &lt;&lt; (std::ostream&amp; os, const Time&amp; t) &#123;
+    os &lt;&lt; t.hours &lt;&lt; &quot; hours &quot; &lt;&lt; t.minutes &lt;&lt; &quot; minutes&quot;;
+    return os;
+&#125;
+Time::operator double() &#123;
+    return stone;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="mainer-cpp"><a href="#mainer-cpp" class="headerlink" title="mainer.cpp"></a>mainer.cpp</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&quot;stack.h&quot;
+
+#include&lt;iostream&gt;
+
+int main() &#123;
+    using namespace std;
+    Time planning;
+    Time coding(2, 40);
+    Time fixing(5, 55);
+    Time total;
+    cout &lt;&lt; &quot;planning time &#x3D; &quot;;
+    planning.Show();
+    cout &lt;&lt; endl;
+
+    cout &lt;&lt; &quot;coding time &#x3D; &quot;;
+    coding.Show();
+    cout &lt;&lt; endl;
+
+    cout &lt;&lt; &quot;fixing time &#x3D; &quot;;
+    fixing.Show();
+    cout &lt;&lt; endl;
+
+    total &#x3D; coding + fixing;
+    cout &lt;&lt; &quot;coding time + fixing time &#x3D; &quot;;
+    total.Show();
+    cout &lt;&lt; endl;
+
+    Time time1 &#x3D; 12.0;
+    time1.Showstone();
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -630,132 +864,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -806,13 +914,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/31/234/">
+                <a href="/2020/08/31/chuang-jian-zi-ji-de-tu-ku-typorapicgo-a-li-oss/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Untitled Post - 18">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="创建自己的图库（typora+picgo+阿里oss）">
                         
-                        <span class="card-title">Untitled Post - 18</span>
+                        <span class="card-title">创建自己的图库（typora+picgo+阿里oss）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -829,13 +937,21 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/uncategorized/" class="post-category">
-                                    uncategorized
+                            <a href="/categories/%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" class="post-category">
+                                    每日学习总结
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%B8%A9%E5%9D%91/">
+                        <span class="chip bg-color">踩坑</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -851,7 +967,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="一年">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="一年">
                         
                         <span class="card-title">一年</span>
                     </div>
@@ -895,6 +1011,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1020,7 +1173,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1033,7 +1186,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1054,6 +1207,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

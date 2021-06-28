@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript基础+JSON简介, jiojio">
+    <meta name="keywords" content="JavaScript基础+JSON简介, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaScript基础+JSON简介 | Hexo</title>
+    <title>JavaScript基础+JSON简介 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -470,7 +470,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.6k
+                    3.5k
                 </div>
                 
 
@@ -492,6 +492,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -501,15 +504,20 @@
 <h2 id="1、基础："><a href="#1、基础：" class="headerlink" title="1、基础："></a>1、基础：</h2><h3 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h3><p>在 HTML 中，JavaScript 代码必须位于 与 标签之间。</p>
 <p>可以不使用 type=”text/javascript”</p>
 <h3 id="在head部分"><a href="#在head部分" class="headerlink" title="在head部分"></a>在head部分</h3><p>建立函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">&quot;demo&quot;</span>).innerHTML = <span class="string">&quot;段落被更改。&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"段落被更改。"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>可以在下面使用</p>
-<h3 id="在body部分："><a href="#在body部分：" class="headerlink" title="在body部分："></a>在body部分：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123; <span class="built_in">document</span>.getElementById(<span class="string">&quot;demo&quot;</span>).innerHTML = <span class="string">&quot;段落被更改。&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="在body部分："><a href="#在body部分：" class="headerlink" title="在body部分："></a>在body部分：</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"段落被更改。"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="在外部脚本："><a href="#在外部脚本：" class="headerlink" title="在外部脚本："></a>在外部脚本：</h3><h4 id="外部文件："><a href="#外部文件：" class="headerlink" title="外部文件："></a>外部文件：</h4><p>myScript.js</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">document</span>.getElementById(<span class="string">&quot;demo&quot;</span>).innerHTML = <span class="string">&quot;段落被更改。&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+   document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"段落被更改。"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="使用：-1"><a href="#使用：-1" class="headerlink" title="使用："></a>使用：</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;myScript.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="使用：-1"><a href="#使用：-1" class="headerlink" title="使用："></a>使用：</h5><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myScript.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>可以在 或 中放置外部脚本引用。</p>
 <hr>
@@ -519,7 +527,8 @@
 <li>  修改属性</li>
 <li>  修改样式</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&quot;demo&quot;</span>).innerHTML = <span class="string">&quot;Hello JavaScript&quot;</span>;</span><br><span class="line">把demo修改成innerHTML的内容</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"Hello JavaScript"</span><span class="token punctuation">;</span>
+把demo修改成innerHTML的内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><ul>
 <li>  使用 window.alert() 写入警告框</li>
@@ -529,13 +538,37 @@
 </ul>
 <p>一个简单的网页输出时间器：</p>
 <p>算是一个比较典型的例子</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> t = <span class="literal">null</span>;</span></span><br><span class="line"><span class="javascript">        t = <span class="built_in">setTimeout</span>(time,<span class="number">1000</span>);<span class="comment">//開始运行</span></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">time</span>(<span class="params"></span>)</span></span></span><br><span class="line"><span class="function"><span class="javascript">        </span>&#123;</span></span><br><span class="line"><span class="javascript">           <span class="built_in">clearTimeout</span>(t);<span class="comment">//清除定时器</span></span></span><br><span class="line"><span class="javascript">           dt = <span class="keyword">new</span> <span class="built_in">Date</span>();</span></span><br><span class="line"><span class="javascript">           <span class="keyword">var</span> h=dt.getHours();<span class="comment">//获取时</span></span></span><br><span class="line"><span class="javascript">           <span class="keyword">var</span> m=dt.getMinutes();<span class="comment">//获取分</span></span></span><br><span class="line"><span class="javascript">           <span class="keyword">var</span> s=dt.getSeconds();<span class="comment">//获取秒</span></span></span><br><span class="line"><span class="javascript">           <span class="built_in">document</span>.getElementById(<span class="string">&quot;showTime&quot;</span>).innerHTML =  <span class="string">&quot;如今的时间为：&quot;</span>+h+<span class="string">&quot;时&quot;</span>+m+<span class="string">&quot;分&quot;</span>+s+<span class="string">&quot;秒&quot;</span>;</span></span><br><span class="line"><span class="javascript">           t = <span class="built_in">setTimeout</span>(time,<span class="number">1000</span>); <span class="comment">//设定定时器，循环运行     </span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span> =<span class="string">&quot;showTime&quot;</span> <span class="attr">style</span>=<span class="string">&quot;background-color: aquamarine;font-size: larger;font-weight: 300;&quot;</span>&gt;</span>timer<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">var</span> t <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        t <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>time<span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//開始运行</span>
+        <span class="token keyword">function</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+           <span class="token function">clearTimeout</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//清除定时器</span>
+           dt <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token keyword">var</span> h<span class="token operator">=</span>dt<span class="token punctuation">.</span><span class="token function">getHours</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//获取时</span>
+           <span class="token keyword">var</span> m<span class="token operator">=</span>dt<span class="token punctuation">.</span><span class="token function">getMinutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//获取分</span>
+           <span class="token keyword">var</span> s<span class="token operator">=</span>dt<span class="token punctuation">.</span><span class="token function">getSeconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//获取秒</span>
+           document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"showTime"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span>  <span class="token string">"如今的时间为："</span><span class="token operator">+</span>h<span class="token operator">+</span><span class="token string">"时"</span><span class="token operator">+</span>m<span class="token operator">+</span><span class="token string">"分"</span><span class="token operator">+</span>s<span class="token operator">+</span><span class="token string">"秒"</span><span class="token punctuation">;</span>
+           t <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>time<span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//设定定时器，循环运行     </span>
+        <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">id</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>showTime<span class="token punctuation">"</span></span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> aquamarine<span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span> larger<span class="token punctuation">;</span><span class="token property">font-weight</span><span class="token punctuation">:</span> 300<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>timer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="3、数字："><a href="#3、数字：" class="headerlink" title="3、数字："></a>3、数字：</h2><p>js数字永远是<strong>64位浮点数</strong>： <strong>其中 0 到 51 存储数字（片段），52 到 62 存储指数，63 位存储符号：</strong></p>
 <h3 id="难点："><a href="#难点：" class="headerlink" title="难点："></a>难点：</h3><p>+号的数字相加和字符串级联：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="string">&quot;The result is: &quot;</span> + x + y;</span><br><span class="line">答案是<span class="number">1020</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="string">&quot;30&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> result = x + y + z;</span><br><span class="line">答案是<span class="number">3030</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> z <span class="token operator">=</span> <span class="token string">"The result is: "</span> <span class="token operator">+</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+答案是<span class="token number">1020</span>
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> z <span class="token operator">=</span> <span class="token string">"30"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> result <span class="token operator">=</span> x <span class="token operator">+</span> y <span class="token operator">+</span> z<span class="token punctuation">;</span>
+答案是<span class="token number">3030</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="4、事件："><a href="#4、事件：" class="headerlink" title="4、事件："></a>4、事件：</h2><h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot; 点击发生的事件 &quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot; 函数名() &quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="4、事件："><a href="#4、事件：" class="headerlink" title="4、事件："></a>4、事件：</h2><h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span> 点击发生的事件 <span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span> 函数名() <span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>onchange</p>
 <p>HTML 元素已被改变</p>
@@ -580,7 +613,8 @@
 <li>  split(); 字符串转换成数组</li>
 </ul>
 <h3 id="重点："><a href="#重点：" class="headerlink" title="重点："></a>重点：</h3><p>1、</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=== 需要类型和值同时相等</span><br><span class="line">== 可以比较相等字符串</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">===</span> 需要类型和值同时相等
+<span class="token operator">==</span> 可以比较相等字符串<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>2、对象之间不能比较，无论怎么比较都是false</p>
 <h2 id="6、数字"><a href="#6、数字" class="headerlink" title="6、数字"></a>6、数字</h2><h3 id="方法：-1"><a href="#方法：-1" class="headerlink" title="方法："></a>方法：</h3><p>toString(); 转换字符串</p>
@@ -603,11 +637,12 @@
 <p>POSITIVE_INFINITY</p>
 <p>表示无穷大（溢出返回）。</p>
 <h2 id="7、数组："><a href="#7、数组：" class="headerlink" title="7、数组："></a>7、数组：</h2><p>数组是一种特殊的变量，它能够一次存放一个以上的值。并不是只能储存数字</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array-name = [item1, item2, ...];</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> array<span class="token operator">-</span>name <span class="token operator">=</span> <span class="token punctuation">[</span>item1<span class="token punctuation">,</span> item2<span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>可以通过下标访问数组元素</p>
 <p>也可以通过数组名访问整个数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cars = [<span class="string">&quot;Saab&quot;</span>, <span class="string">&quot;Volvo&quot;</span>, <span class="string">&quot;BMW&quot;</span>];</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&quot;demo&quot;</span>).innerHTML = cars; </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> cars <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Saab"</span><span class="token punctuation">,</span> <span class="token string">"Volvo"</span><span class="token punctuation">,</span> <span class="token string">"BMW"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> cars<span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><strong>数组是对象</strong></p>
 <h3 id="方法：-2"><a href="#方法：-2" class="headerlink" title="方法："></a>方法：</h3><p>基本同上</p>
@@ -624,7 +659,7 @@
 <h4 id="数组和对象的区别"><a href="#数组和对象的区别" class="headerlink" title="数组和对象的区别"></a>数组和对象的区别</h4><p>在 JavaScript 中，_数组_使用_数字索引_。</p>
 <p>在 JavaScript 中，_对象_使用_命名索引_。</p>
 <p>数组是特殊类型的对象，具有数字索引。</p>
-<h2 id="8、日期："><a href="#8、日期：" class="headerlink" title="8、日期："></a>8、日期：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var d = new Date();</span><br></pre></td></tr></table></figure>
+<h2 id="8、日期："><a href="#8、日期：" class="headerlink" title="8、日期："></a>8、日期：</h2><pre class="line-numbers language-none"><code class="language-none">var d &#x3D; new Date();<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ul>
 <li>  new Date()</li>
@@ -635,14 +670,14 @@
 <h3 id="日期格式："><a href="#日期格式：" class="headerlink" title="日期格式："></a>日期格式：</h3><h4 id="ISO日期"><a href="#ISO日期" class="headerlink" title="ISO日期"></a>ISO日期</h4><p>ISO 8601 语法 (YYYY-MM-DD) 也是首选的 JavaScript 日期格式：</p>
 <p>写日期也可以添加时、分和秒 (YYYY-MM-DDTHH:MM:SS)：</p>
 <h4 id="JavaScript-短日期"><a href="#JavaScript-短日期" class="headerlink" title="JavaScript 短日期"></a>JavaScript 短日期</h4><p>短日期通常使用 “MM/DD/YYYY” 这样的语法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;02/19/2018&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">"02/19/2018"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>在某些浏览器中，不带前导零的月或其会产生错误：</p>
 <h4 id="JavaScript-长日期"><a href="#JavaScript-长日期" class="headerlink" title="JavaScript 长日期"></a>JavaScript 长日期</h4><p>长日期通常以 “MMM DD YYYY” 这样的语法来写</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;Feb 19 2018&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">"Feb 19 2018"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="JavaScript-完整日期"><a href="#JavaScript-完整日期" class="headerlink" title="JavaScript 完整日期"></a>JavaScript 完整日期</h4><p>JavaScript 接受“完整 JavaScript 格式”的日期字符串：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;Mon Feb 19 2018 06:55:23 GMT+0100 (W. Europe Standard Time)&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">"Mon Feb 19 2018 06:55:23 GMT+0100 (W. Europe Standard Time)"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="时区："><a href="#时区：" class="headerlink" title="时区："></a>时区：</h3><p>自动使用浏览器时区</p>
 <h3 id="日期获取方法："><a href="#日期获取方法：" class="headerlink" title="日期获取方法："></a>日期获取方法：</h3><p>方法</p>
@@ -694,18 +729,39 @@
 <li>  Math.min() 和 Math.max() 可用于查找参数列表中的最低或最高值：</li>
 <li>  Math.random() 返回介于 0（包括） 与 1（不包括） 之间的随机数：</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.E          <span class="comment">// 返回欧拉指数（Euler&#x27;s number）</span></span><br><span class="line"><span class="built_in">Math</span>.PI         <span class="comment">// 返回圆周率（PI）</span></span><br><span class="line"><span class="built_in">Math</span>.SQRT2      <span class="comment">// 返回 2 的平方根</span></span><br><span class="line"><span class="built_in">Math</span>.SQRT1_2    <span class="comment">// 返回 1/2 的平方根</span></span><br><span class="line"><span class="built_in">Math</span>.LN2        <span class="comment">// 返回 2 的自然对数</span></span><br><span class="line"><span class="built_in">Math</span>.LN10       <span class="comment">// 返回 10 的自然对数</span></span><br><span class="line"><span class="built_in">Math</span>.LOG2E      <span class="comment">// 返回以 2 为底的 e 的对数（约等于 1.414）</span></span><br><span class="line"><span class="built_in">Math</span>.LOG10E     <span class="comment">// 返回以 10 为底的 e 的对数（约等于0.434）</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Math<span class="token punctuation">.</span><span class="token constant">E</span>          <span class="token comment">// 返回欧拉指数（Euler's number）</span>
+Math<span class="token punctuation">.</span><span class="token constant">PI</span>         <span class="token comment">// 返回圆周率（PI）</span>
+Math<span class="token punctuation">.</span><span class="token constant">SQRT2</span>      <span class="token comment">// 返回 2 的平方根</span>
+Math<span class="token punctuation">.</span><span class="token constant">SQRT1_2</span>    <span class="token comment">// 返回 1/2 的平方根</span>
+Math<span class="token punctuation">.</span><span class="token constant">LN2</span>        <span class="token comment">// 返回 2 的自然对数</span>
+Math<span class="token punctuation">.</span><span class="token constant">LN10</span>       <span class="token comment">// 返回 10 的自然对数</span>
+Math<span class="token punctuation">.</span><span class="token constant">LOG2E</span>      <span class="token comment">// 返回以 2 为底的 e 的对数（约等于 1.414）</span>
+Math<span class="token punctuation">.</span><span class="token constant">LOG10E</span>     <span class="token comment">// 返回以 10 为底的 e 的对数（约等于0.434）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="随机："><a href="#随机：" class="headerlink" title="随机："></a>随机：</h3><p>Math.random() 与 Math.floor() 一起使用用于返回随机整数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">10</span>);     <span class="comment">// 返回 0 至 9 之间的数</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">11</span>);     <span class="comment">// 返回 0 至 10 之间的数</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 返回 0 至 9 之间的数</span>
+Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 返回 0 至 10 之间的数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>这个 JavaScript 函数始终返回介于 min（包括）和 max（不包括）之间的随机数：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRndInteger</span>(<span class="params">min, max</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (max - min) ) + min;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getRndInteger</span><span class="token punctuation">(</span><span class="token parameter">min<span class="token punctuation">,</span> max</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>max <span class="token operator">-</span> min<span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token operator">+</span> min<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>这个 JavaScript 函数始终返回介于 min 和 max（都包括）之间的随机数：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRndInteger</span>(<span class="params">min, max</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (max - min + <span class="number">1</span>) ) + min;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getRndInteger</span><span class="token punctuation">(</span><span class="token parameter">min<span class="token punctuation">,</span> max</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>max <span class="token operator">-</span> min <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token operator">+</span> min<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="10、分支"><a href="#10、分支" class="headerlink" title="10、分支"></a>10、分支</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式) &#123;</span><br><span class="line">     <span class="keyword">case</span> n:</span><br><span class="line">        代码块</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">     <span class="keyword">case</span> n:</span><br><span class="line">        代码块</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">     <span class="keyword">default</span>:</span><br><span class="line">        默认代码块</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<h2 id="10、分支"><a href="#10、分支" class="headerlink" title="10、分支"></a>10、分支</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">switch</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+     <span class="token keyword">case</span> n<span class="token operator">:</span>
+        代码块
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+     <span class="token keyword">case</span> n<span class="token operator">:</span>
+        代码块
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+     <span class="token keyword">default</span><span class="token operator">:</span>
+        默认代码块
+<span class="token punctuation">&#125;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="11、循环"><a href="#11、循环" class="headerlink" title="11、循环"></a>11、循环</h2><p>和java一样，不讲</p>
 <h2 id="12、强制类型转换"><a href="#12、强制类型转换" class="headerlink" title="12、强制类型转换"></a>12、强制类型转换</h2><p><strong>Number() 转换数值，String() 转换字符串，Boolean() 转换布尔值。</strong></p>
@@ -733,7 +789,7 @@
 <p>&gt;&gt;&gt;</p>
 <p>零填充右位移</p>
 <p>通过从左推入零来向右位移，并使最右边的位脱落。</p>
-<h2 id="14、正则表达式"><a href="#14、正则表达式" class="headerlink" title="14、正则表达式"></a>14、正则表达式</h2><h3 id="格式："><a href="#格式：" class="headerlink" title="格式："></a>格式：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/pattern/modifiers;</span><br></pre></td></tr></table></figure>
+<h2 id="14、正则表达式"><a href="#14、正则表达式" class="headerlink" title="14、正则表达式"></a>14、正则表达式</h2><h3 id="格式："><a href="#格式：" class="headerlink" title="格式："></a>格式：</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">/</span>pattern<span class="token operator">/</span>modifiers<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="正则表达式修饰符"><a href="#正则表达式修饰符" class="headerlink" title="正则表达式修饰符"></a>正则表达式修饰符</h4><p>_修饰符_可用于大小写不敏感的更全局的搜素：</p>
 <p>修饰符</p>
@@ -773,7 +829,12 @@
 <p>匹配任何包含零个或多个 n 的字符串。</p>
 <p>n?</p>
 <p>匹配任何包含零个或一个 n 的字符串。</p>
-<h2 id="15、异常："><a href="#15、异常：" class="headerlink" title="15、异常："></a>15、异常：</h2><h3 id="JavaScript-try-和-catch"><a href="#JavaScript-try-和-catch" class="headerlink" title="JavaScript try 和 catch"></a>JavaScript try 和 catch</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">     供测试的代码块</span><br><span class="line">&#125;</span><br><span class="line"> <span class="keyword">catch</span>(err) &#123;</span><br><span class="line">     处理错误的代码块</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<h2 id="15、异常："><a href="#15、异常：" class="headerlink" title="15、异常："></a>15、异常：</h2><h3 id="JavaScript-try-和-catch"><a href="#JavaScript-try-和-catch" class="headerlink" title="JavaScript try 和 catch"></a>JavaScript try 和 catch</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+     供测试的代码块
+<span class="token punctuation">&#125;</span>
+ <span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+     处理错误的代码块
+<span class="token punctuation">&#125;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="JavaScript-抛出错误"><a href="#JavaScript-抛出错误" class="headerlink" title="JavaScript 抛出错误"></a>JavaScript 抛出错误</h3><p>当发生错误时，JavaScript 通常会停止并产生错误消息。</p>
 <p>技术术语是这样描述的：_JavaScript 将抛出异常（抛出错误）_。</p>
@@ -806,7 +867,21 @@
 <p>在相同的作用域，或在相同的块中，通过 let 重新声明一个 var 变量是不允许的：</p>
 <h2 id="21、const："><a href="#21、const：" class="headerlink" title="21、const："></a>21、const：</h2><p>与let基本相同，但是不能改变const变量的值</p>
 <h2 id="22、调试"><a href="#22、调试" class="headerlink" title="22、调试"></a>22、调试</h2><p>可以使用 console.log() 在调试窗口中显示 JavaScript 的值：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My First Web Page<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">a = <span class="number">5</span>;</span></span><br><span class="line"><span class="javascript">b = <span class="number">6</span>;</span></span><br><span class="line"><span class="javascript">c = a + b;</span></span><br><span class="line"><span class="javascript"><span class="built_in">console</span>.log(c);</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>My First Web Page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+b <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+c <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h1 id="JS函数："><a href="#JS函数：" class="headerlink" title="JS函数："></a>JS函数：</h1><p>this 当前对象。</p>
 <p>call(); 方法拥有者.方法.call() 可以调用 方法拥有者 所拥有的方法。</p>
@@ -818,17 +893,24 @@
 </ul>
 <h3 id="JSON-对象"><a href="#JSON-对象" class="headerlink" title="JSON 对象"></a>JSON 对象</h3><p>JSON 对象是在花括号内书写的。</p>
 <p>类似 JavaScript，对象能够包含多个名称/值对：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;firstName&quot;:&quot;Bill&quot;, &quot;lastName&quot;:&quot;Gates&quot;&#125; </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&#123;&quot;firstName&quot;:&quot;Bill&quot;, &quot;lastName&quot;:&quot;Gates&quot;&#125; <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="JSON-数组"><a href="#JSON-数组" class="headerlink" title="JSON 数组"></a>JSON 数组</h3><p>JSON 数组在方括号中书写。</p>
 <p>类似 JavaScript，数组能够包含对象：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;employees&quot;:[</span><br><span class="line">    &#123;&quot;firstName&quot;:&quot;Bill&quot;, &quot;lastName&quot;:&quot;Gates&quot;&#125;, </span><br><span class="line">    &#123;&quot;firstName&quot;:&quot;Steve&quot;, &quot;lastName&quot;:&quot;Jobs&quot;&#125;, </span><br><span class="line">    &#123;&quot;firstName&quot;:&quot;Alan&quot;, &quot;lastName&quot;:&quot;Turing&quot;&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&quot;employees&quot;:[
+    &#123;&quot;firstName&quot;:&quot;Bill&quot;, &quot;lastName&quot;:&quot;Gates&quot;&#125;, 
+    &#123;&quot;firstName&quot;:&quot;Steve&quot;, &quot;lastName&quot;:&quot;Jobs&quot;&#125;, 
+    &#123;&quot;firstName&quot;:&quot;Alan&quot;, &quot;lastName&quot;:&quot;Turing&quot;&#125;
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="JSON-文本转换-JavaScript-对象"><a href="#JSON-文本转换-JavaScript-对象" class="headerlink" title="JSON 文本转换 JavaScript 对象"></a>JSON 文本转换 JavaScript 对象</h3><p>首先，创建包含 JSON 语法的 JavaScript 字符串：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var text = &#x27;&#123; <span class="attr">&quot;employees&quot;</span> : [&#x27; +</span><br><span class="line">&#x27;&#123; <span class="attr">&quot;firstName&quot;</span>:<span class="string">&quot;Bill&quot;</span> , <span class="attr">&quot;lastName&quot;</span>:<span class="string">&quot;Gates&quot;</span> &#125;,&#x27; +</span><br><span class="line">&#x27;&#123; <span class="attr">&quot;firstName&quot;</span>:<span class="string">&quot;Steve&quot;</span> , <span class="attr">&quot;lastName&quot;</span>:<span class="string">&quot;Jobs&quot;</span> &#125;,&#x27; +</span><br><span class="line">&#x27;&#123; <span class="attr">&quot;firstName&quot;</span>:<span class="string">&quot;Alan&quot;</span> , <span class="attr">&quot;lastName&quot;</span>:<span class="string">&quot;Turing&quot;</span> &#125; ]&#125;&#x27;;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">var text = '<span class="token punctuation">&#123;</span> <span class="token property">"employees"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>' +
+'<span class="token punctuation">&#123;</span> <span class="token property">"firstName"</span><span class="token operator">:</span><span class="token string">"Bill"</span> <span class="token punctuation">,</span> <span class="token property">"lastName"</span><span class="token operator">:</span><span class="token string">"Gates"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>' +
+'<span class="token punctuation">&#123;</span> <span class="token property">"firstName"</span><span class="token operator">:</span><span class="token string">"Steve"</span> <span class="token punctuation">,</span> <span class="token property">"lastName"</span><span class="token operator">:</span><span class="token string">"Jobs"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>' +
+'<span class="token punctuation">&#123;</span> <span class="token property">"firstName"</span><span class="token operator">:</span><span class="token string">"Alan"</span> <span class="token punctuation">,</span> <span class="token property">"lastName"</span><span class="token operator">:</span><span class="token string">"Turing"</span> <span class="token punctuation">&#125;</span> <span class="token punctuation">]</span><span class="token punctuation">&#125;</span>';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后，使用 JavaScript 的内建函数 JSON.parse() 来把这个字符串转换为 JavaScript 对象：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">JSON</span>.parse(text);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -915,132 +997,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -1095,7 +1051,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="SQL命令/数据库操作">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="SQL命令/数据库操作">
                         
                         <span class="card-title">SQL命令/数据库操作</span>
                     </div>
@@ -1144,7 +1100,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="5G时代 阅毕印象">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="5G时代 阅毕印象">
                         
                         <span class="card-title">5G时代 阅毕印象</span>
                     </div>
@@ -1188,6 +1144,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1313,7 +1306,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1326,7 +1319,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1347,6 +1340,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

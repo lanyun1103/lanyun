@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="阿里云打卡Task1中对非新人比较难记住的点, jiojio">
+    <meta name="keywords" content="阿里云打卡Task1中对非新人比较难记住的点, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>阿里云打卡Task1中对非新人比较难记住的点 | Hexo</title>
+    <title>阿里云打卡Task1中对非新人比较难记住的点 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -488,6 +488,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -514,14 +517,23 @@
 <p>右移</p>
 <p><code>4 &gt;&gt; 2</code></p>
 <h3 id="2-三元运算符："><a href="#2-三元运算符：" class="headerlink" title="2. 三元运算符："></a>2. 三元运算符：</h3><p>一个简单的例子：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x, y = <span class="number">4</span>, <span class="number">5</span></span><br><span class="line"><span class="keyword">if</span> x &lt; y:</span><br><span class="line">    small = x</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    small = y</span><br><span class="line"><span class="built_in">print</span>(small)  <span class="comment"># 4</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x<span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span>
+<span class="token keyword">if</span> x <span class="token operator">&lt;</span> y<span class="token punctuation">:</span>
+    small <span class="token operator">=</span> x
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    small <span class="token operator">=</span> y
+<span class="token keyword">print</span><span class="token punctuation">(</span>small<span class="token punctuation">)</span>  <span class="token comment"># 4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>这是最基本的处理方式，python的三元运算符和java的差不多，以下为两个对比</p>
 <p>python:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x, y = <span class="number">4</span>, <span class="number">5</span></span><br><span class="line">small = x <span class="keyword">if</span> x &lt; y <span class="keyword">else</span> y</span><br><span class="line"><span class="built_in">print</span>(small)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x<span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span>
+small <span class="token operator">=</span> x <span class="token keyword">if</span> x <span class="token operator">&lt;</span> y <span class="token keyword">else</span> y
+<span class="token keyword">print</span><span class="token punctuation">(</span>small<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>JAVA：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">4</span>, y = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> small = x &lt; y ? x : y;</span><br><span class="line">System.out.println(small)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> small <span class="token operator">=</span> x <span class="token operator">&lt;</span> y <span class="token operator">?</span> x <span class="token operator">:</span> y<span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>small<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-其他运算符"><a href="#3-其他运算符" class="headerlink" title="3. 其他运算符"></a>3. 其他运算符</h3><p>操作符</p>
 <p>名称</p>
@@ -538,7 +550,10 @@
 <p><code>not is</code></p>
 <p>不是</p>
 <p><code>&quot;hello&quot; is not &quot;hello&quot;</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">&quot;hello&quot;</span>]</span><br><span class="line">b = [<span class="string">&quot;hello&quot;</span>]</span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> b, a == b)  <span class="comment"># False True</span></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> <span class="keyword">not</span> b, a != b)  <span class="comment"># True False</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"hello"</span><span class="token punctuation">]</span>
+b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"hello"</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a <span class="token keyword">is</span> b<span class="token punctuation">,</span> a <span class="token operator">==</span> b<span class="token punctuation">)</span>  <span class="token comment"># False True</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a <span class="token keyword">is</span> <span class="token keyword">not</span> b<span class="token punctuation">,</span> a <span class="token operator">!=</span> b<span class="token punctuation">)</span>  <span class="token comment"># True False</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意事项：</p>
 <ul>
@@ -576,7 +591,20 @@
 <p>not and or</p>
 <p>逻辑运算符</p>
 <h3 id="5-保留小数点后几位"><a href="#5-保留小数点后几位" class="headerlink" title="5. 保留小数点后几位"></a>5. 保留小数点后几位</h3><p>如果想要保留小数点后n位，这个时候double可能没有这种功能，就可以使用Decimal包下的Decimal对象</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Decimal</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal</span><br><span class="line">a = decimal.getcontext()</span><br><span class="line">b = Decimal(<span class="number">1</span>) / Decimal(<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.3333333333333333333333333333</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置保留几位小数</span></span><br><span class="line">decimal.getcontext().prec = <span class="number">4</span></span><br><span class="line">c = Decimal(<span class="number">1</span>) / Decimal(<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(c)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.3333</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> Decimal
+<span class="token keyword">from</span> decimal <span class="token keyword">import</span> Decimal
+a <span class="token operator">=</span> decimal<span class="token punctuation">.</span>getcontext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+b <span class="token operator">=</span> Decimal<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> Decimal<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+
+<span class="token comment"># 0.3333333333333333333333333333</span>
+
+<span class="token comment">#设置保留几位小数</span>
+decimal<span class="token punctuation">.</span>getcontext<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>prec <span class="token operator">=</span> <span class="token number">4</span>
+c <span class="token operator">=</span> Decimal<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> Decimal<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+
+<span class="token comment"># 0.3333</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="6-布尔运算的小细节："><a href="#6-布尔运算的小细节：" class="headerlink" title="6. 布尔运算的小细节："></a>6. 布尔运算的小细节：</h3><p>布尔 (boolean) 型变量只能取两个值，<code>True</code> 和 <code>False</code>。当把布尔型变量用在数字运算中，用 <code>1</code> 和 <code>0</code> 代表 <code>True</code> 和 <code>False</code>。</p>
 <p><code>bool</code> 作用在基本类型变量：<code>X</code> 只要不是整型 <code>0</code>、浮点型 <code>0.0</code>，<code>bool(X)</code> 就是 <code>True</code>，其余就是 <code>False</code>。</p>
@@ -586,7 +614,7 @@
 <li>  对于数值变量，<code>0</code>, <code>0.0</code> 都可认为是空的。</li>
 <li>  对于容器变量，里面没元素就是空的</li>
 </ul>
-<h3 id="7-print-函数的参数讲解"><a href="#7-print-函数的参数讲解" class="headerlink" title="7. print()函数的参数讲解"></a>7. print()函数的参数讲解</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(*objects, sep=<span class="string">&#x27; &#x27;</span>, end=<span class="string">&#x27;\n&#x27;</span>, file=sys.stdout, flush=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="7-print-函数的参数讲解"><a href="#7-print-函数的参数讲解" class="headerlink" title="7. print()函数的参数讲解"></a>7. print()函数的参数讲解</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>objects<span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">' '</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">'\n'</span><span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token operator">=</span>sys<span class="token punctuation">.</span>stdout<span class="token punctuation">,</span> flush<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ul>
 <li>  关键字参数<code>sep</code>是实现分隔符，比如多个参数输出时想要输出中间的分隔字符；</li>
@@ -596,70 +624,134 @@
 </ul>
 <h3 id="8-位运算"><a href="#8-位运算" class="headerlink" title="8. 位运算"></a>8. <strong>位运算</strong></h3><p>二进制有三种不同的表示形式：原码、反码和补码，计算机内部使用补码来表示。</p>
 <p><strong>原码</strong>：就是其二进制表示（注意，有一位符号位）。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">11</span> -&gt; <span class="number">3</span></span><br><span class="line"><span class="number">10</span> <span class="number">00</span> <span class="number">00</span> <span class="number">11</span> -&gt; -<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">00</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">11</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">3</span>
+<span class="token number">10</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">11</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">-</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><strong>反码</strong>：正数的反码就是原码，负数的反码是符号位不变，其余位取反（对应正数按位取反）。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">11</span> -&gt; <span class="number">3</span></span><br><span class="line"><span class="number">11</span> <span class="number">11</span> <span class="number">11</span> <span class="number">00</span> -&gt; -<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">00</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">11</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">3</span>
+<span class="token number">11</span> <span class="token number">11</span> <span class="token number">11</span> <span class="token number">00</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">-</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><strong>补码</strong>：正数的补码就是原码，负数的补码是反码+1。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">11</span> -&gt; <span class="number">3</span></span><br><span class="line"><span class="number">11</span> <span class="number">11</span> <span class="number">11</span> 01 -&gt; -<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">00</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">11</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">3</span>
+<span class="token number">11</span> <span class="token number">11</span> <span class="token number">11</span> <span class="token number">01</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">-</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><strong>符号位</strong>：最高位为符号位，0表示正数，1表示负数。在位运算中符号位也参与运算。</p>
 <ul>
 <li>  按位非操作 <code>~</code></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~ <span class="number">1</span> = <span class="number">0</span></span><br><span class="line">~ <span class="number">0</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">~</span> <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token operator">~</span> <span class="token number">0</span> <span class="token operator">=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>把<code>num</code>的补码中的 0 和 1 全部取反（0 变为 1，1 变为 0）有符号整数的符号位在 <code>~</code> 运算中同样会取反。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00</span> <span class="number">00</span> 01 01 -&gt; <span class="number">5</span></span><br><span class="line">~</span><br><span class="line">---</span><br><span class="line"><span class="number">11</span> <span class="number">11</span> <span class="number">10</span> <span class="number">10</span> -&gt; -<span class="number">6</span></span><br><span class="line"></span><br><span class="line"><span class="number">11</span> <span class="number">11</span> <span class="number">10</span> <span class="number">11</span> -&gt; -<span class="number">5</span></span><br><span class="line">~</span><br><span class="line">---</span><br><span class="line"><span class="number">00</span> <span class="number">00</span> 01 <span class="number">00</span> -&gt; <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">01</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">5</span>
+<span class="token operator">~</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token number">11</span> <span class="token number">11</span> <span class="token number">10</span> <span class="token number">10</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">-</span><span class="token number">6</span>
+
+<span class="token number">11</span> <span class="token number">11</span> <span class="token number">10</span> <span class="token number">11</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">-</span><span class="token number">5</span>
+<span class="token operator">~</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">00</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>  按位与操作 &amp;</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &amp; <span class="number">1</span> = <span class="number">1</span></span><br><span class="line"><span class="number">1</span> &amp; <span class="number">0</span> = <span class="number">0</span></span><br><span class="line"><span class="number">0</span> &amp; <span class="number">1</span> = <span class="number">0</span></span><br><span class="line"><span class="number">0</span> &amp; <span class="number">0</span> = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">1</span> <span class="token operator">&amp;</span> <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token number">1</span> <span class="token operator">&amp;</span> <span class="token number">0</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token number">0</span> <span class="token operator">&amp;</span> <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token number">0</span> <span class="token operator">&amp;</span> <span class="token number">0</span> <span class="token operator">=</span> <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>只有两个对应位都为 1 时才为 1</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00</span> <span class="number">00</span> 01 01 -&gt; <span class="number">5</span></span><br><span class="line">&amp;</span><br><span class="line"><span class="number">00</span> <span class="number">00</span> 01 <span class="number">10</span> -&gt; <span class="number">6</span></span><br><span class="line">---</span><br><span class="line"><span class="number">00</span> <span class="number">00</span> 01 <span class="number">00</span> -&gt; <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">01</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">5</span>
+<span class="token operator">&amp;</span>
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">10</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">6</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">00</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>  按位或操作</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>  <span class="number">1</span> = <span class="number">1</span></span><br><span class="line"><span class="number">1</span>  <span class="number">0</span> = <span class="number">1</span></span><br><span class="line"><span class="number">0</span>  <span class="number">1</span> = <span class="number">1</span></span><br><span class="line"><span class="number">0</span>  <span class="number">0</span> = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">1</span>  <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token number">1</span>  <span class="token number">0</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token number">0</span>  <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token number">0</span>  <span class="token number">0</span> <span class="token operator">=</span> <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>只要两个对应位中有一个 1 时就为 1</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00</span> <span class="number">00</span> 01 01 -&gt; <span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="number">00</span> <span class="number">00</span> 01 <span class="number">10</span> -&gt; <span class="number">6</span></span><br><span class="line">---</span><br><span class="line"><span class="number">00</span> <span class="number">00</span> 01 <span class="number">11</span> -&gt; <span class="number">7</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">01</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">5</span>
+
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">10</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">6</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">11</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">7</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>  按位异或操作 ^</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> ^ <span class="number">1</span> = <span class="number">0</span></span><br><span class="line"><span class="number">1</span> ^ <span class="number">0</span> = <span class="number">1</span></span><br><span class="line"><span class="number">0</span> ^ <span class="number">1</span> = <span class="number">1</span></span><br><span class="line"><span class="number">0</span> ^ <span class="number">0</span> = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">1</span> <span class="token operator">^</span> <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token number">1</span> <span class="token operator">^</span> <span class="token number">0</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token number">0</span> <span class="token operator">^</span> <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token number">0</span> <span class="token operator">^</span> <span class="token number">0</span> <span class="token operator">=</span> <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>只有两个对应位不同时才为 1</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00</span> <span class="number">00</span> 01 01 -&gt; <span class="number">5</span></span><br><span class="line">^</span><br><span class="line"><span class="number">00</span> <span class="number">00</span> 01 <span class="number">10</span> -&gt; <span class="number">6</span></span><br><span class="line">---</span><br><span class="line"><span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">11</span> -&gt; <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">01</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">5</span>
+<span class="token operator">^</span>
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">10</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">6</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">11</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>异或操作的性质：满足交换律和结合律</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A: <span class="number">00</span> <span class="number">00</span> <span class="number">11</span> <span class="number">00</span></span><br><span class="line">B: <span class="number">00</span> <span class="number">00</span> 01 <span class="number">11</span></span><br><span class="line"></span><br><span class="line">A^B: <span class="number">00</span> <span class="number">00</span> <span class="number">10</span> <span class="number">11</span></span><br><span class="line">B^A: <span class="number">00</span> <span class="number">00</span> <span class="number">10</span> <span class="number">11</span></span><br><span class="line"></span><br><span class="line">A^A: <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span></span><br><span class="line">A^<span class="number">0</span>: <span class="number">00</span> <span class="number">00</span> <span class="number">11</span> <span class="number">00</span></span><br><span class="line"></span><br><span class="line">A^B^A: = A^A^B = B = <span class="number">00</span> <span class="number">00</span> 01 <span class="number">11</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">A<span class="token punctuation">:</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">11</span> <span class="token number">00</span>
+B<span class="token punctuation">:</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">11</span>
+
+A<span class="token operator">^</span>B<span class="token punctuation">:</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">10</span> <span class="token number">11</span>
+B<span class="token operator">^</span>A<span class="token punctuation">:</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">10</span> <span class="token number">11</span>
+
+A<span class="token operator">^</span>A<span class="token punctuation">:</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">00</span>
+A<span class="token operator">^</span><span class="token number">0</span><span class="token punctuation">:</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">11</span> <span class="token number">00</span>
+
+A<span class="token operator">^</span>B<span class="token operator">^</span>A<span class="token punctuation">:</span> <span class="token operator">=</span> A<span class="token operator">^</span>A<span class="token operator">^</span>B <span class="token operator">=</span> B <span class="token operator">=</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">11</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>  按位左移操作 &lt;&lt;</li>
 </ul>
 <p><code>num &lt;&lt; i</code> 将<code>num</code>的二进制表示向左移动<code>i</code>位所得的值。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00</span> <span class="number">00</span> <span class="number">10</span> <span class="number">11</span> -&gt; <span class="number">11</span></span><br><span class="line"><span class="number">11</span> &lt;&lt; <span class="number">3</span></span><br><span class="line">---</span><br><span class="line">01 01 <span class="number">10</span> <span class="number">00</span> -&gt; <span class="number">88</span> </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">00</span> <span class="token number">00</span> <span class="token number">10</span> <span class="token number">11</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">11</span>
+<span class="token number">11</span> <span class="token operator">&lt;&lt;</span> <span class="token number">3</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token number">01</span> <span class="token number">01</span> <span class="token number">10</span> <span class="token number">00</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">88</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>  按位右移操作 &gt;&gt;</li>
 </ul>
 <p><code>num &gt;&gt; i</code> 将<code>num</code>的二进制表示向右移动<code>i</code>位所得的值。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00</span> <span class="number">00</span> <span class="number">10</span> <span class="number">11</span> -&gt; <span class="number">11</span></span><br><span class="line"><span class="number">11</span> &gt;&gt; <span class="number">2</span></span><br><span class="line">---</span><br><span class="line"><span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">10</span> -&gt; <span class="number">2</span> </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">00</span> <span class="token number">00</span> <span class="token number">10</span> <span class="token number">11</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">11</span>
+<span class="token number">11</span> <span class="token operator">>></span> <span class="token number">2</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">10</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">2</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="利用位运算进行快捷数字操作："><a href="#利用位运算进行快捷数字操作：" class="headerlink" title="利用位运算进行快捷数字操作："></a>利用位运算进行快捷数字操作：</h4><p>通过 <code>&lt;&lt;</code>，<code>&gt;&gt;</code> 快速计算2的倍数问题。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">n &lt;&lt; <span class="number">1</span> -&gt; 计算 n*<span class="number">2</span></span><br><span class="line">n &gt;&gt; <span class="number">1</span> -&gt; 计算 n/<span class="number">2</span>，负奇数的运算不可用</span><br><span class="line">n &lt;&lt; m -&gt; 计算 n*(<span class="number">2</span>^m)，即乘以 <span class="number">2</span> 的 m 次方</span><br><span class="line">n &gt;&gt; m -&gt; 计算 n/(<span class="number">2</span>^m)，即除以 <span class="number">2</span> 的 m 次方</span><br><span class="line"><span class="number">1</span> &lt;&lt; n -&gt; <span class="number">2</span>^n</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">n <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">-</span><span class="token operator">></span> 计算 n<span class="token operator">*</span><span class="token number">2</span>
+n <span class="token operator">>></span> <span class="token number">1</span> <span class="token operator">-</span><span class="token operator">></span> 计算 n<span class="token operator">/</span><span class="token number">2</span>，负奇数的运算不可用
+n <span class="token operator">&lt;&lt;</span> m <span class="token operator">-</span><span class="token operator">></span> 计算 n<span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">^</span>m<span class="token punctuation">)</span>，即乘以 <span class="token number">2</span> 的 m 次方
+n <span class="token operator">>></span> m <span class="token operator">-</span><span class="token operator">></span> 计算 n<span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">^</span>m<span class="token punctuation">)</span>，即除以 <span class="token number">2</span> 的 m 次方
+<span class="token number">1</span> <span class="token operator">&lt;&lt;</span> n <span class="token operator">-</span><span class="token operator">></span> <span class="token number">2</span><span class="token operator">^</span>n<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>通过 <code>^</code> 快速交换两个整数。 通过 <code>^</code> 快速交换两个整数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a ^= b</span><br><span class="line">b ^= a</span><br><span class="line">a ^= b</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">^</span><span class="token operator">=</span> b
+b <span class="token operator">^</span><span class="token operator">=</span> a
+a <span class="token operator">^</span><span class="token operator">=</span> b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>通过 <code>a &amp; (-a)</code> 快速获取<code>a</code>的最后为 1 位置的整数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00</span> <span class="number">00</span> 01 01 -&gt; <span class="number">5</span></span><br><span class="line">&amp;</span><br><span class="line"><span class="number">11</span> <span class="number">11</span> <span class="number">10</span> <span class="number">11</span> -&gt; -<span class="number">5</span></span><br><span class="line">---</span><br><span class="line"><span class="number">00</span> <span class="number">00</span> <span class="number">00</span> 01 -&gt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="number">00</span> <span class="number">00</span> <span class="number">11</span> <span class="number">10</span> -&gt; <span class="number">14</span></span><br><span class="line">&amp;</span><br><span class="line"><span class="number">11</span> <span class="number">11</span> <span class="number">00</span> <span class="number">10</span> -&gt; -<span class="number">14</span></span><br><span class="line">---</span><br><span class="line"><span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">10</span> -&gt; <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token number">01</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">5</span>
+<span class="token operator">&amp;</span>
+<span class="token number">11</span> <span class="token number">11</span> <span class="token number">10</span> <span class="token number">11</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">-</span><span class="token number">5</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">01</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">1</span>
+
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">11</span> <span class="token number">10</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">14</span>
+<span class="token operator">&amp;</span>
+<span class="token number">11</span> <span class="token number">11</span> <span class="token number">00</span> <span class="token number">10</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">-</span><span class="token number">14</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token number">00</span> <span class="token number">00</span> <span class="token number">00</span> <span class="token number">10</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="利用位运算实现整数集合："><a href="#利用位运算实现整数集合：" class="headerlink" title="利用位运算实现整数集合："></a>利用位运算实现整数集合：</h4><p>一个数的二进制表示可以看作是一个集合（0 表示不在集合中，1 表示在集合中）。</p>
 <p>比如集合 <code>&#123;1, 3, 4, 8&#125;</code>，可以表示成 <code>01 00 01 10 10</code> 而对应的位运算也就可以看作是对集合进行的操作。</p>
@@ -667,10 +759,15 @@
 <p>一开始我是没看懂的，其实也就是从左往右看，最左边的0-&gt;代表0不在集合，从左往右数第二个1-&gt;代表1在集合，以此可以得到结果</p>
 </blockquote>
 <p>元素与集合的操作：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a  (<span class="number">1</span>&lt;&lt;i)  -&gt; 把 i 插入到集合中</span><br><span class="line">a &amp; ~(<span class="number">1</span>&lt;&lt;i) -&gt; 把 i 从集合中删除</span><br><span class="line">a &amp; (<span class="number">1</span>&lt;&lt;i)  -&gt; 判断 i 是否属于该集合（零不属于，非零属于）</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a  <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>i<span class="token punctuation">)</span>  <span class="token operator">-</span><span class="token operator">></span> 把 i 插入到集合中
+a <span class="token operator">&amp;</span> <span class="token operator">~</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>i<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> 把 i 从集合中删除
+a <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>i<span class="token punctuation">)</span>  <span class="token operator">-</span><span class="token operator">></span> 判断 i 是否属于该集合（零不属于，非零属于）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>集合之间的操作：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a 补   -&gt; ~a</span><br><span class="line">a 交 b -&gt; a &amp; b</span><br><span class="line">a 并 b -&gt; a  b</span><br><span class="line">a 差 b -&gt; a &amp; (~b)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a 补   <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">~</span>a
+a 交 b <span class="token operator">-</span><span class="token operator">></span> a <span class="token operator">&amp;</span> b
+a 并 b <span class="token operator">-</span><span class="token operator">></span> a  b
+a 差 b <span class="token operator">-</span><span class="token operator">></span> a <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token operator">~</span>b<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意：整数在内存中是以补码的形式存在的，输出自然也是按照补码输出。</p>
 <p>注意：</p>
@@ -679,12 +776,15 @@
 <li>  Python中的整型是补码形式存储的。</li>
 <li>  Python中整型是不限制长度的不会超范围溢出。</li>
 </ul>
-<h3 id="9-特殊的for-else循环"><a href="#9-特殊的for-else循环" class="headerlink" title="9. 特殊的for-else循环"></a>9. 特殊的for-else循环</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> 迭代变量 <span class="keyword">in</span> 可迭代对象:</span><br><span class="line">    代码块</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    代码块</span><br></pre></td></tr></table></figure>
+<h3 id="9-特殊的for-else循环"><a href="#9-特殊的for-else循环" class="headerlink" title="9. 特殊的for-else循环"></a>9. 特殊的for-else循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> 迭代变量 <span class="token keyword">in</span> 可迭代对象<span class="token punctuation">:</span>
+    代码块
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    代码块<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>当<code>for</code>循环正常执行完的情况下，执行<code>else</code>输出，如果<code>for</code>循环中执行了跳出循环的语句，比如 <code>break</code>，将不执行<code>else</code>代码块的内容，与<code>while - else</code>语句一样。</p>
 <h3 id="10-enumerate-函数"><a href="#10-enumerate-函数" class="headerlink" title="10. enumerate()函数"></a>10. enumerate()函数</h3><p>枚举函数的作用： 用来返回一个枚举对象，包含了一个数据集合中的数据，<strong>并且给这个元素一个索引值</strong>。</p>
 <h3 id="11-推导式"><a href="#11-推导式" class="headerlink" title="11. 推导式"></a>11. 推导式</h3><p><strong>列表推导式</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ expr <span class="keyword">for</span> value <span class="keyword">in</span> collection [<span class="keyword">if</span> condition] ]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">[</span> expr <span class="token keyword">for</span> value <span class="token keyword">in</span> collection <span class="token punctuation">[</span><span class="token keyword">if</span> condition<span class="token punctuation">]</span> <span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="12-异常处理"><a href="#12-异常处理" class="headerlink" title="12. 异常处理"></a>12. 异常处理</h3><h4 id="1-Python-标准异常总结："><a href="#1-Python-标准异常总结：" class="headerlink" title="1). Python 标准异常总结："></a>1). Python 标准异常总结：</h4><ul>
 <li>  BaseException：所有异常的 <strong>基类</strong></li>
@@ -744,15 +844,78 @@
 <li>  raise语句</li>
 </ul>
 <p>每个语句举几个例子：</p>
-<h5 id="try-except"><a href="#try-except" class="headerlink" title="try-except:"></a>try-except:</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    检测范围</span><br><span class="line"><span class="keyword">except</span> Exception[<span class="keyword">as</span> reason]:</span><br><span class="line">    出现异常后的处理代码</span><br><span class="line"><span class="comment">###################</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    f = <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line">    f.close()</span><br><span class="line"><span class="keyword">except</span> OSError <span class="keyword">as</span> error:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打开文件出错\n原因是：&#x27;</span> + <span class="built_in">str</span>(error))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开文件出错</span></span><br><span class="line"><span class="comment"># 原因是：[Errno 2] No such file or directory: &#x27;test.txt&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    s = <span class="number">1</span> + <span class="string">&#x27;1&#x27;</span></span><br><span class="line">    <span class="built_in">int</span>(<span class="string">&quot;abc&quot;</span>)</span><br><span class="line">    f = <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line">    f.close()</span><br><span class="line"><span class="keyword">except</span> (OSError, TypeError, ValueError) <span class="keyword">as</span> error:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;出错了！\n原因是：&#x27;</span> + <span class="built_in">str</span>(error))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 出错了！</span></span><br><span class="line"><span class="comment"># 原因是：unsupported operand type(s) for +: &#x27;int&#x27; and &#x27;str&#x27;</span></span><br></pre></td></tr></table></figure>
+<h5 id="try-except"><a href="#try-except" class="headerlink" title="try-except:"></a>try-except:</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    检测范围
+<span class="token keyword">except</span> Exception<span class="token punctuation">[</span><span class="token keyword">as</span> reason<span class="token punctuation">]</span><span class="token punctuation">:</span>
+    出现异常后的处理代码
+<span class="token comment">###################</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'test.txt'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> OSError <span class="token keyword">as</span> error<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'打开文件出错\n原因是：'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 打开文件出错</span>
+<span class="token comment"># 原因是：[Errno 2] No such file or directory: 'test.txt'</span>
+
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    s <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token string">'1'</span>
+    <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span>
+    f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'test.txt'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> <span class="token punctuation">(</span>OSError<span class="token punctuation">,</span> TypeError<span class="token punctuation">,</span> ValueError<span class="token punctuation">)</span> <span class="token keyword">as</span> error<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'出错了！\n原因是：'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 出错了！</span>
+<span class="token comment"># 原因是：unsupported operand type(s) for +: 'int' and 'str'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="try-except-finally"><a href="#try-except-finally" class="headerlink" title="try-except-finally:"></a>try-except-finally:</h5><p>监测范围范围 except Exception[as reason]: 出现异常后的处理代码 finally: 无论如何都会被执行的代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">divide</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        result = x / y</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;result is&quot;</span>, result)</span><br><span class="line">    <span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;division by zero!&quot;</span>)</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;executing finally clause&quot;</span>)</span><br><span class="line"></span><br><span class="line">divide(<span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line"><span class="comment"># result is 2.0</span></span><br><span class="line"><span class="comment"># executing finally clause</span></span><br><span class="line">divide(<span class="number">2</span>, <span class="number">0</span>)</span><br><span class="line"><span class="comment"># division by zero!</span></span><br><span class="line"><span class="comment"># executing finally clause</span></span><br><span class="line">divide(<span class="string">&quot;2&quot;</span>, <span class="string">&quot;1&quot;</span>)</span><br><span class="line"><span class="comment"># executing finally clause</span></span><br><span class="line"><span class="comment"># TypeError: unsupported operand type(s) for /: &#x27;str&#x27; and &#x27;str&#x27;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">divide</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        result <span class="token operator">=</span> x <span class="token operator">/</span> y
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"result is"</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span>
+    <span class="token keyword">except</span> ZeroDivisionError<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"division by zero!"</span><span class="token punctuation">)</span>
+    <span class="token keyword">finally</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"executing finally clause"</span><span class="token punctuation">)</span>
 
-<h5 id="try-except-else"><a href="#try-except-else" class="headerlink" title="try-except-else:"></a>try-except-else:</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    检测范围</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    出现异常后的处理代码</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    如果没有异常执行这块代码</span><br><span class="line"><span class="comment">###################</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    fh = <span class="built_in">open</span>(<span class="string">&quot;testfile.txt&quot;</span>, <span class="string">&quot;w&quot;</span>)</span><br><span class="line">    fh.write(<span class="string">&quot;这是一个测试文件，用于测试异常!!&quot;</span>)</span><br><span class="line"><span class="keyword">except</span> IOError:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Error: 没有找到文件或读取文件失败&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;内容写入文件成功&quot;</span>)</span><br><span class="line">    fh.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 内容写入文件成功</span></span><br></pre></td></tr></table></figure>
+divide<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token comment"># result is 2.0</span>
+<span class="token comment"># executing finally clause</span>
+divide<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token comment"># division by zero!</span>
+<span class="token comment"># executing finally clause</span>
+divide<span class="token punctuation">(</span><span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string">"1"</span><span class="token punctuation">)</span>
+<span class="token comment"># executing finally clause</span>
+<span class="token comment"># TypeError: unsupported operand type(s) for /: 'str' and 'str'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="try-except-else"><a href="#try-except-else" class="headerlink" title="try-except-else:"></a>try-except-else:</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    检测范围
+<span class="token keyword">except</span><span class="token punctuation">:</span>
+    出现异常后的处理代码
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    如果没有异常执行这块代码
+<span class="token comment">###################</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    fh <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"testfile.txt"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span>
+    fh<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"这是一个测试文件，用于测试异常!!"</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> IOError<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Error: 没有找到文件或读取文件失败"</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"内容写入文件成功"</span><span class="token punctuation">)</span>
+    fh<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 内容写入文件成功</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="raise"><a href="#raise" class="headerlink" title="raise:"></a>raise:</h5><p>Python 使用<code>raise</code>语句抛出一个指定的异常。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">raise</span> NameError(<span class="string">&#x27;HiThere&#x27;</span>)</span><br><span class="line"><span class="keyword">except</span> NameError:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;An exception flew by!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># An exception flew by!</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token keyword">raise</span> NameError<span class="token punctuation">(</span><span class="token string">'HiThere'</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> NameError<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'An exception flew by!'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># An exception flew by!</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -839,132 +1002,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -1019,7 +1056,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="阿里云Task2基本数据类型">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="阿里云Task2基本数据类型">
                         
                         <span class="card-title">阿里云Task2基本数据类型</span>
                     </div>
@@ -1060,7 +1097,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="一个Manim的bug-UserWarning: g0-87 not recognized">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="一个Manim的bug-UserWarning: g0-87 not recognized">
                         
                         <span class="card-title">一个Manim的bug-UserWarning: g0-87 not recognized</span>
                     </div>
@@ -1096,6 +1133,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1221,7 +1295,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1234,7 +1308,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1255,6 +1329,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             

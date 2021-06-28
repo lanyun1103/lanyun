@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="R语言常用命令以及小技巧, jiojio">
+    <meta name="keywords" content="R语言常用命令以及小技巧, Java">
     <meta name="description" content="(*´▽｀)ノノ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>R语言常用命令以及小技巧 | Hexo</title>
+    <title>R语言常用命令以及小技巧 | Lanyun&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Lanyun's Blog" type="application/atom+xml">
 </head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Lanyun&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Lanyun&#39;s Blog</div>
         <div class="logo-desc">
             
             (*´▽｀)ノノ
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -466,7 +466,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    694
+                    703
                 </div>
                 
 
@@ -488,18 +488,61 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h4 id="生成数组"><a href="#生成数组" class="headerlink" title="生成数组"></a>生成数组</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = rbinom(<span class="number">20</span>, <span class="number">1</span>, <span class="number">0.25</span>) <span class="comment">#生成伯努利分布的数组</span></span><br><span class="line">&gt; [<span class="number">1</span>] <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">x = <span class="number">1</span>:<span class="number">10</span>    <span class="comment">#生成步长为1的数组</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">rep</span>()       <span class="comment">#重复生成某个元素</span></span><br><span class="line">x = <span class="built_in">rep</span>(<span class="number">1</span>, <span class="number">10</span>)  <span class="comment">#生成10个1</span></span><br></pre></td></tr></table></figure>
+                <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h4 id="生成数组"><a href="#生成数组" class="headerlink" title="生成数组"></a>生成数组</h4><pre class="line-numbers language-r" data-language="r"><code class="language-r">x <span class="token operator">=</span> rbinom<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0.25</span><span class="token punctuation">)</span> <span class="token comment">#生成伯努利分布的数组</span>
+<span class="token operator">></span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span>
 
-<h4 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apply(X, MARGIN, FUN, ...)  <span class="comment">#函数意义：对X数组进行FUN函数得到数据。</span></span><br><span class="line"><span class="comment">#X为数组，MARGIN可以为1,2，1：按照行进行FUN，2：按照列进行FUN。</span></span><br><span class="line">scale()     <span class="comment">#对数据进行展开，将二维的数据-&gt;一维数据</span></span><br></pre></td></tr></table></figure>
+x <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span><span class="token number">10</span>    <span class="token comment">#生成步长为1的数组</span>
 
-<h4 id="绘图命令"><a href="#绘图命令" class="headerlink" title="绘图命令"></a>绘图命令</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">par()       <span class="comment">#设置绘图参数，常用的有mfrow，mfcol（设置n*n），pin（设置图像大小）</span></span><br><span class="line"></span><br><span class="line">plot()      <span class="comment">#散点图,for example: plot(y~x)</span></span><br><span class="line">coplot()    <span class="comment">#不同划分下的散点图，例如coplot(Y~x1x2)</span></span><br><span class="line">hist()      <span class="comment">#直方图</span></span><br><span class="line">pie()       <span class="comment">#饼图</span></span><br><span class="line">boxplot()   <span class="comment">#箱线图</span></span><br><span class="line">dotchart()  <span class="comment">#点图</span></span><br><span class="line">pairs()     <span class="comment">#配对散点图</span></span><br><span class="line">barplot()   <span class="comment">#柱状图</span></span><br><span class="line"></span><br><span class="line">qqline()    <span class="comment">#qq线，qqline向通过探测器分位数(默认情况下是第一和第三四分位数)的“理论”(默认情况下是正常的)分位数-分位数曲线图添加一条线</span></span><br><span class="line">qqnorm()    <span class="comment">#qq图，是一种通用函数，其默认方法是生成Y中的值的正常QQ图</span></span><br></pre></td></tr></table></figure>
+rep<span class="token punctuation">(</span><span class="token punctuation">)</span>       <span class="token comment">#重复生成某个元素</span>
+x <span class="token operator">=</span> rep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>  <span class="token comment">#生成10个1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="统计类命令"><a href="#统计类命令" class="headerlink" title="统计类命令"></a>统计类命令</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##############统计相关##########</span></span><br><span class="line"></span><br><span class="line">table()     <span class="comment">#统计数据中的频数</span></span><br><span class="line"></span><br><span class="line">cor()       <span class="comment">#相关性检验</span></span><br><span class="line">cor.test()  <span class="comment">#检查两个元素之间的相关性</span></span><br><span class="line"></span><br><span class="line">princomp()  <span class="comment">#Princomp对给定的数字数据矩阵执行主成分分析，并将结果作为princomp类的对象返回。</span></span><br><span class="line">predict(object) <span class="comment">#预测样本主成分，参数是princomp类</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#########回归相关命令#########</span></span><br><span class="line"></span><br><span class="line">lm()        <span class="comment">#线性回归</span></span><br><span class="line">lm(Y ~ X1 + X2,data = list1)</span><br><span class="line">glm()       <span class="comment">#logistic回归，</span></span><br><span class="line">glm.val&lt;-glm(Y~X1+X2+X3+X4+X5,data=list2)</span><br><span class="line">step()      <span class="comment">#逐步回归</span></span><br><span class="line">step(glm.val)</span><br><span class="line"></span><br><span class="line">summary(object) <span class="comment">#查看拟合方程</span></span><br><span class="line">coef(object)    <span class="comment">#查看拟合方程的参数</span></span><br></pre></td></tr></table></figure>
+<h4 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h4><pre class="line-numbers language-R" data-language="R"><code class="language-R">apply(X, MARGIN, FUN, ...)  #函数意义：对X数组进行FUN函数得到数据。
+#X为数组，MARGIN可以为1,2，1：按照行进行FUN，2：按照列进行FUN。
+scale()     #对数据进行展开，将二维的数据-&gt;一维数据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="绘图命令"><a href="#绘图命令" class="headerlink" title="绘图命令"></a>绘图命令</h4><pre class="line-numbers language-R" data-language="R"><code class="language-R">par()       #设置绘图参数，常用的有mfrow，mfcol（设置n*n），pin（设置图像大小）
+
+plot()      #散点图,for example: plot(y~x)
+coplot()    #不同划分下的散点图，例如coplot(Y~x1x2)
+hist()      #直方图
+pie()       #饼图
+boxplot()   #箱线图
+dotchart()  #点图
+pairs()     #配对散点图
+barplot()   #柱状图
+
+qqline()    #qq线，qqline向通过探测器分位数(默认情况下是第一和第三四分位数)的“理论”(默认情况下是正常的)分位数-分位数曲线图添加一条线
+qqnorm()    #qq图，是一种通用函数，其默认方法是生成Y中的值的正常QQ图<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="统计类命令"><a href="#统计类命令" class="headerlink" title="统计类命令"></a>统计类命令</h4><pre class="line-numbers language-R" data-language="R"><code class="language-R">##############统计相关##########
+
+table()     #统计数据中的频数
+
+cor()       #相关性检验
+cor.test()  #检查两个元素之间的相关性
+
+princomp()  #Princomp对给定的数字数据矩阵执行主成分分析，并将结果作为princomp类的对象返回。
+predict(object) #预测样本主成分，参数是princomp类
+
+#########回归相关命令#########
+
+lm()        #线性回归
+lm(Y ~ X1 + X2,data &#x3D; list1)
+glm()       #logistic回归，
+glm.val&lt;-glm(Y~X1+X2+X3+X4+X5,data&#x3D;list2)
+step()      #逐步回归
+step(glm.val)
+
+summary(object) #查看拟合方程
+coef(object)    #查看拟合方程的参数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="tips："><a href="#tips：" class="headerlink" title="tips："></a>tips：</h3><p>R语言的matrix和data.frame的区别：</p>
 <ol>
@@ -508,13 +551,13 @@
 <li> matrix不能使用$</li>
 </ol>
 <h3 id="奇淫技巧"><a href="#奇淫技巧" class="headerlink" title="奇淫技巧"></a>奇淫技巧</h3><h4 id="修改某一列的所有元素"><a href="#修改某一列的所有元素" class="headerlink" title="修改某一列的所有元素"></a>修改某一列的所有元素</h4><p>使用which对数据进行筛选，我觉得这个应该是内置了一个循环函数，对数据中所有的数据进行遍历进行修改。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df1$Q101E1[which(df1$Q101E1==<span class="string">&quot;未上过学&quot;</span>)]&lt;-<span class="string">&quot;未上过小学&quot;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">df1$Q101E1[which(df1$Q101E1&#x3D;&#x3D;&quot;未上过学&quot;)]&lt;-&quot;未上过小学&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="如何解决csv文件中有空值而不是NA"><a href="#如何解决csv文件中有空值而不是NA" class="headerlink" title="如何解决csv文件中有空值而不是NA"></a>如何解决csv文件中有空值而不是NA</h4><p>这个只能在读取的时候进行处理，在读取的地方添加 na.strings = “”，这样读取出来的数据和Q101L1行一样，在R中就会转换为NA。</p>
 <p><img src="http://pict.lanyun1103.top/typora/20201212230854.png" alt="image-20201212230846976"></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df2 = read.csv(<span class="string">&quot;2017.csv&quot;</span>,na.strings = <span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R">df2 &#x3D; read.csv(&quot;2017.csv&quot;,na.strings &#x3D; &quot;&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h4 id="xlabel90°旋转"><a href="#xlabel90°旋转" class="headerlink" title="xlabel90°旋转"></a>xlabel90°旋转</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme(axis.text.x=element_text(angle=<span class="number">90</span>, size=<span class="number">8</span>))</span><br></pre></td></tr></table></figure>
+<h4 id="xlabel90°旋转"><a href="#xlabel90°旋转" class="headerlink" title="xlabel90°旋转"></a>xlabel90°旋转</h4><pre class="line-numbers language-R" data-language="R"><code class="language-R">theme(axis.text.x&#x3D;element_text(angle&#x3D;90, size&#x3D;8))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -601,132 +644,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -781,7 +698,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="LaTeX科技排版">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="LaTeX科技排版">
                         
                         <span class="card-title">LaTeX科技排版</span>
                     </div>
@@ -830,7 +747,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="LaTeX希腊字母">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="LaTeX希腊字母">
                         
                         <span class="card-title">LaTeX希腊字母</span>
                     </div>
@@ -866,6 +783,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lanyun&#39;s Blog<br />'
+            + '文章作者: Lanyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -991,7 +945,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1004,7 +958,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">99.2k</span>
+                        class="white-color">97k</span>
             
             
             
@@ -1025,6 +979,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             
