@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-27T10:39:42.046Z</updated>
+  <updated>2021-07-18T07:10:34.047Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to learn 12 hours(Youtube)</title>
+    <link href="http://example.com/2021/07/18/how/"/>
+    <id>http://example.com/2021/07/18/how/</id>
+    <published>2021-07-18T07:07:36.000Z</published>
+    <updated>2021-07-18T07:10:34.047Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Videos-on-youtube"><a href="#Videos-on-youtube" class="headerlink" title="Videos on youtube"></a>Videos on youtube</h1><h2 id="How-to-learn-12-hours"><a href="#How-to-learn-12-hours" class="headerlink" title="How to learn 12 hours"></a>How to learn 12 hours</h2><ol><li>pushing yourself, breaking yourself down. can come back stronger.</li><li>growth mindset.</li><li>desire to succed</li><li>not depend on motivation, it just set yourself prepare for failure</li><li>motivation and drive: you can be motivated easily, but drive can get you from a point to another point</li><li>stop procrastination(atomic habits)</li><li>depth is far more important than how long you study</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Videos-on-youtube&quot;&gt;&lt;a href=&quot;#Videos-on-youtube&quot; class=&quot;headerlink&quot; title=&quot;Videos on youtube&quot;&gt;&lt;/a&gt;Videos on youtube&lt;/h1&gt;&lt;h2 id=&quot;How-t</summary>
+      
+    
+    
+    
+    <category term="每日学习总结" scheme="http://example.com/categories/%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>正则表达式Cheat sheet</title>
@@ -479,30 +501,6 @@
     
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GIT版本控制总结</title>
-    <link href="http://example.com/2020/10/17/git-ban-ben-kong-zhi-zong-jie/"/>
-    <id>http://example.com/2020/10/17/git-ban-ben-kong-zhi-zong-jie/</id>
-    <published>2020-10-17T05:49:43.000Z</published>
-    <updated>2021-06-27T10:39:41.996Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="GIT版本控制总结"><a href="#GIT版本控制总结" class="headerlink" title="GIT版本控制总结"></a>GIT版本控制总结</h1><h2 id="0-git流程"><a href="#0-git流程" class="headerlink" title="0.git流程"></a>0.git流程</h2><ol><li> 克隆仓库</li><li> 在工作目录中增删改文件</li><li> 暂存文件</li><li> 提交更新</li></ol><h2 id="1-提交文件："><a href="#1-提交文件：" class="headerlink" title="1.提交文件："></a>1.提交文件：</h2><p>本地操作</p><pre class="line-numbers language-git" data-language="git"><code class="language-git">git add ***.txt #暂存单个文件git add .       #批量暂存文件git status      #查看当前文件git commit -m <span class="token string">"context"</span>   #提交文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-查看提交记录："><a href="#2-查看提交记录：" class="headerlink" title="2.查看提交记录："></a>2.查看提交记录：</h2><pre class="line-numbers language-git" data-language="git"><code class="language-git">git log     #查看提交日志<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="查看当前文件与仓库文件之间区别："><a href="#查看当前文件与仓库文件之间区别：" class="headerlink" title="查看当前文件与仓库文件之间区别："></a>查看当前文件与仓库文件之间区别：</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">git diff ***.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="3-git库管理策略"><a href="#3-git库管理策略" class="headerlink" title="3.git库管理策略"></a>3.git库管理策略</h2><p>Git之所以能实现分布式版本控制，就是基于其分支管理策略。本地库所做的操作都是在某分支上进行的，不同分支之间可以合并。可以拉取远程分支到本地，也可以推送本地分支到远程。</p><pre class="line-numbers language-git" data-language="git"><code class="language-git">git branch &lt;branchName> #创建新的分支git branch -d &lt;branchName> #删除已有分支git checkout &lt;branchName> #切换到其它分支上git merge &lt;branchName>    #合并branchName分支到当前分支上git branch -r           #查看远程分支git branch -a           #查看远程及本地的所有分支，当前分支前加<span class="token string">"*"</span>号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在git中，master作为主分支，不作为开发使用，只用来发布新版本，主分支也叫作版本分支。</p><p>所以通常在另一个develop分支上完成开发，如果想对外发布，则在master分支上对develop进行“合并”。</p><pre class="line-numbers language-git" data-language="git"><code class="language-git"><span class="token comment">#从master上分出一个develop分支</span>git checkout -b develop master <span class="token comment">#将develop分支合并到master分支的命令如下两个：</span><span class="token comment">#切换到master分支</span>git checkout master<span class="token comment">#对develop分支进行合并</span>git merge --no-ff develop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>默认情况下会快速合并，意思是直接将master分支指向develop，而添加–no-ff正常合并，在master分支上生成一个新的节点。</p><h2 id="4-远程库向本地库同步："><a href="#4-远程库向本地库同步：" class="headerlink" title="4.远程库向本地库同步："></a>4.远程库向本地库同步：</h2><h3 id="4-1-克隆远程库到本地："><a href="#4-1-克隆远程库到本地：" class="headerlink" title="4.1 克隆远程库到本地："></a>4.1 克隆远程库到本地：</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">git clone &lt;url.git>git clone &lt;ver_url.git> &lt;localurl.git>git clone -o 远程主机名 &lt;ver_url.git> &lt;localurl.git><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="4-2-拉取远程分支到本地并建立关联"><a href="#4-2-拉取远程分支到本地并建立关联" class="headerlink" title="4.2 拉取远程分支到本地并建立关联"></a>4.2 拉取远程分支到本地并建立关联</h3><pre class="line-numbers language-git" data-language="git"><code class="language-git">git checkout -b 本地分支名 origin/远程分支名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="4-3-拉取远程分支并与本地分支合并"><a href="#4-3-拉取远程分支并与本地分支合并" class="headerlink" title="4.3 拉取远程分支并与本地分支合并"></a>4.3 拉取远程分支并与本地分支合并</h3><p>git pull命令先拉取远程分支到本地，再与本地指定的分支合并。</p><pre class="line-numbers language-git" data-language="git"><code class="language-git">git pull &lt;远程主机名> &lt;远程分支名>:&lt;本地分支名>git pull origin next:master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="5-本地向远程同步"><a href="#5-本地向远程同步" class="headerlink" title="5. 本地向远程同步"></a>5. 本地向远程同步</h2><h3 id="5-1-主机名管理"><a href="#5-1-主机名管理" class="headerlink" title="5.1 主机名管理"></a>5.1 主机名管理</h3><p>git 为了便于管理，每一个远程主机都需要指定一个主机名，即本地对远程主机名的映射。git remote用来管理这些</p><pre class="line-numbers language-git" data-language="git"><code class="language-git"><span class="token comment">#添加远程主机</span>git remote add &lt;远程主机名> &lt;网址><span class="token comment">#删除远程主机</span>git remote rm &lt;远程主机名><span class="token comment">#修改远程主机名</span>git remote rename &lt;原主机名> &lt;新主机名><span class="token comment">#查询远程主机</span><span class="token comment">#查询所有与本地库关联的远程主机名</span>git remote<span class="token comment">#查询所有与本地库关联的远程主机名及其地址</span>git remote –v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="5-2-本地分支推送到远程主机上"><a href="#5-2-本地分支推送到远程主机上" class="headerlink" title="5.2 本地分支推送到远程主机上"></a>5.2 本地分支推送到远程主机上</h3><p>本地分支有更新时，将本地推送到远程与之关联的分支上</p><pre class="line-numbers language-git" data-language="git"><code class="language-git">git push &lt;远程主机名> &lt;本地分支名>:&lt;远程分支名><span class="token comment">#推送master分支到origin主机的master分支上</span>git push origin master<span class="token comment">#本地分支为空，表示删除远程的master分支</span>git push origin :master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;GIT版本控制总结&quot;&gt;&lt;a href=&quot;#GIT版本控制总结&quot; class=&quot;headerlink&quot; title=&quot;GIT版本控制总结&quot;&gt;&lt;/a&gt;GIT版本控制总结&lt;/h1&gt;&lt;h2 id=&quot;0-git流程&quot;&gt;&lt;a href=&quot;#0-git流程&quot; class=&quot;he</summary>
-      
-    
-    
-    
-    <category term="每日学习总结" scheme="http://example.com/categories/%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-    
-    <category term="踩坑" scheme="http://example.com/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
